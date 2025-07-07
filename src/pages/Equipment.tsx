@@ -148,33 +148,115 @@ const Equipment = () => {
               We Buy
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              We purchase a wide range of endoscopy equipment and related systems, regardless of condition
+              We purchase endoscopy equipment and related systems, regardless of condition
             </p>
           </div>
 
-          <div className="grid lg:grid-cols-2 gap-12">
-            {equipmentWeBuy.map((category, index) => (
-              <div key={index} className="bg-white rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-shadow duration-300">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            {/* Gastroscopes */}
+            <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+              <div className="relative h-48 bg-gradient-to-br from-blue-500 to-blue-600">
                 <img 
-                  src={category.image} 
-                  alt={category.category} 
-                  className="w-full h-64 object-cover"
+                  src="https://images.pexels.com/photos/4167541/pexels-photo-4167541.jpeg?auto=compress&cs=tinysrgb&w=400&h=200&fit=crop" 
+                  alt="Gastroscopes" 
+                  className="w-full h-full object-cover opacity-30"
                 />
-                <div className="p-8">
-                  <h3 className="text-2xl font-bold text-gray-900 mb-4">{category.category}</h3>
-                  <p className="text-gray-600 mb-6">{category.description}</p>
-                  
-                  <div className="grid md:grid-cols-2 gap-3">
-                    {category.items.map((item, itemIndex) => (
-                      <div key={itemIndex} className="flex items-center">
-                        <CheckCircle className="h-5 w-5 text-green-500 mr-3 flex-shrink-0" />
-                        <span className="text-gray-700 font-medium">{item}</span>
-                      </div>
-                    ))}
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <div className="text-center">
+                    <h3 className="text-2xl font-bold text-white">Gastroscopes</h3>
                   </div>
                 </div>
               </div>
-            ))}
+              <div className="p-6">
+                <p className="text-gray-600 text-center">
+                  Upper GI endoscopes for diagnostic and therapeutic procedures
+                </p>
+              </div>
+            </div>
+
+            {/* Colonoscopes */}
+            <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+              <div className="relative h-48 bg-gradient-to-br from-green-500 to-green-600">
+                <img 
+                  src="https://images.pexels.com/photos/4386467/pexels-photo-4386467.jpeg?auto=compress&cs=tinysrgb&w=400&h=200&fit=crop" 
+                  alt="Colonoscopes" 
+                  className="w-full h-full object-cover opacity-30"
+                />
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <div className="text-center">
+                    <h3 className="text-2xl font-bold text-white">Colonoscopes</h3>
+                  </div>
+                </div>
+              </div>
+              <div className="p-6">
+                <p className="text-gray-600 text-center">
+                  Colon examination scopes for screening and therapeutic procedures
+                </p>
+              </div>
+            </div>
+
+            {/* Duodenoscopes */}
+            <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+              <div className="relative h-48 bg-gradient-to-br from-purple-500 to-purple-600">
+                <img 
+                  src="https://images.pexels.com/photos/4021775/pexels-photo-4021775.jpeg?auto=compress&cs=tinysrgb&w=400&h=200&fit=crop" 
+                  alt="Duodenoscopes" 
+                  className="w-full h-full object-cover opacity-30"
+                />
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <div className="text-center">
+                    <h3 className="text-2xl font-bold text-white">Duodenoscopes</h3>
+                  </div>
+                </div>
+              </div>
+              <div className="p-6">
+                <p className="text-gray-600 text-center">
+                  ERCP scopes for bile duct and pancreatic procedures
+                </p>
+              </div>
+            </div>
+
+            {/* Bronchoscopes */}
+            <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+              <div className="relative h-48 bg-gradient-to-br from-teal-500 to-teal-600">
+                <img 
+                  src="https://images.pexels.com/photos/4386370/pexels-photo-4386370.jpeg?auto=compress&cs=tinysrgb&w=400&h=200&fit=crop" 
+                  alt="Bronchoscopes" 
+                  className="w-full h-full object-cover opacity-30"
+                />
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <div className="text-center">
+                    <h3 className="text-2xl font-bold text-white">Bronchoscopes</h3>
+                  </div>
+                </div>
+              </div>
+              <div className="p-6">
+                <p className="text-gray-600 text-center">
+                  Respiratory endoscopes for airway examination and procedures
+                </p>
+              </div>
+            </div>
+
+            {/* Light Sources and Processors */}
+            <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 md:col-span-2 lg:col-span-1">
+              <div className="relative h-48 bg-gradient-to-br from-orange-500 to-orange-600">
+                <img 
+                  src="https://images.pexels.com/photos/4167541/pexels-photo-4167541.jpeg?auto=compress&cs=tinysrgb&w=400&h=200&fit=crop" 
+                  alt="Light Sources and Processors" 
+                  className="w-full h-full object-cover opacity-30"
+                />
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <div className="text-center">
+                    <h3 className="text-2xl font-bold text-white">Light Sources & Processors</h3>
+                  </div>
+                </div>
+              </div>
+              <div className="p-6">
+                <p className="text-gray-600 text-center">
+                  Video processors, light sources, and imaging systems
+                </p>
+              </div>
+            </div>
           </div>
 
           {/* Additional Equipment Note */}
