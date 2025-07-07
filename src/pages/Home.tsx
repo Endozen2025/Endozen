@@ -283,10 +283,6 @@ const Home = () => {
                   <CheckCircle className="h-4 w-4 text-green-500 mr-2" />
                   Preventive maintenance schedules
                 </li>
-                <li className="flex items-center text-sm text-gray-600">
-                  <CheckCircle className="h-4 w-4 text-green-500 mr-2" />
-                  Emergency repair services
-                </li>
               </ul>
             </div>
 
