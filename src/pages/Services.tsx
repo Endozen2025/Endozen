@@ -543,12 +543,12 @@ const Services = () => {
               Complete Service Solutions
             </h2>
             <p className="text-xl text-gray-600">
-              Beyond repairs, we offer comprehensive medical equipment servicing
+              Essential maintenance and emergency services to keep your equipment operational
             </p>
           </div>
 
-          <div className="grid lg:grid-cols-2 gap-8">
-            {services.slice(1).map((service, index) => (
+          <div className="grid lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
+            {services.filter(service => service.title === 'Preventive Maintenance' || service.title === 'Emergency Service').map((service, index) => (
               <div
                 key={index}
                 className="bg-white border border-gray-200 rounded-xl overflow-hidden hover:shadow-lg transition-shadow duration-300"
