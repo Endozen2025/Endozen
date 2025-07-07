@@ -172,8 +172,15 @@ const Home = () => {
             <div>
               <div className="text-4xl font-bold text-blue-600 mb-2">14+</div>
               <div className="text-gray-600">
-                <div>Years of Global Experience – Trusted</div>
-                <div>by Clients Worldwide</div>
+                <div>
+                  <p>Years of Global Experience</p>
+                  <p>Trusted by Clients Worldwide</p>
+                </div>
+                <div>
+                  <p>
+                    <br />
+                  </p>
+                </div>
               </div>
             </div>
             <div>
@@ -184,7 +191,9 @@ const Home = () => {
             </div>
             <div>
               <div className="text-4xl font-bold text-blue-600 mb-2">24/7</div>
-              <div className="text-gray-600">Emergency Support</div>
+              <div className="text-gray-600">
+                Priority Support for Urgent Repairs
+              </div>
             </div>
             <div>
               <div className="text-4xl font-bold text-green-600 mb-2">99%</div>
