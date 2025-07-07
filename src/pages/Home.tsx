@@ -15,6 +15,7 @@ import {
   Truck,
   Search,
   FileText,
+  AlertTriangle,
 } from "lucide-react";
 
 const Home = () => {
@@ -190,7 +191,9 @@ const Home = () => {
               <div className="text-gray-600">Equipment Serviced</div>
             </div>
             <div>
-              <div className="text-4xl font-bold text-blue-600 mb-2">24/7</div>
+              <div className="text-4xl font-bold text-blue-600 mb-2 flex justify-center">
+                <AlertTriangle className="h-12 w-12" />
+              </div>
               <div className="text-gray-600">
                 Priority Support for Urgent Repairs
               </div>
