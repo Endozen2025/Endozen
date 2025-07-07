@@ -247,52 +247,149 @@ const Services = () => {
             </p>
           </div>
 
-          {/* Main Categories Grid */}
-          <div className="flex justify-center mb-16">
-            {/* Flexible Endoscopes */}
-            <div className="bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-shadow duration-300 max-w-md">
-              <div className="relative h-48 bg-gradient-to-br from-blue-500 to-blue-600">
+          {/* Endoscope Types Grid */}
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+            {/* Video Gastroscopes */}
+            <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 hover:scale-105">
+              <div className="relative h-32 bg-gradient-to-br from-blue-500 to-blue-600">
                 <img
-                  src="https://images.pexels.com/photos/4167541/pexels-photo-4167541.jpeg?auto=compress&cs=tinysrgb&w=400&h=200&fit=crop"
-                  alt="Flexible endoscopes"
-                  className="w-full h-full object-cover opacity-30"
+                  src="https://images.pexels.com/photos/4167541/pexels-photo-4167541.jpeg?auto=compress&cs=tinysrgb&w=300&h=150&fit=crop"
+                  alt="Video Gastroscopes"
+                  className="w-full h-full object-cover opacity-20"
                 />
                 <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="text-center">
-                    <Stethoscope className="h-16 w-16 text-white mx-auto mb-4" />
-                    <h3 className="text-2xl font-bold text-white">
-                      Flexible Endoscopes
-                    </h3>
+                  <Stethoscope className="h-12 w-12 text-white" />
+                </div>
+              </div>
+              <div className="p-6">
+                <h3 className="text-lg font-bold text-gray-900 mb-2">
+                  Video Gastroscopes
+                </h3>
+                <p className="text-sm text-gray-600 mb-4">
+                  Upper GI tract examination and therapeutic procedures
+                </p>
+                <div className="space-y-2">
+                  <div className="flex items-center text-xs text-gray-600">
+                    <CheckCircle className="h-3 w-3 text-green-500 mr-2" />
+                    <span>Diagnostic imaging</span>
+                  </div>
+                  <div className="flex items-center text-xs text-gray-600">
+                    <CheckCircle className="h-3 w-3 text-green-500 mr-2" />
+                    <span>Therapeutic interventions</span>
                   </div>
                 </div>
               </div>
-              <div className="p-8">
-                <div className="space-y-4">
-                  <div className="flex items-center text-gray-700">
-                    <CheckCircle className="h-5 w-5 text-green-500 mr-3 flex-shrink-0" />
-                    <span className="font-medium">Video Gastroscopes</span>
-                  </div>
-                  <div className="flex items-center text-gray-700">
-                    <CheckCircle className="h-5 w-5 text-green-500 mr-3 flex-shrink-0" />
-                    <span className="font-medium">Colonoscopes</span>
-                  </div>
-                  <div className="flex items-center text-gray-700">
-                    <CheckCircle className="h-5 w-5 text-green-500 mr-3 flex-shrink-0" />
-                    <span className="font-medium">Duodenoscopes</span>
-                  </div>
-                  <div className="flex items-center text-gray-700">
-                    <CheckCircle className="h-5 w-5 text-green-500 mr-3 flex-shrink-0" />
-                    <span className="font-medium">Bronchoscopes</span>
-                  </div>
-                </div>
-                <div className="mt-6 pt-6 border-t border-gray-200">
-                  <p className="text-sm text-gray-600">
-                    Complete repair and restoration services for all major
-                    endoscope types used in diagnostic and therapeutic
-                    procedures.
-                  </p>
+            </div>
+
+            {/* Colonoscopes */}
+            <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 hover:scale-105">
+              <div className="relative h-32 bg-gradient-to-br from-green-500 to-green-600">
+                <img
+                  src="https://images.pexels.com/photos/4386467/pexels-photo-4386467.jpeg?auto=compress&cs=tinysrgb&w=300&h=150&fit=crop"
+                  alt="Colonoscopes"
+                  className="w-full h-full object-cover opacity-20"
+                />
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <Activity className="h-12 w-12 text-white" />
                 </div>
               </div>
+              <div className="p-6">
+                <h3 className="text-lg font-bold text-gray-900 mb-2">
+                  Colonoscopes
+                </h3>
+                <p className="text-sm text-gray-600 mb-4">
+                  Colon and large intestine examination procedures
+                </p>
+                <div className="space-y-2">
+                  <div className="flex items-center text-xs text-gray-600">
+                    <CheckCircle className="h-3 w-3 text-green-500 mr-2" />
+                    <span>Cancer screening</span>
+                  </div>
+                  <div className="flex items-center text-xs text-gray-600">
+                    <CheckCircle className="h-3 w-3 text-green-500 mr-2" />
+                    <span>Polyp removal</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Duodenoscopes */}
+            <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 hover:scale-105">
+              <div className="relative h-32 bg-gradient-to-br from-purple-500 to-purple-600">
+                <img
+                  src="https://images.pexels.com/photos/4021775/pexels-photo-4021775.jpeg?auto=compress&cs=tinysrgb&w=300&h=150&fit=crop"
+                  alt="Duodenoscopes"
+                  className="w-full h-full object-cover opacity-20"
+                />
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <Microscope className="h-12 w-12 text-white" />
+                </div>
+              </div>
+              <div className="p-6">
+                <h3 className="text-lg font-bold text-gray-900 mb-2">
+                  Duodenoscopes
+                </h3>
+                <p className="text-sm text-gray-600 mb-4">
+                  ERCP procedures and bile duct interventions
+                </p>
+                <div className="space-y-2">
+                  <div className="flex items-center text-xs text-gray-600">
+                    <CheckCircle className="h-3 w-3 text-green-500 mr-2" />
+                    <span>Bile duct access</span>
+                  </div>
+                  <div className="flex items-center text-xs text-gray-600">
+                    <CheckCircle className="h-3 w-3 text-green-500 mr-2" />
+                    <span>Stone removal</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Bronchoscopes */}
+            <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 hover:scale-105">
+              <div className="relative h-32 bg-gradient-to-br from-teal-500 to-teal-600">
+                <img
+                  src="https://images.pexels.com/photos/4386370/pexels-photo-4386370.jpeg?auto=compress&cs=tinysrgb&w=300&h=150&fit=crop"
+                  alt="Bronchoscopes"
+                  className="w-full h-full object-cover opacity-20"
+                />
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <Settings className="h-12 w-12 text-white" />
+                </div>
+              </div>
+              <div className="p-6">
+                <h3 className="text-lg font-bold text-gray-900 mb-2">
+                  Bronchoscopes
+                </h3>
+                <p className="text-sm text-gray-600 mb-4">
+                  Respiratory tract examination and lung procedures
+                </p>
+                <div className="space-y-2">
+                  <div className="flex items-center text-xs text-gray-600">
+                    <CheckCircle className="h-3 w-3 text-green-500 mr-2" />
+                    <span>Airway visualization</span>
+                  </div>
+                  <div className="flex items-center text-xs text-gray-600">
+                    <CheckCircle className="h-3 w-3 text-green-500 mr-2" />
+                    <span>Biopsy procedures</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Overview Card */}
+          <div className="bg-gradient-to-r from-blue-50 to-green-50 rounded-2xl p-8 mb-16">
+            <div className="text-center">
+              <Stethoscope className="h-16 w-16 text-blue-600 mx-auto mb-4" />
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">
+                Comprehensive Endoscope Repair Services
+              </h3>
+              <p className="text-lg text-gray-700 max-w-3xl mx-auto">
+                Our expert technicians provide complete repair and restoration
+                services for all major endoscope types used in diagnostic and
+                therapeutic procedures across multiple medical specialties.
+              </p>
             </div>
           </div>
 
