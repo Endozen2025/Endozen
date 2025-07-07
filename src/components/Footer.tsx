@@ -35,14 +35,6 @@ const Footer = () => {
                   to="/services"
                   className="text-gray-300 hover:text-white transition-colors"
                 >
-                  Scope Repair Services
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/services"
-                  className="text-gray-300 hover:text-white transition-colors"
-                >
                   Preventive Maintenance
                 </Link>
               </li>
@@ -51,23 +43,7 @@ const Footer = () => {
                   to="/services"
                   className="text-gray-300 hover:text-white transition-colors"
                 >
-                  Equipment Calibration
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/services"
-                  className="text-gray-300 hover:text-white transition-colors"
-                >
                   Emergency Service
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/services"
-                  className="text-gray-300 hover:text-white transition-colors"
-                >
-                  Remote Diagnostics
                 </Link>
               </li>
             </ul>
