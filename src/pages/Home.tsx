@@ -172,35 +172,31 @@ const Home = () => {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             <div>
               <div className="text-4xl font-bold text-blue-600 mb-2">14+</div>
-              <div className="text-gray-600">
-                <div>
-                  <p>Years of Global Experience</p>
-                  <p>Trusted by Clients Worldwide</p>
-                </div>
-                <div>
-                  <p>
-                    <br />
-                  </p>
-                </div>
+              <div className="text-gray-600 text-sm leading-tight">
+                <p className="font-medium">Years of Global Experience</p>
+                <p className="text-xs text-gray-500 mt-1">Trusted by Clients Worldwide</p>
               </div>
             </div>
             <div>
-              <div className="text-4xl font-bold text-green-600 mb-2">
-                5000+
+              <div className="text-4xl font-bold text-green-600 mb-2">5000+</div>
+              <div className="text-gray-600 text-sm leading-tight">
+                <p className="font-medium">Equipment Serviced</p>
+                <p className="text-xs text-gray-500 mt-1">Across Healthcare Facilities</p>
               </div>
-              <div className="text-gray-600">Equipment Serviced</div>
             </div>
             <div>
-              <div className="text-4xl font-bold text-blue-600 mb-2 flex justify-center">
-                <AlertTriangle className="h-12 w-12" />
-              </div>
-              <div className="text-gray-600">
-                Priority Support for Urgent Repairs
+              <div className="text-4xl font-bold text-blue-600 mb-2">24/7</div>
+              <div className="text-gray-600 text-sm leading-tight">
+                <p className="font-medium">Priority Support</p>
+                <p className="text-xs text-gray-500 mt-1">For Urgent Repairs</p>
               </div>
             </div>
             <div>
               <div className="text-4xl font-bold text-green-600 mb-2">99%</div>
-              <div className="text-gray-600">Customer Satisfaction</div>
+              <div className="text-gray-600 text-sm leading-tight">
+                <p className="font-medium">Customer Satisfaction</p>
+                <p className="text-xs text-gray-500 mt-1">Quality Service Guarantee</p>
+              </div>
             </div>
           </div>
         </div>
