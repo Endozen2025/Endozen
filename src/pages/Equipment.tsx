@@ -230,24 +230,6 @@ const Equipment = () => {
               </div>
             ))}
           </div>
-
-          {/* Additional Benefits */}
-          <div className="mt-16 bg-gradient-to-r from-blue-50 to-green-50 p-8 rounded-xl">
-            <div className="grid md:grid-cols-3 gap-8 text-center">
-              <div>
-                <div className="text-4xl font-bold text-blue-600 mb-2">Quick</div>
-                <div className="text-gray-600">Response & quotes</div>
-              </div>
-              <div>
-                <div className="text-4xl font-bold text-green-600 mb-2">Fair</div>
-                <div className="text-gray-600">Transparent pricing</div>
-              </div>
-              <div>
-                <div className="text-4xl font-bold text-blue-600 mb-2">Simple</div>
-                <div className="text-gray-600">Documentation process</div>
-              </div>
-            </div>
-          </div>
         </div>
       </section>
 
