@@ -9,7 +9,7 @@ const About = () => {
         <div className="absolute inset-0 bg-black opacity-30"></div>
         <div className="absolute inset-0">
           <img 
-            src="https://images.pexels.com/photos/4167541/pexels-photo-4167541.jpeg?auto=compress&cs=tinysrgb&w=1920&h=600&fit=crop" 
+            src="/endoscopy-hospital-doctor-holding-endoscope-before-gastroscopy.jpg" 
             alt="Medical professionals and endoscope equipment in healthcare facility" 
             className="w-full h-full object-cover opacity-40"
           />
@@ -64,8 +64,8 @@ const About = () => {
 
             <div className="relative">
               <img 
-                src="https://images.pexels.com/photos/4167541/pexels-photo-4167541.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop" 
-                alt="Medical equipment service facility with endoscopes and diagnostic equipment" 
+                src="/flexible-endoscope-medical-investigative-surgical-tool-monitoring-gastrointestinal-endoscope-clinic-closeup.jpg" 
+                alt="Flexible endoscope medical investigative surgical tool for gastrointestinal monitoring in clinic" 
                 className="w-full h-96 object-cover rounded-xl shadow-lg"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent rounded-xl"></div>
@@ -100,17 +100,12 @@ const About = () => {
           <div className="grid md:grid-cols-3 gap-8">
             {/* Our Vision */}
             <div className="text-center bg-white p-8 rounded-xl shadow-lg">
-              <div className="relative mb-6">
-                <img 
-                  src="https://images.pexels.com/photos/4167541/pexels-photo-4167541.jpeg?auto=compress&cs=tinysrgb&w=300&h=200&fit=crop" 
-                  alt="Our vision - leading medical equipment service provider" 
-                  className="w-full h-32 object-cover rounded-lg"
-                />
-                <div className="absolute -bottom-4 left-1/2 transform -translate-x-1/2">
-                  <Target className="h-12 w-12 text-blue-600 bg-white p-2 rounded-full shadow-lg" />
+              <div className="flex justify-center mb-6">
+                <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center">
+                  <Target className="h-8 w-8 text-blue-600" />
                 </div>
               </div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-4 mt-4">Our Vision</h3>
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">Our Vision</h3>
               <p className="text-gray-600">
                 To become India's leading provider of precision endoscope repair solutions—recognized for our trust, 
                 innovation, and commitment to healthcare excellence.
@@ -119,17 +114,12 @@ const About = () => {
 
             {/* Our Mission */}
             <div className="text-center bg-white p-8 rounded-xl shadow-lg">
-              <div className="relative mb-6">
-                <img 
-                  src="https://images.pexels.com/photos/4386467/pexels-photo-4386467.jpeg?auto=compress&cs=tinysrgb&w=300&h=200&fit=crop" 
-                  alt="Our mission - endoscope servicing excellence and patient care" 
-                  className="w-full h-32 object-cover rounded-lg"
-                />
-                <div className="absolute -bottom-4 left-1/2 transform -translate-x-1/2">
-                  <Shield className="h-12 w-12 text-green-600 bg-white p-2 rounded-full shadow-lg" />
+              <div className="flex justify-center mb-6">
+                <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center">
+                  <Shield className="h-8 w-8 text-green-600" />
                 </div>
               </div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-4 mt-4">Our Mission</h3>
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">Our Mission</h3>
               <p className="text-gray-600">
                 To deliver high-quality, reliable endoscope repair services that enhance clinical outcomes, reduce 
                 equipment downtime, and maximize the performance and longevity of critical medical devices.
@@ -138,17 +128,12 @@ const About = () => {
 
             {/* Core Values */}
             <div className="text-center bg-white p-8 rounded-xl shadow-lg">
-              <div className="relative mb-6">
-                <img 
-                  src="https://images.pexels.com/photos/4386370/pexels-photo-4386370.jpeg?auto=compress&cs=tinysrgb&w=300&h=200&fit=crop" 
-                  alt="Our values - healthcare excellence and compassion" 
-                  className="w-full h-32 object-cover rounded-lg"
-                />
-                <div className="absolute -bottom-4 left-1/2 transform -translate-x-1/2">
-                  <Heart className="h-12 w-12 text-blue-600 bg-white p-2 rounded-full shadow-lg" />
+              <div className="flex justify-center mb-6">
+                <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center">
+                  <Heart className="h-8 w-8 text-blue-600" />
                 </div>
               </div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-4 mt-4">Core Values</h3>
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">Core Values</h3>
               <div className="text-left space-y-3">
                 <div>
                   <h4 className="font-semibold text-gray-900">Precision</h4>
@@ -186,25 +171,25 @@ const About = () => {
                 title: 'Hospitals',
                 description: 'Large hospital networks and medical centers',
                 icon: Users,
-                image: 'https://images.pexels.com/photos/4167541/pexels-photo-4167541.jpeg?auto=compress&cs=tinysrgb&w=300&h=200&fit=crop'
+                image: '/hospital-building-red-cross-medical-institution-health-treatment-disease-wallpaper-background.jpg'
               },
               {
                 title: 'Diagnostic Centers',
                 description: 'Specialized diagnostic and imaging facilities',
                 icon: Target,
-                image: 'https://images.pexels.com/photos/4386467/pexels-photo-4386467.jpeg?auto=compress&cs=tinysrgb&w=300&h=200&fit=crop'
+                image: '/hand-with-protective-gloves-holding-blood-samples-covid-test.jpg'
               },
               {
                 title: 'Clinics',
                 description: 'Private clinics and outpatient facilities',
                 icon: Heart,
-                image: 'https://images.pexels.com/photos/4386370/pexels-photo-4386370.jpeg?auto=compress&cs=tinysrgb&w=300&h=200&fit=crop'
+                image: '/empty-modern-medical-office-having-disease-documents-table-equipped-with-contemporary-furniture-hospital-workplace-with-nobody-it-ready-sickness-consultation-medicine-support.jpg'
               },
               {
                 title: 'OEM Partners',
                 description: 'Original equipment manufacturers and distributors',
                 icon: Shield,
-                image: 'https://images.pexels.com/photos/4021775/pexels-photo-4021775.jpeg?auto=compress&cs=tinysrgb&w=300&h=200&fit=crop'
+                image: '/professional-handshake-symbolizing-scientific-collaboration.jpg'
               }
             ].map((service, index) => (
               <div key={index} className="bg-gray-50 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
@@ -271,8 +256,8 @@ const About = () => {
             </div>
             <div className="relative">
               <img 
-                src="https://images.pexels.com/photos/4167541/pexels-photo-4167541.jpeg?auto=compress&cs=tinysrgb&w=600&h=500&fit=crop" 
-                alt="Medical equipment service excellence with endoscopes and advanced technology" 
+                src="/flexible-endoscope-medical-investigative-surgical-tool-monitoring-gastrointestinal-endoscope-clinic-closeup.jpg" 
+                alt="Flexible endoscope medical investigative surgical tool - quality assurance and testing excellence" 
                 className="w-full h-96 object-cover rounded-xl shadow-lg"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent rounded-xl"></div>

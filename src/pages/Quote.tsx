@@ -64,7 +64,7 @@ const Quote = () => {
         <div className="absolute inset-0 bg-black opacity-30"></div>
         <div className="absolute inset-0">
           <img 
-            src="https://images.pexels.com/photos/4167541/pexels-photo-4167541.jpeg?auto=compress&cs=tinysrgb&w=1920&h=600&fit=crop" 
+            src="/endoscopy-hospital-doctor-holding-endoscope-before-gastroscopy.jpg" 
             alt="Request endoscope and medical equipment service quote" 
             className="w-full h-full object-cover opacity-40"
           />

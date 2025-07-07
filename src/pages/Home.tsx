@@ -23,12 +23,12 @@ const Home = () => {
     <div className="pt-16">
       {/* Hero Banner */}
       <section className="relative bg-gradient-to-br from-blue-600 via-blue-700 to-green-600 text-white overflow-hidden">
-        <div className="absolute inset-0 bg-black opacity-20"></div>
+        <div className="absolute inset-0 bg-blue-800 opacity-75"></div>
         <div className="absolute inset-0">
           <img
-            src="https://images.pexels.com/photos/4167541/pexels-photo-4167541.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop"
-            alt="Professional endoscope and medical equipment in modern healthcare facility"
-            className="w-full h-full object-cover opacity-30"
+            src="/colonoscopy-endoscopic-examination (1).jpg"
+            alt="Professional colonoscopy endoscopic examination and medical equipment"
+            className="w-full h-full object-cover opacity-40"
           />
         </div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 md:py-32">
@@ -133,9 +133,9 @@ const Home = () => {
 
             <div className="relative">
               <img
-                src="https://images.pexels.com/photos/4167541/pexels-photo-4167541.jpeg?auto=compress&cs=tinysrgb&w=600&h=500&fit=crop"
-                alt="Precision endoscope repair and quality control process"
-                className="w-full h-96 object-cover rounded-xl shadow-lg"
+                src="/flexible-endoscope-medical-investigative-surgical-tool-monitoring-gastrointestinal-endoscope-clinic-closeup.jpg"
+                alt="Flexible endoscope medical investigative surgical tool - precision repair and quality control process"
+                className="w-full h-[600px] object-cover rounded-xl shadow-lg"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent rounded-xl"></div>
               <div className="absolute bottom-6 left-6 right-6 bg-white/90 backdrop-blur-sm p-6 rounded-lg">
@@ -222,8 +222,8 @@ const Home = () => {
             <div className="bg-gray-50 p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300">
               <div className="relative mb-6">
                 <img
-                  src="https://images.pexels.com/photos/4386467/pexels-photo-4386467.jpeg?auto=compress&cs=tinysrgb&w=400&h=200&fit=crop"
-                  alt="Extend endoscope equipment lifespan"
+                  src="/endoscopy-hospital-doctor-holding-endoscope-before-gastroscopy-medical-examination (1).jpg"
+                  alt="Endoscopy hospital doctor holding endoscope - extend equipment lifespan through professional maintenance"
                   className="w-full h-32 object-cover rounded-lg"
                 />
                 <div className="absolute -bottom-4 left-4">
@@ -257,8 +257,8 @@ const Home = () => {
             <div className="bg-gray-50 p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300">
               <div className="relative mb-6">
                 <img
-                  src="https://images.pexels.com/photos/4021775/pexels-photo-4021775.jpeg?auto=compress&cs=tinysrgb&w=400&h=200&fit=crop"
-                  alt="Improve device availability and minimize downtime"
+                  src="/close-up-endoscope-hands-medical-worker-stock-photo.jpg"
+                  alt="Close-up endoscope hands medical worker - minimize downtime with fast maintenance"
                   className="w-full h-32 object-cover rounded-lg"
                 />
                 <div className="absolute -bottom-4 left-4">
@@ -287,8 +287,8 @@ const Home = () => {
             <div className="bg-gray-50 p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300">
               <div className="relative mb-6">
                 <img
-                  src="https://images.pexels.com/photos/4386370/pexels-photo-4386370.jpeg?auto=compress&cs=tinysrgb&w=400&h=200&fit=crop"
-                  alt="Expert guidance and technical support"
+                  src="/doctor-monitoring-patient-s-pulse.jpg"
+                  alt="Doctor monitoring patient's pulse - expert medical support and technical guidance"
                   className="w-full h-32 object-cover rounded-lg"
                 />
                 <div className="absolute -bottom-4 left-4">
@@ -321,8 +321,8 @@ const Home = () => {
             <div className="bg-gray-50 p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300">
               <div className="relative mb-6">
                 <img
-                  src="https://images.pexels.com/photos/4167541/pexels-photo-4167541.jpeg?auto=compress&cs=tinysrgb&w=400&h=200&fit=crop"
-                  alt="Reduce operational disruptions"
+                  src="/Gastro.jpg"
+                  alt="Gastroscopy equipment - reduce operational disruptions with comprehensive maintenance"
                   className="w-full h-32 object-cover rounded-lg"
                 />
                 <div className="absolute -bottom-4 left-4">
@@ -355,8 +355,8 @@ const Home = () => {
             <div className="bg-gray-50 p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 md:col-span-2 lg:col-span-1">
               <div className="relative mb-6">
                 <img
-                  src="https://images.pexels.com/photos/4386467/pexels-photo-4386467.jpeg?auto=compress&cs=tinysrgb&w=400&h=200&fit=crop"
-                  alt="Affordable and dependable solutions"
+                  src="/nurse-wears-protective-suit-mask-covid19-outbreak.jpg"
+                  alt="Nurse wearing protective suit and mask - affordable and dependable repair solutions for healthcare facilities"
                   className="w-full h-32 object-cover rounded-lg"
                 />
                 <div className="absolute -bottom-4 left-4">
@@ -413,8 +413,7 @@ const Home = () => {
                   "Compliance certification",
                 ],
                 icon: Settings,
-                image:
-                  "https://images.pexels.com/photos/4386467/pexels-photo-4386467.jpeg?auto=compress&cs=tinysrgb&w=300&h=150&fit=crop",
+                image: "/endoscope-closeup-blue-surface (1).jpg",
               },
               {
                 title: "Emergency Service",
@@ -426,8 +425,7 @@ const Home = () => {
                   "Loaner equipment",
                 ],
                 icon: Clock,
-                image:
-                  "https://images.pexels.com/photos/4021775/pexels-photo-4021775.jpeg?auto=compress&cs=tinysrgb&w=300&h=150&fit=crop",
+                image: "/2149478511.jpg",
               },
             ].map((service, index) => (
               <div
@@ -479,7 +477,7 @@ const Home = () => {
       <section className="py-20 bg-blue-600 text-white relative overflow-hidden">
         <div className="absolute inset-0">
           <img
-            src="https://images.pexels.com/photos/4386467/pexels-photo-4386467.jpeg?auto=compress&cs=tinysrgb&w=1920&h=600&fit=crop"
+            src="/examination-endoscope-room.jpg"
             alt="Medical professionals working with endoscopes and equipment"
             className="w-full h-full object-cover opacity-20"
           />

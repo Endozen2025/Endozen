@@ -16,7 +16,44 @@ import {
   Stethoscope,
   Microscope,
   Activity,
+  Heart,
+  Zap,
+  Eye,
+  Target,
+  Scan,
+  Camera,
+  Monitor,
+  Telescope,
+  Radar,
 } from "lucide-react";
+
+// React Icons - Font Awesome Icons (Medical)
+import { 
+  FaStethoscope, 
+  FaMicroscope, 
+  FaEye, 
+  FaHeartbeat,
+  FaSearch,
+  FaBullseye,
+  FaCamera
+} from "react-icons/fa";
+
+// Material Design Icons
+import { 
+  MdLocalHospital, 
+  MdVisibility, 
+  MdMonitorHeart,
+  MdScanner,
+  MdVideocam
+} from "react-icons/md";
+
+// Heroicons
+import { 
+  EyeIcon, 
+  MagnifyingGlassIcon,
+  CameraIcon,
+  HeartIcon
+} from "@heroicons/react/24/outline";
 
 const Services = () => {
   const services = [
@@ -53,8 +90,7 @@ const Services = () => {
       ],
       turnaround: "Scheduled",
       warranty: "30 days",
-      image:
-        "https://images.pexels.com/photos/4386467/pexels-photo-4386467.jpeg?auto=compress&cs=tinysrgb&w=400&h=200&fit=crop",
+      image: "/endoscope-closeup-blue-surface (1).jpg",
     },
     {
       icon: Settings,
@@ -88,8 +124,7 @@ const Services = () => {
       ],
       turnaround: "Same day",
       warranty: "90 days",
-      image:
-        "https://images.pexels.com/photos/4021775/pexels-photo-4021775.jpeg?auto=compress&cs=tinysrgb&w=400&h=200&fit=crop",
+      image: "/2149478511.jpg",
     },
     {
       icon: GraduationCap,
@@ -183,7 +218,7 @@ const Services = () => {
         <div className="absolute inset-0 bg-black opacity-30"></div>
         <div className="absolute inset-0">
           <img
-            src="https://images.pexels.com/photos/4167541/pexels-photo-4167541.jpeg?auto=compress&cs=tinysrgb&w=1920&h=600&fit=crop"
+            src="/endoscopy-hospital-doctor-holding-endoscope-before-gastroscopy.jpg"
             alt="Medical equipment services and endoscope repair facility"
             className="w-full h-full object-cover opacity-40"
           />
@@ -253,12 +288,12 @@ const Services = () => {
             <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 hover:scale-105">
               <div className="relative h-32 bg-gradient-to-br from-blue-500 to-blue-600">
                 <img
-                  src="https://images.pexels.com/photos/4167541/pexels-photo-4167541.jpeg?auto=compress&cs=tinysrgb&w=300&h=150&fit=crop"
+                  src="/Gastro.jpg"
                   alt="Video Gastroscopes"
                   className="w-full h-full object-cover opacity-20"
                 />
                 <div className="absolute inset-0 flex items-center justify-center">
-                  <Stethoscope className="h-12 w-12 text-white" />
+                  <FaSearch className="h-12 w-12 text-white" />
                 </div>
               </div>
               <div className="p-6">
@@ -285,12 +320,12 @@ const Services = () => {
             <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 hover:scale-105">
               <div className="relative h-32 bg-gradient-to-br from-green-500 to-green-600">
                 <img
-                  src="https://images.pexels.com/photos/4386467/pexels-photo-4386467.jpeg?auto=compress&cs=tinysrgb&w=300&h=150&fit=crop"
+                  src="/colonoscopy-endoscopic-examination.jpg"
                   alt="Colonoscopes"
                   className="w-full h-full object-cover opacity-20"
                 />
                 <div className="absolute inset-0 flex items-center justify-center">
-                  <Activity className="h-12 w-12 text-white" />
+                  <FaHeartbeat className="h-12 w-12 text-white" />
                 </div>
               </div>
               <div className="p-6">
@@ -317,12 +352,12 @@ const Services = () => {
             <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 hover:scale-105">
               <div className="relative h-32 bg-gradient-to-br from-purple-500 to-purple-600">
                 <img
-                  src="https://images.pexels.com/photos/4021775/pexels-photo-4021775.jpeg?auto=compress&cs=tinysrgb&w=300&h=150&fit=crop"
+                  src="/duodenoscope.webp"
                   alt="Duodenoscopes"
-                  className="w-full h-full object-cover opacity-20"
+                  className="w-full h-full object-cover opacity-30"
                 />
                 <div className="absolute inset-0 flex items-center justify-center">
-                  <Microscope className="h-12 w-12 text-white" />
+                  <MdScanner className="h-12 w-12 text-white" />
                 </div>
               </div>
               <div className="p-6">
@@ -349,12 +384,12 @@ const Services = () => {
             <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 hover:scale-105">
               <div className="relative h-32 bg-gradient-to-br from-teal-500 to-teal-600">
                 <img
-                  src="https://images.pexels.com/photos/4386370/pexels-photo-4386370.jpeg?auto=compress&cs=tinysrgb&w=300&h=150&fit=crop"
+                  src="/bronchoscope.PNG"
                   alt="Bronchoscopes"
                   className="w-full h-full object-cover opacity-20"
                 />
                 <div className="absolute inset-0 flex items-center justify-center">
-                  <Settings className="h-12 w-12 text-white" />
+                  <MdMonitorHeart className="h-12 w-12 text-white" />
                 </div>
               </div>
               <div className="p-6">
@@ -440,23 +475,56 @@ const Services = () => {
             {repairProcess.map((process, index) => (
               <div
                 key={index}
-                className="text-center bg-gray-50 rounded-xl p-6 shadow-lg"
+                className="relative bg-gradient-to-br from-blue-50 to-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 border border-blue-100"
               >
-                <img
-                  src={process.image}
-                  alt={process.title}
-                  className="w-full h-32 object-cover rounded-lg mb-4"
-                />
-                <div className="w-16 h-16 bg-blue-600 text-white rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">
-                  {process.step}
+                {/* Step Number Circle */}
+                <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                  <div className="w-16 h-16 bg-gradient-to-r from-blue-600 to-blue-700 text-white rounded-full flex items-center justify-center text-xl font-bold shadow-lg">
+                    {process.step}
+                  </div>
                 </div>
-                <process.icon className="h-8 w-8 text-blue-600 mx-auto mb-3" />
-                <h3 className="text-xl font-semibold text-gray-900 mb-3">
-                  {process.title}
-                </h3>
-                <p className="text-gray-600">{process.description}</p>
+                
+                {/* Icon */}
+                <div className="mt-8 mb-6 flex justify-center">
+                  <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center">
+                    <process.icon className="h-8 w-8 text-blue-600" />
+                  </div>
+                </div>
+                
+                {/* Content */}
+                <div className="text-center">
+                  <h3 className="text-xl font-semibold text-gray-900 mb-4">
+                    {process.title}
+                  </h3>
+                  <p className="text-gray-600 leading-relaxed">
+                    {process.description}
+                  </p>
+                </div>
+                
+                {/* Connector Line (except for last item) */}
+                {index < repairProcess.length - 1 && (
+                  <div className="hidden lg:block absolute top-8 -right-4 w-8 h-0.5 bg-blue-200"></div>
+                )}
               </div>
             ))}
+          </div>
+          
+          {/* Process Flow Indicator */}
+          <div className="mt-12 text-center">
+            <div className="inline-flex items-center bg-blue-50 px-8 py-4 rounded-full">
+              <div className="flex items-center space-x-2">
+                <div className="w-3 h-3 bg-blue-600 rounded-full"></div>
+                <div className="w-8 h-0.5 bg-blue-300"></div>
+                <div className="w-3 h-3 bg-blue-600 rounded-full"></div>
+                <div className="w-8 h-0.5 bg-blue-300"></div>
+                <div className="w-3 h-3 bg-blue-600 rounded-full"></div>
+                <div className="w-8 h-0.5 bg-blue-300"></div>
+                <div className="w-3 h-3 bg-blue-600 rounded-full"></div>
+              </div>
+              <span className="ml-4 text-blue-800 font-medium">
+                Complete process typically takes 24-48 hours
+              </span>
+            </div>
           </div>
         </div>
       </section>
@@ -547,7 +615,7 @@ const Services = () => {
             </p>
           </div>
 
-          <div className="grid lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
+          <div className="grid lg:grid-cols-2 gap-8 max-w-4xl mx-auto">
             {services.filter(service => service.title === 'Preventive Maintenance' || service.title === 'Emergency Service').map((service, index) => (
               <div
                 key={index}

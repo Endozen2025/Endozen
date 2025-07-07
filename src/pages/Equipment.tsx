@@ -97,7 +97,7 @@ const Equipment = () => {
         <div className="absolute inset-0 bg-black opacity-30"></div>
         <div className="absolute inset-0">
           <img 
-            src="https://images.pexels.com/photos/4167541/pexels-photo-4167541.jpeg?auto=compress&cs=tinysrgb&w=1920&h=600&fit=crop" 
+            src="/endoscopy-hospital-doctor-holding-endoscope-before-gastroscopy.jpg" 
             alt="Sell your endoscopy equipment to EndoZen" 
             className="w-full h-full object-cover opacity-40"
           />
@@ -157,7 +157,7 @@ const Equipment = () => {
             <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
               <div className="relative h-48 bg-gradient-to-br from-blue-500 to-blue-600">
                 <img 
-                  src="https://images.pexels.com/photos/4167541/pexels-photo-4167541.jpeg?auto=compress&cs=tinysrgb&w=400&h=200&fit=crop" 
+                  src="/Gastro.jpg" 
                   alt="Gastroscopes" 
                   className="w-full h-full object-cover opacity-30"
                 />
@@ -178,7 +178,7 @@ const Equipment = () => {
             <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
               <div className="relative h-48 bg-gradient-to-br from-green-500 to-green-600">
                 <img 
-                  src="https://images.pexels.com/photos/4386467/pexels-photo-4386467.jpeg?auto=compress&cs=tinysrgb&w=400&h=200&fit=crop" 
+                  src="/colonoscopy-endoscopic-examination.jpg" 
                   alt="Colonoscopes" 
                   className="w-full h-full object-cover opacity-30"
                 />
@@ -199,7 +199,7 @@ const Equipment = () => {
             <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
               <div className="relative h-48 bg-gradient-to-br from-purple-500 to-purple-600">
                 <img 
-                  src="https://images.pexels.com/photos/4021775/pexels-photo-4021775.jpeg?auto=compress&cs=tinysrgb&w=400&h=200&fit=crop" 
+                  src="/duodenoscope.webp" 
                   alt="Duodenoscopes" 
                   className="w-full h-full object-cover opacity-30"
                 />
@@ -220,7 +220,7 @@ const Equipment = () => {
             <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
               <div className="relative h-48 bg-gradient-to-br from-teal-500 to-teal-600">
                 <img 
-                  src="https://images.pexels.com/photos/4386370/pexels-photo-4386370.jpeg?auto=compress&cs=tinysrgb&w=400&h=200&fit=crop" 
+                  src="/bronchoscope.PNG" 
                   alt="Bronchoscopes" 
                   className="w-full h-full object-cover opacity-30"
                 />
@@ -241,7 +241,7 @@ const Equipment = () => {
             <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 md:col-span-2 lg:col-span-1">
               <div className="relative h-48 bg-gradient-to-br from-orange-500 to-orange-600">
                 <img 
-                  src="https://images.pexels.com/photos/4167541/pexels-photo-4167541.jpeg?auto=compress&cs=tinysrgb&w=400&h=200&fit=crop" 
+                  src="/Lightning sources.webp" 
                   alt="Light Sources and Processors" 
                   className="w-full h-full object-cover opacity-30"
                 />

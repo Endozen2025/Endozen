@@ -56,7 +56,7 @@ const Contact = () => {
         <div className="absolute inset-0 bg-black opacity-30"></div>
         <div className="absolute inset-0">
           <img 
-            src="https://images.pexels.com/photos/4167541/pexels-photo-4167541.jpeg?auto=compress&cs=tinysrgb&w=1920&h=600&fit=crop" 
+            src="/endoscopy-hospital-doctor-holding-endoscope-before-gastroscopy.jpg" 
             alt="Contact EndoZen team for endoscope repair and medical equipment service" 
             className="w-full h-full object-cover opacity-40"
           />
@@ -300,22 +300,22 @@ const Contact = () => {
               {
                 type: 'Hospitals',
                 description: 'Large hospital networks and medical centers',
-                image: 'https://images.pexels.com/photos/4167541/pexels-photo-4167541.jpeg?auto=compress&cs=tinysrgb&w=300&h=200&fit=crop'
+                image: '/hospital-building-red-cross-medical-institution-health-treatment-disease-wallpaper-background.jpg'
               },
               {
                 type: 'Diagnostic Centers',
                 description: 'Specialized diagnostic and imaging facilities',
-                image: 'https://images.pexels.com/photos/4386467/pexels-photo-4386467.jpeg?auto=compress&cs=tinysrgb&w=300&h=200&fit=crop'
+                image: '/hand-with-protective-gloves-holding-blood-samples-covid-test.jpg'
               },
               {
                 type: 'Clinics',
                 description: 'Private clinics and outpatient facilities',
-                image: 'https://images.pexels.com/photos/4386370/pexels-photo-4386370.jpeg?auto=compress&cs=tinysrgb&w=300&h=200&fit=crop'
+                image: '/empty-modern-medical-office-having-disease-documents-table-equipped-with-contemporary-furniture-hospital-workplace-with-nobody-it-ready-sickness-consultation-medicine-support.jpg'
               },
               {
                 type: 'Distributors',
                 description: 'Medical equipment distributors and dealers',
-                image: 'https://images.pexels.com/photos/4021775/pexels-photo-4021775.jpeg?auto=compress&cs=tinysrgb&w=300&h=200&fit=crop'
+                image: '/professional-handshake-symbolizing-scientific-collaboration.jpg'
               }
             ].map((facility, index) => (
               <div key={index} className="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
