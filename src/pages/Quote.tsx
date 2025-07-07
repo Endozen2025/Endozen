@@ -382,7 +382,7 @@ const Quote = () => {
             <div className="bg-white p-6 rounded-xl text-center shadow-lg">
               <Phone className="h-12 w-12 text-blue-600 mx-auto mb-4" />
               <h3 className="text-xl font-semibold text-gray-900 mb-2">Emergency Hotline</h3>
-              <p className="text-blue-600 font-bold text-lg">+1 (555) 123-4567</p>
+              <p className="text-blue-600 font-bold text-lg">+91-XXXXXXXXXX</p>
               <p className="text-gray-600 text-sm mt-2">Available 24/7</p>
             </div>
             <div className="bg-white p-6 rounded-xl text-center shadow-lg">
