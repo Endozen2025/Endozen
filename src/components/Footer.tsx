@@ -94,7 +94,7 @@ const Footer = () => {
               <div className="flex items-start">
                 <Mail className="h-5 w-5 text-blue-400 mr-3 mt-0.5" />
                 <div>
-                  <p className="text-gray-300">service@endozen.com</p>
+                  <p className="text-gray-300">info@endozenindia.com</p>
                   <p className="text-gray-400 text-sm">General Inquiries</p>
                 </div>
               </div>
