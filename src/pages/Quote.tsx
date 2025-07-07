@@ -88,7 +88,7 @@ const Quote = () => {
           <div className="flex flex-col md:flex-row items-center justify-center text-center md:text-left">
             <Phone className="h-6 w-6 mr-3 mb-2 md:mb-0" />
             <span className="font-semibold mr-4">Emergency Service Needed?</span>
-            <span>Call us directly: <a href="tel:+15551234567" className="underline font-bold">+1 (555) 123-4567</a></span>
+            <span>Call us directly: <a href="tel:+91-XXXXXXXXXX" className="underline font-bold">+1 (555) 123-4567</a></span>
           </div>
         </div>
       </section>
