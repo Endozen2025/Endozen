@@ -185,7 +185,9 @@ const Home = () => {
               </div>
             </div>
             <div>
-              <div className="text-4xl font-bold text-blue-600 mb-2">24/7</div>
+              <div className="flex items-center justify-center mb-2">
+                <AlertTriangle className="h-12 w-12 text-blue-600" />
+              </div>
               <div className="text-gray-600 text-sm leading-tight">
                 <p className="font-medium">Priority Support</p>
                 <p className="text-xs text-gray-500 mt-1">For Urgent Repairs</p>
