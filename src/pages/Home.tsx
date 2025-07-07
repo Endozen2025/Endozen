@@ -199,9 +199,9 @@ const Home = () => {
               Why Partner with EndoZen?
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Whether you're a small clinic or a large hospital network, EndoZen
-              is here to support your equipment so you can stay focused on
-              delivering exceptional patient care.
+              We go beyond repair — delivering lifecycle optimization,
+              preventive maintenance, cost-effective service contracts, and
+              expert nationwide support tailored to your operational needs.
             </p>
           </div>
 
