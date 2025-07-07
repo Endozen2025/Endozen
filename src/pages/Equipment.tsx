@@ -39,31 +39,27 @@ const Equipment = () => {
   const processSteps = [
     {
       step: '1',
-      title: 'Send Equipment Details',
-      description: 'Send us details about the equipment you want to sell (brand, model, condition)',
+      title: 'Send Details',
+      description: 'Email us your equipment details and photos',
       icon: FileText,
-      image: 'https://images.pexels.com/photos/4167541/pexels-photo-4167541.jpeg?auto=compress&cs=tinysrgb&w=300&h=200&fit=crop'
     },
     {
       step: '2', 
-      title: 'Receive Estimate',
-      description: 'Receive an estimate from our team within 1-2 business days',
+      title: 'Get Quote',
+      description: 'Receive our quote within 24 hours',
       icon: DollarSign,
-      image: 'https://images.pexels.com/photos/4386467/pexels-photo-4386467.jpeg?auto=compress&cs=tinysrgb&w=300&h=200&fit=crop'
     },
     {
       step: '3',
-      title: 'Schedule Pickup',
-      description: 'Schedule pickup or drop-off at your convenience',
+      title: 'Pickup',
+      description: 'We arrange convenient pickup',
       icon: Truck,
-      image: 'https://images.pexels.com/photos/4386370/pexels-photo-4386370.jpeg?auto=compress&cs=tinysrgb&w=300&h=200&fit=crop'
     },
     {
       step: '4',
       title: 'Get Paid',
-      description: 'Get paid after inspection and confirmation',
+      description: 'Payment after final inspection',
       icon: CheckCircle,
-      image: 'https://images.pexels.com/photos/4021775/pexels-photo-4021775.jpeg?auto=compress&cs=tinysrgb&w=300&h=200&fit=crop'
     }
   ];
 
@@ -256,89 +252,57 @@ const Equipment = () => {
       </section>
 
       {/* How It Works */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
+          <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               How It Works
             </h2>
             <p className="text-xl text-gray-600">
-              A simple 4-step process to turn your equipment into value
+              Simple 4-step process
             </p>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {processSteps.map((step, index) => (
-              <div key={index} className="text-center">
-                <img 
-                  src={step.image} 
-                  alt={step.title} 
-                  className="w-full h-40 object-cover rounded-xl mb-6 shadow-lg"
-                />
-                <div className="w-16 h-16 bg-gradient-to-br from-blue-600 to-green-600 text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-6">
+              <div key={index} className="text-center bg-white p-6 rounded-xl shadow-lg">
+                <div className="w-16 h-16 bg-gradient-to-br from-blue-600 to-green-600 text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">
                   {step.step}
                 </div>
                 <step.icon className="h-8 w-8 text-blue-600 mx-auto mb-4" />
-                <h3 className="text-xl font-semibold text-gray-900 mb-3">{step.title}</h3>
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">{step.title}</h3>
                 <p className="text-gray-600">{step.description}</p>
               </div>
             ))}
-          </div>
-
-          {/* Process Flow */}
-          <div className="mt-16 bg-white p-8 rounded-xl shadow-lg">
-            <div className="text-center">
-              <h3 className="text-2xl font-bold text-gray-900 mb-6">Ready to Get Started?</h3>
-              <p className="text-lg text-gray-600 mb-8">
-                The process is simple and straightforward. We handle all the logistics to make selling your equipment as easy as possible.
-              </p>
-              <div className="grid md:grid-cols-3 gap-6">
-                <div className="bg-gray-50 p-6 rounded-lg">
-                  <Camera className="h-8 w-8 text-blue-600 mx-auto mb-3" />
-                  <h4 className="font-semibold text-gray-900 mb-2">Take Photos</h4>
-                  <p className="text-sm text-gray-600">Send us clear photos of your equipment</p>
-                </div>
-                <div className="bg-gray-50 p-6 rounded-lg">
-                  <FileText className="h-8 w-8 text-green-600 mx-auto mb-3" />
-                  <h4 className="font-semibold text-gray-900 mb-2">Provide Details</h4>
-                  <p className="text-sm text-gray-600">Include brand, model, and condition information</p>
-                </div>
-                <div className="bg-gray-50 p-6 rounded-lg">
-                  <Mail className="h-8 w-8 text-blue-600 mx-auto mb-3" />
-                  <h4 className="font-semibold text-gray-900 mb-2">Send to Us</h4>
-                  <p className="text-sm text-gray-600">Email everything to info@endozenindia.com</p>
-                </div>
-              </div>
-            </div>
           </div>
         </div>
       </section>
 
       {/* Contact Information */}
-      <section className="py-20 bg-white">
+      <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
+          <div className="text-center mb-8">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Ready to Sell?
             </h2>
             <p className="text-xl text-gray-600 mb-8">
-              Send us photos and equipment info to get started
+              Contact us to get started
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+          <div className="grid md:grid-cols-2 gap-6 max-w-3xl mx-auto">
             {/* Email Contact */}
-            <div className="bg-gray-50 p-8 rounded-xl shadow-lg text-center hover:shadow-xl transition-shadow duration-300">
-              <div className="w-20 h-20 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-6">
-                <Mail className="h-10 w-10 text-blue-600" />
+            <div className="bg-gray-50 p-6 rounded-xl shadow-lg text-center hover:shadow-xl transition-shadow duration-300">
+              <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Mail className="h-8 w-8 text-blue-600" />
               </div>
-              <h3 className="text-2xl font-semibold text-gray-900 mb-4">Email Us</h3>
-              <p className="text-gray-600 mb-6">
-                Send photos and equipment details for a quick quote
+              <h3 className="text-xl font-semibold text-gray-900 mb-3">Email Us</h3>
+              <p className="text-gray-600 mb-4">
+                Send equipment details for quote
               </p>
               <a
                 href="mailto:info@endozenindia.com"
-                className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors duration-200 inline-flex items-center"
+                className="bg-blue-600 text-white px-6 py-2 rounded-lg font-semibold hover:bg-blue-700 transition-colors duration-200 inline-flex items-center"
               >
                 <Mail className="mr-2 h-5 w-5" />
                 info@endozenindia.com
@@ -346,86 +310,49 @@ const Equipment = () => {
             </div>
 
             {/* Phone Contact */}
-            <div className="bg-gray-50 p-8 rounded-xl shadow-lg text-center hover:shadow-xl transition-shadow duration-300">
-              <div className="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
-                <Phone className="h-10 w-10 text-green-600" />
+            <div className="bg-gray-50 p-6 rounded-xl shadow-lg text-center hover:shadow-xl transition-shadow duration-300">
+              <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Phone className="h-8 w-8 text-green-600" />
               </div>
-              <h3 className="text-2xl font-semibold text-gray-900 mb-4">Call Us</h3>
-              <p className="text-gray-600 mb-6">
-                Speak directly with our equipment specialists
+              <h3 className="text-xl font-semibold text-gray-900 mb-3">Call Us</h3>
+              <p className="text-gray-600 mb-4">
+                Speak with our specialists
               </p>
               <a
                 href="tel:+91-XXXXXXXXXX"
-                className="bg-green-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-green-700 transition-colors duration-200 inline-flex items-center"
+                className="bg-green-600 text-white px-6 py-2 rounded-lg font-semibold hover:bg-green-700 transition-colors duration-200 inline-flex items-center"
               >
                 <Phone className="mr-2 h-5 w-5" />
                 +91-XXXXXXXXXX
               </a>
             </div>
           </div>
-
-          {/* Additional Information */}
-          <div className="mt-12 text-center">
-            <div className="bg-gray-50 p-8 rounded-xl shadow-lg max-w-3xl mx-auto">
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">What to Include in Your Message</h3>
-              <div className="grid md:grid-cols-3 gap-6 text-left">
-                <div>
-                  <h4 className="font-semibold text-gray-900 mb-2">Equipment Details</h4>
-                  <ul className="text-sm text-gray-600 space-y-1">
-                    <li>• Brand and model</li>
-                    <li>• Serial number</li>
-                    <li>• Year of manufacture</li>
-                    <li>• Current condition</li>
-                  </ul>
-                </div>
-                <div>
-                  <h4 className="font-semibold text-gray-900 mb-2">Photos</h4>
-                  <ul className="text-sm text-gray-600 space-y-1">
-                    <li>• Overall equipment view</li>
-                    <li>• Control panel/display</li>
-                    <li>• Any damage or wear</li>
-                    <li>• Accessories included</li>
-                  </ul>
-                </div>
-                <div>
-                  <h4 className="font-semibold text-gray-900 mb-2">Additional Info</h4>
-                  <ul className="text-sm text-gray-600 space-y-1">
-                    <li>• Reason for selling</li>
-                    <li>• Service history</li>
-                    <li>• Location</li>
-                    <li>• Preferred timeline</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-blue-600 to-green-600 text-white">
+      <section className="py-16 bg-gradient-to-r from-blue-600 to-green-600 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Let's Help You Unlock Value from Your Idle Inventory
+            Turn Your Equipment Into Value
           </h2>
-          <p className="text-xl mb-8 max-w-3xl mx-auto">
-            Turn your unused or surplus endoscopy equipment into value with our simple, transparent process.
-            Get a fair quote and hassle-free pickup service.
+          <p className="text-lg mb-6 max-w-2xl mx-auto">
+            Simple, transparent process with fair pricing and hassle-free pickup.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
               href="mailto:info@endozenindia.com"
-              className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-colors duration-200 inline-flex items-center justify-center"
+              className="bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-200 inline-flex items-center justify-center"
             >
               <Mail className="mr-2 h-5 w-5" />
-              Email Equipment Details
+              Email Details
             </a>
             <a
               href="tel:+91-XXXXXXXXXX"
-              className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-blue-600 transition-colors duration-200 inline-flex items-center justify-center"
+              className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors duration-200 inline-flex items-center justify-center"
             >
               <Phone className="mr-2 h-5 w-5" />
-              Call for Quote
+              Call Now
             </a>
           </div>
         </div>
