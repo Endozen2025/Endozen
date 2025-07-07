@@ -1,6 +1,6 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { Activity, Phone, Mail, MapPin, Clock } from 'lucide-react';
+import React from "react";
+import { Link } from "react-router-dom";
+import { Activity, Phone, Mail, MapPin, Clock } from "lucide-react";
 
 const Footer = () => {
   return (
@@ -11,15 +11,14 @@ const Footer = () => {
           <div>
             <div className="flex items-center space-x-2 mb-4">
               <Activity className="h-8 w-8 text-blue-400" />
-              <span className="text-2xl font-bold">EndoZen</span>
+              <span className="text-2xl font-bold">EndoZen India Pvt Ltd</span>
             </div>
             <p className="text-gray-300 mb-4">
-              Professional endoscope and medical equipment servicing with certified technicians and guaranteed quality.
+              <b>Precision Care. Peace of Mind.</b>
             </p>
             <div className="flex space-x-2">
-              <div className="flex items-center text-gray-300">
-                <Clock className="h-4 w-4 mr-2" />
-                <span className="text-sm">24/7 Emergency Service</span>
+              <div className="text-sm text-gray-300">
+                Certified Endoscope Repair Services Across India
               </div>
             </div>
           </div>
@@ -28,11 +27,46 @@ const Footer = () => {
           <div>
             <h3 className="text-lg font-semibold mb-4">Services</h3>
             <ul className="space-y-2">
-              <li><Link to="/services" className="text-gray-300 hover:text-white transition-colors">Endoscope Repair</Link></li>
-              <li><Link to="/services" className="text-gray-300 hover:text-white transition-colors">Preventive Maintenance</Link></li>
-              <li><Link to="/services" className="text-gray-300 hover:text-white transition-colors">Equipment Calibration</Link></li>
-              <li><Link to="/services" className="text-gray-300 hover:text-white transition-colors">Emergency Service</Link></li>
-              <li><Link to="/services" className="text-gray-300 hover:text-white transition-colors">Training & Support</Link></li>
+              <li>
+                <Link
+                  to="/services"
+                  className="text-gray-300 hover:text-white transition-colors"
+                >
+                  Endoscope Repair
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/services"
+                  className="text-gray-300 hover:text-white transition-colors"
+                >
+                  Preventive Maintenance
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/services"
+                  className="text-gray-300 hover:text-white transition-colors"
+                >
+                  Equipment Calibration
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/services"
+                  className="text-gray-300 hover:text-white transition-colors"
+                >
+                  Emergency Service
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/services"
+                  className="text-gray-300 hover:text-white transition-colors"
+                >
+                  Training & Support
+                </Link>
+              </li>
             </ul>
           </div>
 
@@ -40,9 +74,30 @@ const Footer = () => {
           <div>
             <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
             <ul className="space-y-2">
-              <li><Link to="/about" className="text-gray-300 hover:text-white transition-colors">About Us</Link></li>
-              <li><Link to="/equipment" className="text-gray-300 hover:text-white transition-colors">Sell Equipment</Link></li>
-              <li><Link to="/quote" className="text-gray-300 hover:text-white transition-colors">Get Quote</Link></li>
+              <li>
+                <Link
+                  to="/about"
+                  className="text-gray-300 hover:text-white transition-colors"
+                >
+                  About Us
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/equipment"
+                  className="text-gray-300 hover:text-white transition-colors"
+                >
+                  Sell Equipment
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/quote"
+                  className="text-gray-300 hover:text-white transition-colors"
+                >
+                  Get Quote
+                </Link>
+              </li>
             </ul>
           </div>
 
@@ -80,10 +135,16 @@ const Footer = () => {
             © 2025 EndoZen. All rights reserved.
           </p>
           <div className="flex space-x-6 mt-4 md:mt-0">
-            <Link to="/privacy" className="text-gray-400 hover:text-white text-sm transition-colors">
+            <Link
+              to="/privacy"
+              className="text-gray-400 hover:text-white text-sm transition-colors"
+            >
               Privacy Policy
             </Link>
-            <Link to="/terms" className="text-gray-400 hover:text-white text-sm transition-colors">
+            <Link
+              to="/terms"
+              className="text-gray-400 hover:text-white text-sm transition-colors"
+            >
               Terms & Conditions
             </Link>
           </div>
