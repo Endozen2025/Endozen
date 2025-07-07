@@ -378,21 +378,6 @@ const Services = () => {
             </div>
           </div>
 
-          {/* Overview Card */}
-          <div className="bg-gradient-to-r from-blue-50 to-green-50 rounded-2xl p-8 mb-16">
-            <div className="text-center">
-              <Stethoscope className="h-16 w-16 text-blue-600 mx-auto mb-4" />
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">
-                Comprehensive Endoscope Repair Services
-              </h3>
-              <p className="text-lg text-gray-700 max-w-3xl mx-auto">
-                Our expert technicians provide complete repair and restoration
-                services for all major endoscope types used in diagnostic and
-                therapeutic procedures across multiple medical specialties.
-              </p>
-            </div>
-          </div>
-
           {/* Common Repairs Section */}
           <div className="bg-white rounded-2xl shadow-xl p-8 md:p-12">
             <div className="text-center mb-8">
