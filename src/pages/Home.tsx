@@ -170,8 +170,11 @@ const Home = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             <div>
-              <div className="text-4xl font-bold text-blue-600 mb-2">15+</div>
-              <div className="text-gray-600">Years Experience</div>
+              <div className="text-4xl font-bold text-blue-600 mb-2">14+</div>
+              <div className="text-gray-600">
+                <div>Years of Global Experience – Trusted</div>
+                <div>by Clients Worldwide</div>
+              </div>
             </div>
             <div>
               <div className="text-4xl font-bold text-green-600 mb-2">
