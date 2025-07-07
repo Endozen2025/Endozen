@@ -169,33 +169,33 @@ const Home = () => {
       {/* Stats Section */}
       <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center items-center">
             <div>
               <div className="text-4xl font-bold text-blue-600 mb-2">14+</div>
-              <div className="text-gray-600 text-sm leading-tight">
+              <div className="text-gray-600 text-sm leading-tight min-h-[3rem] flex flex-col justify-center">
                 <p className="font-medium">Years of Global Experience</p>
                 <p className="text-xs text-gray-500 mt-1">Trusted by Clients Worldwide</p>
               </div>
             </div>
             <div>
               <div className="text-4xl font-bold text-green-600 mb-2">5000+</div>
-              <div className="text-gray-600 text-sm leading-tight">
+              <div className="text-gray-600 text-sm leading-tight min-h-[3rem] flex flex-col justify-center">
                 <p className="font-medium">Equipment Serviced</p>
                 <p className="text-xs text-gray-500 mt-1">Across Healthcare Facilities</p>
               </div>
             </div>
             <div>
-              <div className="flex items-center justify-center mb-2">
+              <div className="flex items-center justify-center mb-2 h-[3rem]">
                 <AlertTriangle className="h-12 w-12 text-blue-600" />
               </div>
-              <div className="text-gray-600 text-sm leading-tight">
+              <div className="text-gray-600 text-sm leading-tight min-h-[3rem] flex flex-col justify-center">
                 <p className="font-medium">Priority Support</p>
                 <p className="text-xs text-gray-500 mt-1">For Urgent Repairs</p>
               </div>
             </div>
             <div>
               <div className="text-4xl font-bold text-green-600 mb-2">99%</div>
-              <div className="text-gray-600 text-sm leading-tight">
+              <div className="text-gray-600 text-sm leading-tight min-h-[3rem] flex flex-col justify-center">
                 <p className="font-medium">Customer Satisfaction</p>
                 <p className="text-xs text-gray-500 mt-1">Quality Service Guarantee</p>
               </div>
