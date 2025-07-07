@@ -11,15 +11,18 @@ const Footer = () => {
           <div>
             <div className="flex items-center space-x-2 mb-4">
               <Activity className="h-8 w-8 text-blue-400" />
-              <span className="text-2xl font-bold">EndoZen India Pvt Ltd</span>
-            </div>
-            <p className="text-gray-300 mb-4">
-              <b>Precision Care. Peace of Mind.</b>
-            </p>
-            <div className="flex space-x-2">
-              <div className="text-sm text-gray-300">
-                Certified Endoscope Repair Services Across India
+              <div>
+                <div className="text-2xl font-bold">EndoZen</div>
+                <div className="text-sm text-blue-300">India Pvt Ltd</div>
               </div>
+            </div>
+            <div className="mb-4">
+              <p className="text-gray-300 font-semibold mb-2">
+                Precision Care. Peace of Mind.
+              </p>
+              <p className="text-sm text-gray-400">
+                Certified Endoscope Repair Services Across India
+              </p>
             </div>
           </div>
 
@@ -32,7 +35,7 @@ const Footer = () => {
                   to="/services"
                   className="text-gray-300 hover:text-white transition-colors"
                 >
-                  Endoscope Repair
+                  Scope Repair Services
                 </Link>
               </li>
               <li>
@@ -64,7 +67,7 @@ const Footer = () => {
                   to="/services"
                   className="text-gray-300 hover:text-white transition-colors"
                 >
-                  Training & Support
+                  Remote Diagnostics
                 </Link>
               </li>
             </ul>
