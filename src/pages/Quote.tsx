@@ -28,13 +28,18 @@ const Quote = () => {
     }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  // Mock submit function
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Here you would typically send the data to your backend
-    console.log('Form submitted:', formData);
-    setIsSubmitted(true);
-    // Reset form after 3 seconds
-    setTimeout(() => setIsSubmitted(false), 3000);
+    try {
+      // Simulate async API call
+      await new Promise(resolve => setTimeout(resolve, 1000));
+      setIsSubmitted(true);
+      // Reset form after 3 seconds
+      setTimeout(() => setIsSubmitted(false), 3000);
+    } catch (error) {
+      alert('An error occurred. Please try again.');
+    }
   };
 
   if (isSubmitted) {
@@ -88,7 +93,7 @@ const Quote = () => {
           <div className="flex flex-col md:flex-row items-center justify-center text-center md:text-left">
             <Phone className="h-6 w-6 mr-3 mb-2 md:mb-0" />
             <span className="font-semibold mr-4">Emergency Service Needed?</span>
-            <span>Call us directly: <a href="tel:+91-XXXXXXXXXX" className="underline font-bold">+1 (555) 123-4567</a></span>
+            <span>Call us directly: <a href="tel:+91-XXXXXXXXXX" className="underline font-bold">+91-XXXXXXXXXX</a></span>
           </div>
         </div>
       </section>
@@ -191,7 +196,7 @@ const Quote = () => {
                     value={formData.phone}
                     onChange={handleChange}
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
-                    placeholder="+1 (555) 123-4567"
+                    placeholder="+91-XXXXXXXXXX"
                   />
                 </div>
               </div>

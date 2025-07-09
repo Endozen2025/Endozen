@@ -6,19 +6,18 @@ import {
   Clock,
   Users,
   CheckCircle,
-  Star,
-  Phone,
   Award,
-  Wrench,
   Settings,
   Target,
   Truck,
-  Search,
-  FileText,
   AlertTriangle,
+  Wrench,
 } from "lucide-react";
+import { useContent } from "../hooks/useContent";
 
 const Home = () => {
+  const { getContent } = useContent();
+
   return (
     <div className="pt-16">
       {/* Hero Banner */}
@@ -31,27 +30,25 @@ const Home = () => {
             className="w-full h-full object-cover opacity-40"
           />
         </div>
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 md:py-32">
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-28">
           <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold mb-6">
+            <h1 className="text-3xl md:text-5xl font-bold mb-2">
               Expert Endoscope Care for
-              <br />
-              <span className="text-green-300">Peace of Mind</span>
             </h1>
-
+            <h2 className="text-3xl md:text-5xl font-bold mb-6" style={{ color: '#4ADE80' }}>
+              Peace of Mind
+            </h2>
             <div className="mb-8">
-              <div className="text-xl md:text-2xl font-semibold mb-6 tracking-wider">
-                REPAIRS | UPGRADES | PURCHASES| PREVENTIVE MAINTENANCE
+              <div className="text-lg md:text-xl font-semibold mb-6 tracking-wider">
+                REPAIRS | UPGRADES | PURCHASES | PREVENTIVE MAINTENANCE
               </div>
             </div>
-
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/contact"
                 className="bg-green-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-green-600 transition-colors duration-200 flex items-center justify-center shadow-lg"
               >
-                Contact Us
-                <ArrowRight className="ml-2 h-5 w-5" />
+                Contact Us <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
               <Link
                 to="/quote"
@@ -68,30 +65,20 @@ const Home = () => {
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+            <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6">
               <span className="text-blue-600">Precision in Every Repair.</span>{" "}
-              <span className="text-green-600">
-                Reliability in Every Service.
-              </span>
+              <span className="text-green-600">Reliability in Every Service.</span>
             </h2>
           </div>
 
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
-              <div className="space-y-6 text-gray-600 text-lg leading-relaxed">
+              <div className="space-y-6 text-gray-600 text-base leading-relaxed">
                 <p>
-                  At EndoZen, we take a precision-centered approach to endoscope
-                  repair and lifecycle management. We understand the daily
-                  challenges faced by hospitals, clinics, and diagnostic centers
-                  - delayed repairs, inconsistent service quality, and rising
-                  costs.
+                  {getContent('home', 'precision_reliability', 'description_paragraph_1') || 'At EndoZen, we take a precision-centered approach to endoscope repair and lifecycle management. We understand the daily challenges faced by hospitals, clinics, and diagnostic centers - delayed repairs, inconsistent service quality, and rising costs.'}
                 </p>
                 <p>
-                  That's why we offer accurate, affordable, and dependable
-                  repair solutions for flexible endoscopes across India. Every
-                  device we service undergoes strict quality control to ensure
-                  optimal performance and full compliance with healthcare
-                  standards.
+                  {getContent('home', 'precision_reliability', 'description_paragraph_2') || 'That\'s why we offer accurate, affordable, and dependable repair solutions for flexible endoscopes across India. Every device we service undergoes strict quality control to ensure optimal performance and full compliance with healthcare standards.'}
                 </p>
               </div>
 
@@ -99,20 +86,19 @@ const Home = () => {
                 <div className="bg-blue-50 p-6 rounded-xl">
                   <Target className="h-8 w-8 text-blue-600 mb-3" />
                   <h3 className="font-semibold text-gray-900 mb-2">
-                    Precision-Centered
+                    {getContent('home', 'precision_reliability', 'precision_centered_title') || 'Precision-Centered'}
                   </h3>
                   <p className="text-gray-600 text-sm">
-                    Every repair follows strict protocols for optimal
-                    performance
+                    {getContent('home', 'precision_reliability', 'precision_centered_description') || 'Every repair follows strict protocols for optimal performance'}
                   </p>
                 </div>
                 <div className="bg-green-50 p-6 rounded-xl">
                   <Shield className="h-8 w-8 text-green-600 mb-3" />
                   <h3 className="font-semibold text-gray-900 mb-2">
-                    Quality Control
+                    {getContent('home', 'precision_reliability', 'quality_control_title') || 'Quality Control'}
                   </h3>
                   <p className="text-gray-600 text-sm">
-                    Comprehensive testing ensures healthcare compliance
+                    {getContent('home', 'precision_reliability', 'quality_control_description') || 'Comprehensive testing ensures healthcare compliance'}
                   </p>
                 </div>
               </div>
@@ -121,12 +107,11 @@ const Home = () => {
                 <div className="flex items-center mb-4">
                   <Truck className="h-8 w-8 mr-3" />
                   <h3 className="text-xl font-semibold">
-                    Nationwide Pickup & Delivery Available
+                    {getContent('home', 'precision_reliability', 'pickup_delivery_title') || 'Nationwide Pickup & Delivery Available'}
                   </h3>
                 </div>
                 <p className="text-blue-100">
-                  Convenient logistics support across India for seamless service
-                  experience
+                  {getContent('home', 'precision_reliability', 'pickup_delivery_description') || 'Convenient logistics support across India for seamless service experience'}
                 </p>
               </div>
             </div>
@@ -140,23 +125,23 @@ const Home = () => {
               <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent rounded-xl"></div>
               <div className="absolute bottom-6 left-6 right-6 bg-white/90 backdrop-blur-sm p-6 rounded-lg">
                 <h3 className="text-xl font-bold text-gray-900 mb-3">
-                  Our Commitment
+                  {getContent('home', 'precision_reliability', 'our_commitment_title') || 'Our Commitment'}
                 </h3>
                 <div className="space-y-2">
                   <div className="flex items-center text-gray-600">
                     <CheckCircle className="h-5 w-5 text-green-500 mr-3" />
                     <span className="text-sm">
-                      Accurate & affordable solutions
+                      {getContent('home', 'precision_reliability', 'commitment_point_1') || 'Accurate & affordable solutions'}
                     </span>
                   </div>
                   <div className="flex items-center text-gray-600">
                     <CheckCircle className="h-5 w-5 text-green-500 mr-3" />
-                    <span className="text-sm">Dependable repair services</span>
+                    <span className="text-sm">{getContent('home', 'precision_reliability', 'commitment_point_2') || 'Dependable repair services'}</span>
                   </div>
                   <div className="flex items-center text-gray-600">
                     <CheckCircle className="h-5 w-5 text-green-500 mr-3" />
                     <span className="text-sm">
-                      Healthcare standards compliance
+                      {getContent('home', 'precision_reliability', 'commitment_point_3') || 'Healthcare standards compliance'}
                     </span>
                   </div>
                 </div>
@@ -171,33 +156,33 @@ const Home = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center items-center">
             <div>
-              <div className="text-4xl font-bold text-blue-600 mb-2">14+</div>
-              <div className="text-gray-600 text-sm leading-tight min-h-[3rem] flex flex-col justify-center">
+              <div className="text-3xl font-bold text-blue-600 mb-2">14+</div>
+              <div className="text-gray-600 text-xs leading-tight min-h-[3rem] flex flex-col justify-center">
                 <p className="font-medium">Years of Global Experience</p>
                 <p className="text-xs text-gray-500 mt-1">Trusted by Clients Worldwide</p>
               </div>
             </div>
             <div>
-              <div className="text-4xl font-bold text-green-600 mb-2">5000+</div>
-              <div className="text-gray-600 text-sm leading-tight min-h-[3rem] flex flex-col justify-center">
-                <p className="font-medium">Equipment Serviced</p>
-                <p className="text-xs text-gray-500 mt-1">Across Healthcare Facilities</p>
+              <div className="text-3xl font-bold text-green-600 mb-2">{getContent('home', 'stats', 'equipment_serviced_number') || '5000+'}</div>
+              <div className="text-gray-600 text-xs leading-tight min-h-[3rem] flex flex-col justify-center">
+                <p className="font-medium">{getContent('home', 'stats', 'equipment_serviced_title') || 'Equipment Serviced'}</p>
+                <p className="text-xs text-gray-500 mt-1">{getContent('home', 'stats', 'equipment_serviced_subtitle') || 'Across Healthcare Facilities'}</p>
               </div>
             </div>
             <div>
               <div className="flex items-center justify-center mb-2 h-[3rem]">
                 <AlertTriangle className="h-12 w-12 text-blue-600" />
               </div>
-              <div className="text-gray-600 text-sm leading-tight min-h-[3rem] flex flex-col justify-center">
-                <p className="font-medium">Priority Support</p>
-                <p className="text-xs text-gray-500 mt-1">For Urgent Repairs</p>
+              <div className="text-gray-600 text-xs leading-tight min-h-[3rem] flex flex-col justify-center">
+                <p className="font-medium">{getContent('home', 'stats', 'priority_support_title') || 'Priority Support'}</p>
+                <p className="text-xs text-gray-500 mt-1">{getContent('home', 'stats', 'priority_support_subtitle') || 'For Urgent Repairs'}</p>
               </div>
             </div>
             <div>
-              <div className="text-4xl font-bold text-green-600 mb-2">99%</div>
-              <div className="text-gray-600 text-sm leading-tight min-h-[3rem] flex flex-col justify-center">
-                <p className="font-medium">Customer Satisfaction</p>
-                <p className="text-xs text-gray-500 mt-1">Quality Service Guarantee</p>
+              <div className="text-3xl font-bold text-green-600 mb-2">{getContent('home', 'stats', 'customer_satisfaction_number') || '99%'}</div>
+              <div className="text-gray-600 text-xs leading-tight min-h-[3rem] flex flex-col justify-center">
+                <p className="font-medium">{getContent('home', 'stats', 'customer_satisfaction_title') || 'Customer Satisfaction'}</p>
+                <p className="text-xs text-gray-500 mt-1">{getContent('home', 'stats', 'customer_satisfaction_subtitle') || 'Quality Service Guarantee'}</p>
               </div>
             </div>
           </div>
@@ -208,13 +193,11 @@ const Home = () => {
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+            <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
               Why Partner with EndoZen?
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              We go beyond repair — delivering lifecycle optimization,
-              preventive maintenance, cost-effective service contracts, and
-              expert nationwide support tailored to your operational needs.
+            <p className="text-base text-gray-600 max-w-3xl mx-auto">
+              We go beyond repair — delivering lifecycle optimization, preventive maintenance, cost-effective service contracts, and expert nationwide support tailored to your operational needs.
             </p>
           </div>
 
@@ -231,12 +214,10 @@ const Home = () => {
                 </div>
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-4">
-                Extend Equipment Lifespan
+                {getContent('home', 'why_choose', 'extend_lifespan_title') || 'Extend Equipment Lifespan'}
               </h3>
               <p className="text-gray-600 mb-6">
-                Our precision repair and maintenance services significantly
-                extend the lifespan of your endoscopy equipment, maximizing your
-                investment.
+                {getContent('home', 'why_choose', 'extend_lifespan_description') || 'Our precision repair and maintenance services significantly extend the lifespan of your endoscopy equipment, maximizing your investment.'}
               </p>
               <ul className="space-y-2">
                 <li className="flex items-center text-sm text-gray-600">
@@ -266,11 +247,10 @@ const Home = () => {
                 </div>
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-4">
-                Minimize Downtime
+                {getContent('home', 'why_choose', 'minimize_downtime_title') || 'Minimize Downtime'}
               </h3>
               <p className="text-gray-600 mb-6">
-                Improve device availability and minimize downtime with our fast
-                turnaround times and preventive maintenance programs.
+                {getContent('home', 'why_choose', 'minimize_downtime_description') || 'Improve device availability and minimize downtime with our fast turnaround times and preventive maintenance programs.'}
               </p>
               <ul className="space-y-2">
                 <li className="flex items-center text-sm text-gray-600">
@@ -296,11 +276,10 @@ const Home = () => {
                 </div>
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-4">
-                Expert Support
+                {getContent('home', 'why_choose', 'expert_support_title') || 'Expert Support'}
               </h3>
               <p className="text-gray-600 mb-6">
-                Access expert guidance and responsive technical support with
-                tailored service contracts and nationwide logistics.
+                {getContent('home', 'why_choose', 'expert_support_description') || 'Access expert guidance and responsive technical support with tailored service contracts and nationwide logistics.'}
               </p>
               <ul className="space-y-2">
                 <li className="flex items-center text-sm text-gray-600">
@@ -330,11 +309,10 @@ const Home = () => {
                 </div>
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-4">
-                Reduce Disruptions
+                {getContent('home', 'why_choose', 'reduce_disruptions_title') || 'Reduce Disruptions'}
               </h3>
               <p className="text-gray-600 mb-6">
-                Reduce operational disruptions with our comprehensive
-                maintenance programs and proactive equipment monitoring.
+                {getContent('home', 'why_choose', 'reduce_disruptions_description') || 'Reduce operational disruptions with our comprehensive maintenance programs and proactive equipment monitoring.'}
               </p>
               <ul className="space-y-2">
                 <li className="flex items-center text-sm text-gray-600">
@@ -364,11 +342,10 @@ const Home = () => {
                 </div>
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-4">
-                Affordable Solutions
+                {getContent('home', 'why_choose', 'affordable_solutions_title') || 'Affordable Solutions'}
               </h3>
               <p className="text-gray-600 mb-6">
-                Get accurate, affordable, and dependable repair solutions with
-                transparent pricing and comprehensive warranties.
+                {getContent('home', 'why_choose', 'affordable_solutions_description') || 'Get accurate, affordable, and dependable repair solutions with transparent pricing and comprehensive warranties.'}
               </p>
               <ul className="space-y-2">
                 <li className="flex items-center text-sm text-gray-600">
@@ -393,19 +370,31 @@ const Home = () => {
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Our Services
+            <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
+              {getContent('home', 'services', 'title') || 'Our Services'}
             </h2>
-            <p className="text-xl text-gray-600">
-              Comprehensive endoscope and medical equipment servicing solutions
+            <p className="text-base text-gray-600">
+              {getContent('home', 'services', 'subtitle') || 'Comprehensive endoscope and medical equipment servicing solutions'}
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {[
               {
-                title: "Preventive Maintenance",
+                title: "Endoscope",
                 description:
+                  "Expert repair of flexible endoscopes including gastroscopes, colonoscopes, and bronchoscopes with precision tools and high-grade components.",
+                features: [
+                  "Endoscope repair",
+                  "Light guide cable service",
+                  "Insertion tube replacement",
+                ],
+                icon: Wrench,
+                image: "/Endoscope.jpg", // Use the same image as Services page
+              },
+              {
+                title: getContent('home', 'services', 'preventive_maintenance_title') || "Preventive Maintenance",
+                description: getContent('home', 'services', 'preventive_maintenance_description') ||
                   "Scheduled maintenance programs to prevent costly breakdowns and extend equipment life with comprehensive testing.",
                 features: [
                   "Regular inspections",
@@ -416,18 +405,18 @@ const Home = () => {
                 image: "/endoscope-closeup-blue-surface (1).jpg",
               },
               {
-                title: "Emergency Service",
-                description:
-                  "24/7 emergency repair service to minimize downtime and keep your facility operational with same-day response.",
+                title: getContent('home', 'services', 'priority_support_title') || "Priority Support",
+                description: getContent('home', 'services', 'priority_support_description') ||
+                  "Fast-track support to minimize downtime and keep your facility operational. Get immediate assistance, on-site service, and access to loaner equipment when you need it most.",
                 features: [
-                  "Same-day response",
+                  "Immediate response",
                   "On-site service",
-                  "Loaner equipment",
+                  "Loaner equipment available",
                 ],
                 icon: Clock,
                 image: "/2149478511.jpg",
-              },
-            ].map((service, index) => (
+              }
+            ].map((service: any, index: number) => (
               <div
                 key={index}
                 className="bg-white rounded-xl overflow-hidden hover:shadow-lg transition-shadow duration-300"
@@ -446,7 +435,7 @@ const Home = () => {
                   </div>
                   <p className="text-gray-600 mb-4">{service.description}</p>
                   <ul className="space-y-2 mb-6">
-                    {service.features.map((feature, idx) => (
+                    {service.features.map((feature: string, idx: number) => (
                       <li
                         key={idx}
                         className="flex items-center text-sm text-gray-600"
@@ -466,43 +455,9 @@ const Home = () => {
               to="/services"
               className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors duration-200 inline-flex items-center"
             >
-              View All Services
+              {getContent('home', 'services', 'view_all_services_button') || 'View All Services'}
               <ArrowRight className="ml-2 h-5 w-5" />
             </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* Testimonial Preview */}
-      <section className="py-20 bg-blue-600 text-white relative overflow-hidden">
-        <div className="absolute inset-0">
-          <img
-            src="/examination-endoscope-room.jpg"
-            alt="Medical professionals working with endoscopes and equipment"
-            className="w-full h-full object-cover opacity-20"
-          />
-        </div>
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <div className="flex justify-center mb-6">
-              {[...Array(5)].map((_, i) => (
-                <Star
-                  key={i}
-                  className="h-8 w-8 text-yellow-400 fill-current"
-                />
-              ))}
-            </div>
-            <blockquote className="text-2xl md:text-3xl font-light mb-8 max-w-4xl mx-auto">
-              "EndoZen has been our trusted partner for over 5 years. Their
-              expertise and reliability have kept our endoscopy department
-              running smoothly with minimal downtime."
-            </blockquote>
-            <div className="text-lg">
-              <p className="font-semibold">Dr. Sarah Johnson</p>
-              <p className="opacity-90">
-                Chief of Gastroenterology, Metropolitan Medical Center
-              </p>
-            </div>
           </div>
         </div>
       </section>
@@ -510,25 +465,24 @@ const Home = () => {
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-green-600 to-blue-600 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Ready to Service Your Equipment?
+          <h2 className="text-2xl md:text-3xl font-bold mb-4">
+            {getContent('home', 'cta', 'title') || 'Ready to Service Your Equipment?'}
           </h2>
-          <p className="text-xl mb-8 max-w-2xl mx-auto">
-            Get a free quote today and experience the EndoZen difference. Fast,
-            reliable, and professional service guaranteed.
+          <p className="text-base mb-8 max-w-2xl mx-auto">
+            {getContent('home', 'cta', 'description') || 'Get a free quote today and experience the EndoZen difference. Fast, reliable, and professional service guaranteed.'}
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               to="/quote"
               className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-colors duration-200"
             >
-              Get Free Quote
+              {getContent('home', 'cta', 'button_1_text') || 'Get Free Quote'}
             </Link>
             <Link
               to="/contact"
               className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-blue-600 transition-colors duration-200"
             >
-              Contact Us Today
+              {getContent('home', 'cta', 'button_2_text') || 'Contact Us Today'}
             </Link>
           </div>
         </div>

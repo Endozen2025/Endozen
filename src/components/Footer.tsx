@@ -1,8 +1,10 @@
-import React from "react";
 import { Link } from "react-router-dom";
 import { Activity, Phone, Mail, MapPin, Clock } from "lucide-react";
+import { useContent } from "../hooks/useContent";
 
 const Footer = () => {
+  const { getContent } = useContent();
+
   return (
     <footer className="bg-gray-900 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
@@ -12,16 +14,20 @@ const Footer = () => {
             <div className="flex items-center space-x-2 mb-4">
               <Activity className="h-8 w-8 text-blue-400" />
               <div>
-                <div className="text-2xl font-bold">EndoZen</div>
-                <div className="text-sm text-blue-300">India Pvt Ltd</div>
+                <div className="text-2xl font-bold">
+                  {getContent('footer', 'brand', 'company_name') || 'EndoZen'}
+                </div>
+                <div className="text-sm text-blue-300">
+                  {getContent('footer', 'brand', 'company_subtitle') || 'India Pvt Ltd'}
+                </div>
               </div>
             </div>
             <div className="mb-4">
               <p className="text-gray-300 font-semibold mb-2">
-                Precision Care. Peace of Mind.
+                {getContent('footer', 'brand', 'tagline') || 'Precision Care. Peace of Mind.'}
               </p>
               <p className="text-sm text-gray-400">
-                Certified Endoscope Repair Services Across India
+                {getContent('footer', 'brand', 'description') || 'Certified Endoscope Repair Services Across India'}
               </p>
             </div>
           </div>
@@ -35,6 +41,14 @@ const Footer = () => {
                   to="/services"
                   className="text-gray-300 hover:text-white transition-colors"
                 >
+                  Endoscope
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/services"
+                  className="text-gray-300 hover:text-white transition-colors"
+                >
                   Preventive Maintenance
                 </Link>
               </li>
@@ -43,7 +57,7 @@ const Footer = () => {
                   to="/services"
                   className="text-gray-300 hover:text-white transition-colors"
                 >
-                  Emergency Service
+                  Priority Support
                 </Link>
               </li>
             </ul>
@@ -87,22 +101,30 @@ const Footer = () => {
               <div className="flex items-start">
                 <Phone className="h-5 w-5 text-blue-400 mr-3 mt-0.5" />
                 <div>
-                  <p className="text-gray-300">+91-XXXXXXXXXX</p>
+                  <p className="text-gray-300">
+                    {getContent('footer', 'contact', 'phone') || '+91-XXXXXXXXXX'}
+                  </p>
                   <p className="text-gray-400 text-sm">24/7 Emergency Line</p>
                 </div>
               </div>
               <div className="flex items-start">
                 <Mail className="h-5 w-5 text-blue-400 mr-3 mt-0.5" />
                 <div>
-                  <p className="text-gray-300">info@endozenindia.com</p>
+                  <p className="text-gray-300">
+                    {getContent('footer', 'contact', 'email') || 'info@endozenindia.com'}
+                  </p>
                   <p className="text-gray-400 text-sm">General Inquiries</p>
                 </div>
               </div>
               <div className="flex items-start">
                 <MapPin className="h-5 w-5 text-blue-400 mr-3 mt-0.5" />
                 <div>
-                  <p className="text-gray-300">1234 Medical Center Dr</p>
-                  <p className="text-gray-300">Healthcare City, HC 12345</p>
+                  <p className="text-gray-300">
+                    {getContent('footer', 'contact', 'address') || '[Your Address Here]'}
+                  </p>
+                  <p className="text-gray-300">
+                    {getContent('footer', 'contact', 'business_hours') || 'Mon-Fri: 9AM-5PM'}
+                  </p>
                 </div>
               </div>
             </div>

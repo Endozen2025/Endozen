@@ -4,8 +4,6 @@ import {
   Wrench,
   Shield,
   Clock,
-  Settings,
-  GraduationCap,
   Phone,
   CheckCircle,
   ArrowRight,
@@ -13,204 +11,166 @@ import {
   FileText,
   Award,
   Truck,
-  Stethoscope,
   Microscope,
-  Activity,
   Heart,
-  Zap,
-  Eye,
-  Target,
   Scan,
-  Camera,
   Monitor,
-  Telescope,
-  Radar,
 } from "lucide-react";
 
-// React Icons - Font Awesome Icons (Medical)
-import { 
-  FaStethoscope, 
-  FaMicroscope, 
-  FaEye, 
-  FaHeartbeat,
-  FaSearch,
-  FaBullseye,
-  FaCamera
-} from "react-icons/fa";
+// All content is now static/mock data
+const staticContent = {
+  hero: {
+    title: "Endoscope Repair Services",
+    subtitle: "Precision Repairs. Trusted Results.",
+    description: "At EndoZen, we provide expert repair services for flexible endoscopes used in hospitals, diagnostic centers, and surgical facilities. Our focus is on restoring scopes to full functionality while maintaining the highest standards of quality, safety, and performance."
+  },
+  service_promise: {
+    description: "We understand the critical role your scopes play in patient care. That's why our repair process is designed to be accurate, transparent, and fast—minimizing downtime and extending the life of your equipment."
+  },
+  pickup_delivery: {
+    title: "Pickup and Delivery Support Available Across India",
+    subtitle: "Convenient nationwide logistics to ensure seamless service experience for your facility"
+  },
+  we_repair: {
+    title: "We Repair",
+    subtitle: "Comprehensive repair services for all types of flexible endoscopes and their components",
+    gastroscope_title: "Gastroscopes",
+    gastroscope_description: "Diagnostic and therapeutic gastroscopes for upper GI procedures.",
+    colonoscope_title: "Colonoscopes",
+    colonoscope_description: "High-definition colonoscopes for screening and intervention.",
+    duodenoscope_title: "Duodenoscopes",
+    duodenoscope_description: "ERCP and specialty duodenoscopes, any condition.",
+    bronchoscope_title: "Bronchoscopes",
+    bronchoscope_description: "Flexible bronchoscopes for pulmonary procedures."
+  },
+  common_repairs: {
+    title: "Common Repairs Include",
+    subtitle: "Our expert technicians handle a wide range of repair services to restore your endoscopes to optimal performance",
+    repair_1: "Insertion tube and bending rubber replacement",
+    repair_2: "Biopsy/suction channel restoration",
+    repair_3: "Light guide bundle repair",
+    repair_4: "Distal tip, angulation wire, and control knob adjustments",
+    repair_5: "Connector and cable repair",
+    repair_6: "Full leak testing and quality checks",
+    qa_note: "All repairs undergo strict quality assurance and testing."
+  },
+  repair_process: {
+    title: "Our Repair Process",
+    subtitle: "A streamlined approach designed for accuracy, transparency, and speed",
+    step_1_title: "Inspection & Leak Testing",
+    step_1_description: "We start with a thorough inspection and diagnostic testing to identify all issues.",
+    step_2_title: "Quotation & Approval",
+    step_2_description: "A detailed estimate is shared for your review and approval before any work begins.",
+    step_3_title: "Expert Repair",
+    step_3_description: "Repairs are completed by trained technicians using precision tools and high-grade components.",
+    step_4_title: "Final QA & Return",
+    step_4_description: "Each unit undergoes rigorous quality assurance checks before return.",
+    turnaround_note: "Typical turnaround: 3-5 business days. Rush service available."
+  },
+  why_choose: {
+    title: "Why Choose EndoZen?",
+    technician_title: "Trained Technicians",
+    technician_description: "Deep expertise in flexible endoscope repair with continuous training and certification updates.",
+    components_title: "High-Quality Components",
+    components_description: "Use of high-quality OEM-compatible components ensuring long-lasting repairs and optimal performance.",
+    process_title: "Transparent Process",
+    process_description: "Transparent process and fair pricing with detailed estimates and clear communication throughout.",
+    turnaround_title: "Fast Turnaround",
+    turnaround_description: "Fast turnaround and consistent communication to minimize your equipment downtime.",
+    pickup_title: "Pickup & Delivery",
+    pickup_description: "Pickup and delivery support available across India for your convenience.",
+    support_title: "Ongoing Support",
+    support_description: "Comprehensive after-service support and technical consultation for optimal equipment performance."
+  },
+  complete_service: {
+    title: "Complete Service Solutions",
+    subtitle: "Comprehensive endoscope and medical equipment servicing solutions"
+  },
+  cta: {
+    title: "Ready to Restore Your Equipment?",
+    subtitle: "Request a free quote or contact us for more information.",
+    quote_button: "Get a Quote",
+    contact_button: "Contact Us"
+  }
+};
 
-// Material Design Icons
-import { 
-  MdLocalHospital, 
-  MdVisibility, 
-  MdMonitorHeart,
-  MdScanner,
-  MdVideocam
-} from "react-icons/md";
+const services = [
+  {
+    icon: Shield,
+    title: "Preventive Maintenance",
+    description:
+      "Scheduled maintenance programs to prevent costly breakdowns",
+    features: [
+      "Regular inspection schedules",
+      "Performance testing and calibration",
+      "Wear part replacement",
+      "Cleaning and disinfection validation",
+      "Documentation and compliance reporting",
+      "Customized maintenance plans",
+    ],
+    turnaround: "Scheduled",
+    warranty: "30 days",
+    image: "/endoscope-closeup-blue-surface (1).jpg",
+  },
+  {
+    icon: Clock,
+    title: "Emergency Service",
+    description: "24/7 emergency repair service to minimize downtime",
+    features: [
+      "Same-day response available",
+      "On-site service capability",
+      "Emergency hotline support",
+      "Loaner equipment programs",
+      "Priority processing",
+      "Weekend and holiday coverage",
+    ],
+    turnaround: "Same day",
+    warranty: "90 days",
+    image: "/2149478511.jpg",
+  },
+];
 
-// Heroicons
-import { 
-  EyeIcon, 
-  MagnifyingGlassIcon,
-  CameraIcon,
-  HeartIcon
-} from "@heroicons/react/24/outline";
+// Add static service cards for the Complete Service Solutions section
+const completeServiceCards = [
+  {
+    title: "Endoscope",
+    description:
+      "Expert repair of flexible endoscopes including gastroscopes, colonoscopes, and bronchoscopes with precision tools and high-grade components.",
+    features: [
+      "Endoscope repair",
+      "Light guide cable service",
+      "Insertion tube replacement",
+    ],
+    icon: Wrench,
+    image: "/Endoscope.jpg", // This matches the actual file in public folder
+  },
+  {
+    title: "Preventive Maintenance",
+    description:
+      "Scheduled maintenance programs to prevent costly breakdowns and extend equipment life with comprehensive testing.",
+    features: [
+      "Regular inspections",
+      "Performance testing",
+      "Compliance certification",
+    ],
+    icon: Shield,
+    image: "/endoscope-closeup-blue-surface (1).jpg",
+  },
+  {
+    title: "Priority Support",
+    description:
+      "Fast-track support to minimize downtime and keep your facility operational. Get immediate assistance, on-site service, and access to loaner equipment when you need it most.",
+    features: [
+      "Immediate response",
+      "On-site service",
+      "Loaner equipment available",
+    ],
+    icon: Clock,
+    image: "/2149478511.jpg",
+  },
+];
 
 const Services = () => {
-  const services = [
-    {
-      icon: Wrench,
-      title: "Scope Repair Services",
-      description:
-        "Expert repair services for flexible endoscopes used in hospitals, diagnostic centers, and surgical facilities",
-      features: [
-        "Video Gastroscopes, Colonoscopes, Duodenoscopes, Bronchoscopes",
-        "Light guide cables, control bodies, insertion tubes",
-        "Bending sections and angulation mechanisms",
-        "Equipment for gastroenterology, pulmonology, surgical endoscopy",
-        "Insertion tube and bending rubber replacement",
-        "Biopsy/suction channel restoration",
-      ],
-      turnaround: "24-48 hours",
-      warranty: "90 days",
-      image:
-        "https://images.pexels.com/photos/4167541/pexels-photo-4167541.jpeg?auto=compress&cs=tinysrgb&w=400&h=200&fit=crop",
-    },
-    {
-      icon: Shield,
-      title: "Preventive Maintenance",
-      description:
-        "Scheduled maintenance programs to prevent costly breakdowns",
-      features: [
-        "Regular inspection schedules",
-        "Performance testing and calibration",
-        "Wear part replacement",
-        "Cleaning and disinfection validation",
-        "Documentation and compliance reporting",
-        "Customized maintenance plans",
-      ],
-      turnaround: "Scheduled",
-      warranty: "30 days",
-      image: "/endoscope-closeup-blue-surface (1).jpg",
-    },
-    {
-      icon: Settings,
-      title: "Equipment Calibration",
-      description:
-        "Precision calibration services to ensure optimal performance",
-      features: [
-        "Multi-point calibration testing",
-        "Performance verification",
-        "Regulatory compliance certification",
-        "Calibration certificate generation",
-        "Equipment performance optimization",
-        "Accuracy validation",
-      ],
-      turnaround: "2-4 hours",
-      warranty: "60 days",
-      image:
-        "https://images.pexels.com/photos/4386370/pexels-photo-4386370.jpeg?auto=compress&cs=tinysrgb&w=400&h=200&fit=crop",
-    },
-    {
-      icon: Clock,
-      title: "Emergency Service",
-      description: "24/7 emergency repair service to minimize downtime",
-      features: [
-        "Same-day response available",
-        "On-site service capability",
-        "Emergency hotline support",
-        "Loaner equipment programs",
-        "Priority processing",
-        "Weekend and holiday coverage",
-      ],
-      turnaround: "Same day",
-      warranty: "90 days",
-      image: "/2149478511.jpg",
-    },
-    {
-      icon: GraduationCap,
-      title: "Training & Support",
-      description: "Comprehensive training programs for your staff",
-      features: [
-        "Equipment operation training",
-        "Maintenance best practices",
-        "Troubleshooting techniques",
-        "Safety protocols",
-        "Compliance requirements",
-        "Ongoing technical support",
-      ],
-      turnaround: "Flexible",
-      warranty: "N/A",
-      image:
-        "https://images.pexels.com/photos/4386467/pexels-photo-4386467.jpeg?auto=compress&cs=tinysrgb&w=400&h=200&fit=crop",
-    },
-    {
-      icon: Phone,
-      title: "Remote Diagnostics",
-      description:
-        "Advanced remote diagnostic capabilities for quick issue resolution",
-      features: [
-        "Remote system analysis",
-        "Performance monitoring",
-        "Predictive maintenance alerts",
-        "Technical consultation",
-        "Software updates and patches",
-        "Real-time troubleshooting",
-      ],
-      turnaround: "Immediate",
-      warranty: "30 days",
-      image:
-        "https://images.pexels.com/photos/4386370/pexels-photo-4386370.jpeg?auto=compress&cs=tinysrgb&w=400&h=200&fit=crop",
-    },
-  ];
-
-  const commonRepairs = [
-    "Insertion tube and bending rubber replacement",
-    "Biopsy/suction channel restoration",
-    "Light guide bundle repair",
-    "Distal tip, angulation wire, and control knob adjustments",
-    "Connector and cable repair",
-    "Full leak testing and quality checks",
-  ];
-
-  const repairProcess = [
-    {
-      step: "01",
-      title: "Inspection & Leak Testing",
-      description:
-        "We start with a thorough inspection and diagnostic testing to identify all issues.",
-      icon: Search,
-      image:
-        "https://images.pexels.com/photos/4167541/pexels-photo-4167541.jpeg?auto=compress&cs=tinysrgb&w=300&h=200&fit=crop",
-    },
-    {
-      step: "02",
-      title: "Quotation & Approval",
-      description:
-        "A detailed estimate is shared for your review and approval before any work begins.",
-      icon: FileText,
-      image:
-        "https://images.pexels.com/photos/4386467/pexels-photo-4386467.jpeg?auto=compress&cs=tinysrgb&w=300&h=200&fit=crop",
-    },
-    {
-      step: "03",
-      title: "Expert Repair",
-      description:
-        "Repairs are completed by trained technicians using precision tools and high-grade components.",
-      icon: Wrench,
-      image:
-        "https://images.pexels.com/photos/4021775/pexels-photo-4021775.jpeg?auto=compress&cs=tinysrgb&w=300&h=200&fit=crop",
-    },
-    {
-      step: "04",
-      title: "Final QA",
-      description:
-        "Each unit undergoes rigorous quality assurance checks before return.",
-      icon: Award,
-      image:
-        "https://images.pexels.com/photos/4386370/pexels-photo-4386370.jpeg?auto=compress&cs=tinysrgb&w=300&h=200&fit=crop",
-    },
-  ];
-
   return (
     <div className="pt-16">
       {/* Hero Banner */}
@@ -226,17 +186,13 @@ const Services = () => {
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
           <div className="text-center">
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
-              Scope Repair Services
+              {staticContent.hero.title}
             </h1>
             <p className="text-xl md:text-2xl font-semibold mb-4">
-              Precision Repairs. Trusted Results.
+              {staticContent.hero.subtitle}
             </p>
             <p className="text-lg max-w-4xl mx-auto opacity-90">
-              At EndoZen, we provide expert repair services for flexible
-              endoscopes used in hospitals, diagnostic centers, and surgical
-              facilities. Our focus is on restoring scopes to full functionality
-              while maintaining the highest standards of quality, safety, and
-              performance.
+              {staticContent.hero.description}
             </p>
           </div>
         </div>
@@ -247,10 +203,7 @@ const Services = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <p className="text-xl text-gray-700 max-w-4xl mx-auto leading-relaxed">
-              We understand the critical role your scopes play in patient care.
-              That's why our repair process is designed to be accurate,
-              transparent, and fast—minimizing downtime and extending the life
-              of your equipment.
+              {staticContent.service_promise.description}
             </p>
           </div>
 
@@ -258,12 +211,11 @@ const Services = () => {
             <div className="flex items-center justify-center mb-6">
               <Truck className="h-12 w-12 mr-4" />
               <h3 className="text-2xl font-bold">
-                Pickup and Delivery Support Available Across India
+                {staticContent.pickup_delivery.title}
               </h3>
             </div>
             <p className="text-center text-blue-100 text-lg">
-              Convenient nationwide logistics to ensure seamless service
-              experience for your facility
+              {staticContent.pickup_delivery.subtitle}
             </p>
           </div>
         </div>
@@ -274,11 +226,10 @@ const Services = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              We Repair
+              {staticContent.we_repair.title}
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Comprehensive repair services for all types of flexible endoscopes
-              and their components
+              {staticContent.we_repair.subtitle}
             </p>
           </div>
 
@@ -293,15 +244,15 @@ const Services = () => {
                   className="w-full h-full object-cover opacity-20"
                 />
                 <div className="absolute inset-0 flex items-center justify-center">
-                  <FaSearch className="h-12 w-12 text-white" />
+                  <Search className="h-12 w-12 text-white" />
                 </div>
               </div>
               <div className="p-6">
                 <h3 className="text-lg font-bold text-gray-900 mb-2">
-                  Video Gastroscopes
+                  {staticContent.we_repair.gastroscope_title}
                 </h3>
                 <p className="text-sm text-gray-600 mb-4">
-                  Upper GI tract examination and therapeutic procedures
+                  {staticContent.we_repair.gastroscope_description}
                 </p>
                 <div className="space-y-2">
                   <div className="flex items-center text-xs text-gray-600">
@@ -325,15 +276,15 @@ const Services = () => {
                   className="w-full h-full object-cover opacity-20"
                 />
                 <div className="absolute inset-0 flex items-center justify-center">
-                  <FaHeartbeat className="h-12 w-12 text-white" />
+                  <Heart className="h-12 w-12 text-white" />
                 </div>
               </div>
               <div className="p-6">
                 <h3 className="text-lg font-bold text-gray-900 mb-2">
-                  Colonoscopes
+                  {staticContent.we_repair.colonoscope_title}
                 </h3>
                 <p className="text-sm text-gray-600 mb-4">
-                  Colon and large intestine examination procedures
+                  {staticContent.we_repair.colonoscope_description}
                 </p>
                 <div className="space-y-2">
                   <div className="flex items-center text-xs text-gray-600">
@@ -357,15 +308,15 @@ const Services = () => {
                   className="w-full h-full object-cover opacity-30"
                 />
                 <div className="absolute inset-0 flex items-center justify-center">
-                  <MdScanner className="h-12 w-12 text-white" />
+                  <Scan className="h-12 w-12 text-white" />
                 </div>
               </div>
               <div className="p-6">
                 <h3 className="text-lg font-bold text-gray-900 mb-2">
-                  Duodenoscopes
+                  {staticContent.we_repair.duodenoscope_title}
                 </h3>
                 <p className="text-sm text-gray-600 mb-4">
-                  ERCP procedures and bile duct interventions
+                  {staticContent.we_repair.duodenoscope_description}
                 </p>
                 <div className="space-y-2">
                   <div className="flex items-center text-xs text-gray-600">
@@ -389,15 +340,15 @@ const Services = () => {
                   className="w-full h-full object-cover opacity-20"
                 />
                 <div className="absolute inset-0 flex items-center justify-center">
-                  <MdMonitorHeart className="h-12 w-12 text-white" />
+                  <Monitor className="h-12 w-12 text-white" />
                 </div>
               </div>
               <div className="p-6">
                 <h3 className="text-lg font-bold text-gray-900 mb-2">
-                  Bronchoscopes
+                  {staticContent.we_repair.bronchoscope_title}
                 </h3>
                 <p className="text-sm text-gray-600 mb-4">
-                  Respiratory tract examination and lung procedures
+                  {staticContent.we_repair.bronchoscope_description}
                 </p>
                 <div className="space-y-2">
                   <div className="flex items-center text-xs text-gray-600">
@@ -418,16 +369,22 @@ const Services = () => {
             <div className="text-center mb-8">
               <Wrench className="h-16 w-16 text-blue-600 mx-auto mb-4" />
               <h3 className="text-3xl font-bold text-gray-900 mb-4">
-                Common Repairs Include
+                {staticContent.common_repairs.title}
               </h3>
               <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-                Our expert technicians handle a wide range of repair services to
-                restore your endoscopes to optimal performance
+                {staticContent.common_repairs.subtitle}
               </p>
             </div>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {commonRepairs.map((repair, index) => (
+              {[
+                staticContent.common_repairs.repair_1,
+                staticContent.common_repairs.repair_2,
+                staticContent.common_repairs.repair_3,
+                staticContent.common_repairs.repair_4,
+                staticContent.common_repairs.repair_5,
+                staticContent.common_repairs.repair_6
+              ].map((repair, index) => (
                 <div
                   key={index}
                   className="bg-gray-50 p-6 rounded-xl hover:bg-blue-50 transition-colors duration-200"
@@ -449,8 +406,7 @@ const Services = () => {
               <div className="inline-flex items-center bg-blue-50 px-6 py-3 rounded-full">
                 <Microscope className="h-5 w-5 text-blue-600 mr-2" />
                 <span className="text-blue-800 font-medium">
-                  All repairs include comprehensive testing and quality
-                  assurance
+                  {staticContent.common_repairs.qa_note}
                 </span>
               </div>
             </div>
@@ -463,16 +419,40 @@ const Services = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Our Repair Process
+              {staticContent.repair_process.title}
             </h2>
             <p className="text-xl text-gray-600">
-              A streamlined approach designed for accuracy, transparency, and
-              speed
+              {staticContent.repair_process.subtitle}
             </p>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {repairProcess.map((process, index) => (
+            {[
+              {
+                step: "01",
+                title: staticContent.repair_process.step_1_title,
+                description: staticContent.repair_process.step_1_description,
+                icon: Search
+              },
+              {
+                step: "02",
+                title: staticContent.repair_process.step_2_title,
+                description: staticContent.repair_process.step_2_description,
+                icon: FileText
+              },
+              {
+                step: "03",
+                title: staticContent.repair_process.step_3_title,
+                description: staticContent.repair_process.step_3_description,
+                icon: Wrench
+              },
+              {
+                step: "04",
+                title: staticContent.repair_process.step_4_title,
+                description: staticContent.repair_process.step_4_description,
+                icon: Award
+              }
+            ].map((process, index) => (
               <div
                 key={index}
                 className="relative bg-gradient-to-br from-blue-50 to-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 border border-blue-100"
@@ -502,7 +482,7 @@ const Services = () => {
                 </div>
                 
                 {/* Connector Line (except for last item) */}
-                {index < repairProcess.length - 1 && (
+                {index < 3 && (
                   <div className="hidden lg:block absolute top-8 -right-4 w-8 h-0.5 bg-blue-200"></div>
                 )}
               </div>
@@ -522,7 +502,7 @@ const Services = () => {
                 <div className="w-3 h-3 bg-blue-600 rounded-full"></div>
               </div>
               <span className="ml-4 text-blue-800 font-medium">
-                Complete process typically takes 24-48 hours
+                {staticContent.repair_process.turnaround_note}
               </span>
             </div>
           </div>
@@ -534,7 +514,7 @@ const Services = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Why Choose EndoZen?
+              {staticContent.why_choose.title}
             </h2>
           </div>
 
@@ -542,138 +522,103 @@ const Services = () => {
             <div className="bg-white p-8 rounded-xl shadow-lg">
               <Award className="h-12 w-12 text-blue-600 mb-4" />
               <h3 className="text-xl font-semibold text-gray-900 mb-3">
-                Trained Technicians
+                {staticContent.why_choose.technician_title}
               </h3>
               <p className="text-gray-600">
-                Deep expertise in flexible endoscope repair with continuous
-                training and certification updates.
+                {staticContent.why_choose.technician_description}
               </p>
             </div>
             <div className="bg-white p-8 rounded-xl shadow-lg">
               <Shield className="h-12 w-12 text-green-600 mb-4" />
               <h3 className="text-xl font-semibold text-gray-900 mb-3">
-                High-Quality Components
+                {staticContent.why_choose.components_title}
               </h3>
               <p className="text-gray-600">
-                Use of high-quality OEM-compatible components ensuring
-                long-lasting repairs and optimal performance.
+                {staticContent.why_choose.components_description}
               </p>
             </div>
             <div className="bg-white p-8 rounded-xl shadow-lg">
               <FileText className="h-12 w-12 text-blue-600 mb-4" />
               <h3 className="text-xl font-semibold text-gray-900 mb-3">
-                Transparent Process
+                {staticContent.why_choose.process_title}
               </h3>
               <p className="text-gray-600">
-                Transparent process and fair pricing with detailed estimates and
-                clear communication throughout.
+                {staticContent.why_choose.process_description}
               </p>
             </div>
             <div className="bg-white p-8 rounded-xl shadow-lg">
               <Clock className="h-12 w-12 text-green-600 mb-4" />
               <h3 className="text-xl font-semibold text-gray-900 mb-3">
-                Fast Turnaround
+                {staticContent.why_choose.turnaround_title}
               </h3>
               <p className="text-gray-600">
-                Fast turnaround and consistent communication to minimize your
-                equipment downtime.
+                {staticContent.why_choose.turnaround_description}
               </p>
             </div>
             <div className="bg-white p-8 rounded-xl shadow-lg">
               <Truck className="h-12 w-12 text-blue-600 mb-4" />
               <h3 className="text-xl font-semibold text-gray-900 mb-3">
-                Pickup & Delivery
+                {staticContent.why_choose.pickup_title}
               </h3>
               <p className="text-gray-600">
-                Pickup and delivery support available across India for your
-                convenience.
+                {staticContent.why_choose.pickup_description}
               </p>
             </div>
             <div className="bg-white p-8 rounded-xl shadow-lg">
               <Phone className="h-12 w-12 text-green-600 mb-4" />
               <h3 className="text-xl font-semibold text-gray-900 mb-3">
-                Ongoing Support
+                {staticContent.why_choose.support_title}
               </h3>
               <p className="text-gray-600">
-                Comprehensive after-service support and technical consultation
-                for optimal equipment performance.
+                {staticContent.why_choose.support_description}
               </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Additional Services Grid */}
+      {/* Additional Services Grid (Complete Service Solutions) */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Complete Service Solutions
+              {staticContent.complete_service.title}
             </h2>
             <p className="text-xl text-gray-600">
-              Essential maintenance and emergency services to keep your equipment operational
+              {staticContent.complete_service.subtitle}
             </p>
           </div>
 
-          <div className="grid lg:grid-cols-2 gap-8 max-w-4xl mx-auto">
-            {services.filter(service => service.title === 'Preventive Maintenance' || service.title === 'Emergency Service').map((service, index) => (
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            {completeServiceCards.map((service, index) => (
               <div
                 key={index}
-                className="bg-white border border-gray-200 rounded-xl overflow-hidden hover:shadow-lg transition-shadow duration-300"
+                className="bg-white rounded-xl overflow-hidden hover:shadow-lg transition-shadow duration-300"
               >
                 <img
                   src={service.image}
                   alt={service.title}
-                  className="w-full h-48 object-cover"
+                  className="w-full h-40 object-cover"
                 />
-                <div className="p-8">
-                  <div className="flex items-start mb-6">
-                    <div className="flex-shrink-0">
-                      <service.icon className="h-12 w-12 text-blue-600" />
-                    </div>
-                    <div className="ml-6 flex-1">
-                      <h3 className="text-2xl font-semibold text-gray-900 mb-3">
-                        {service.title}
-                      </h3>
-                      <p className="text-gray-600 mb-6">
-                        {service.description}
-                      </p>
-
-                      <div className="grid md:grid-cols-2 gap-4 mb-6">
-                        <div className="bg-blue-50 p-4 rounded-lg">
-                          <div className="text-sm font-medium text-blue-600 mb-1">
-                            Turnaround Time
-                          </div>
-                          <div className="text-lg font-semibold text-gray-900">
-                            {service.turnaround}
-                          </div>
-                        </div>
-                        <div className="bg-green-50 p-4 rounded-lg">
-                          <div className="text-sm font-medium text-green-600 mb-1">
-                            Warranty
-                          </div>
-                          <div className="text-lg font-semibold text-gray-900">
-                            {service.warranty}
-                          </div>
-                        </div>
-                      </div>
-
-                      <h4 className="font-semibold text-gray-900 mb-3">
-                        Service Includes:
-                      </h4>
-                      <ul className="space-y-2 mb-6">
-                        {service.features.map((feature, idx) => (
-                          <li
-                            key={idx}
-                            className="flex items-start text-sm text-gray-600"
-                          >
-                            <CheckCircle className="h-4 w-4 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
-                            {feature}
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
+                <div className="p-6">
+                  <div className="flex items-center mb-4">
+                    <service.icon className="h-8 w-8 text-blue-600 mr-3" />
+                    <h3 className="text-xl font-semibold text-gray-900">
+                      {service.title}
+                    </h3>
                   </div>
+                  <p className="text-gray-600 mb-4">{service.description}</p>
+                  <ul className="space-y-2 mb-6">
+                    {service.features.map((feature, idx) => (
+                      <li
+                        key={idx}
+                        className="flex items-center text-sm text-gray-600"
+                      >
+                        <CheckCircle className="h-4 w-4 text-green-500 mr-2" />
+                        {feature}
+                      </li>
+                    ))}
+                  </ul>
                 </div>
               </div>
             ))}
@@ -685,26 +630,24 @@ const Services = () => {
       <section className="py-20 bg-gradient-to-r from-blue-600 to-green-600 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Let's Get Your Scope Back in Action
+            {staticContent.cta.title}
           </h2>
           <p className="text-xl mb-8 max-w-3xl mx-auto">
-            If your endoscope is showing image issues, leaks, or mechanical
-            failure, EndoZen can help. Contact us today to request a diagnosis,
-            repair quote, or pickup schedule.
+            {staticContent.cta.subtitle}
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               to="/quote"
               className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-colors duration-200 inline-flex items-center justify-center"
             >
-              Request Repair Quote
+              {staticContent.cta.quote_button}
               <ArrowRight className="ml-2 h-5 w-5" />
             </Link>
             <Link
               to="/contact"
               className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-blue-600 transition-colors duration-200"
             >
-              Schedule Pickup
+              {staticContent.cta.contact_button}
             </Link>
           </div>
         </div>

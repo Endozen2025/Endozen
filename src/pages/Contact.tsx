@@ -2,6 +2,13 @@ import React, { useState } from 'react';
 import { Phone, Mail, MapPin, Clock, Send, CheckCircle, MessageSquare, Calendar, Building } from 'lucide-react';
 
 const Contact = () => {
+  const staticContent = {
+    hero: {
+      title: 'Contact Us',
+      subtitle: "We're Here to Help - Let's Talk Scopes",
+      description: "Have a question about repairs, service, or selling your equipment? Need a quote or want to schedule a pickup? Our team at EndoZen India Pvt Ltd is ready to assist you. Whether you're a hospital, diagnostic center, clinic, or distributor - we're just a message or call away."
+    }
+  };
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -20,13 +27,17 @@ const Contact = () => {
     }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  // Mock submit function
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Here you would typically send the data to your backend
-    console.log('Contact form submitted:', formData);
-    setIsSubmitted(true);
-    // Reset form after 3 seconds
-    setTimeout(() => setIsSubmitted(false), 3000);
+    try {
+      // Simulate async API call
+      await new Promise(resolve => setTimeout(resolve, 1000));
+      setIsSubmitted(true);
+      setTimeout(() => setIsSubmitted(false), 3000);
+    } catch (error) {
+      alert('An error occurred. Please try again.');
+    }
   };
 
   if (isSubmitted) {
@@ -64,15 +75,13 @@ const Contact = () => {
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
           <div className="text-center">
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
-              Contact Us
+              {staticContent.hero.title}
             </h1>
             <p className="text-xl md:text-2xl font-semibold mb-4 text-green-300">
-              We're Here to Help - Let's Talk Scopes
+              {staticContent.hero.subtitle}
             </p>
             <p className="text-lg max-w-4xl mx-auto opacity-90">
-              Have a question about repairs, service, or selling your equipment? Need a quote or want to schedule a pickup?
-              Our team at EndoZen India Pvt Ltd is ready to assist you. Whether you're a hospital, diagnostic center, clinic,
-              or distributor - we're just a message or call away.
+              {staticContent.hero.description}
             </p>
           </div>
         </div>

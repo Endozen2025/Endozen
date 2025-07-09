@@ -1,11 +1,13 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, Activity } from 'lucide-react';
+import { useContent } from '../hooks/useContent';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const location = useLocation();
+  const { getContent } = useContent();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -16,11 +18,11 @@ const Header = () => {
   }, []);
 
   const navItems = [
-    { name: 'Home', path: '/' },
-    { name: 'About', path: '/about' },
-    { name: 'Services', path: '/services' },
-    { name: 'Equipment', path: '/equipment' },
-    { name: 'Contact', path: '/contact' },
+    { name: getContent('header', 'navigation', 'home_text') || 'Home', path: '/' },
+    { name: getContent('header', 'navigation', 'about_text') || 'About', path: '/about' },
+    { name: getContent('header', 'navigation', 'services_text') || 'Services', path: '/services' },
+    { name: getContent('header', 'navigation', 'equipment_text') || 'Equipment', path: '/equipment' },
+    { name: getContent('header', 'navigation', 'contact_text') || 'Contact', path: '/contact' },
   ];
 
   return (
@@ -31,7 +33,9 @@ const Header = () => {
         <div className="flex justify-between items-center h-16">
           <Link to="/" className="flex items-center space-x-2">
             <Activity className="h-8 w-8 text-blue-600" />
-            <span className="text-2xl font-bold text-gray-900">EndoZen</span>
+            <span className="text-2xl font-bold text-gray-900">
+              {getContent('header', 'brand', 'company_name') || 'EndoZen'}
+            </span>
           </Link>
 
           {/* Desktop Navigation */}
@@ -55,7 +59,7 @@ const Header = () => {
             to="/quote"
             className="hidden md:inline-flex bg-blue-600 text-white px-6 py-2 rounded-lg font-medium hover:bg-blue-700 transition-colors duration-200"
           >
-            Get Quote
+            {getContent('header', 'cta', 'quote_button_text') || 'Get Quote'}
           </Link>
 
           {/* Mobile menu button */}
@@ -90,7 +94,7 @@ const Header = () => {
                 className="block px-3 py-2 mt-4 bg-blue-600 text-white text-center rounded-lg font-medium hover:bg-blue-700 transition-colors duration-200"
                 onClick={() => setIsMenuOpen(false)}
               >
-                Get Quote
+                {getContent('header', 'cta', 'quote_button_text') || 'Get Quote'}
               </Link>
             </div>
           </div>
