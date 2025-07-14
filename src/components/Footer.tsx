@@ -14,13 +14,10 @@ const Footer = () => {
             <div className="flex items-center space-x-2 mb-4">
               <Activity className="h-8 w-8 text-blue-400" />
               <div>
-                <div className="text-2xl font-bold">
-                  {getContent('footer', 'brand', 'company_name') || 'EndoZen'}
+                <div className="text-1.5xl font-bold">
+                  {getContent('footer', 'brand', 'company_name') || 'EndoZen India Pvt Ltd'}
                 </div>
-                <div className="text-sm text-blue-300">
-                  {getContent('footer', 'brand', 'company_subtitle') || 'India Pvt Ltd'}
                 </div>
-              </div>
             </div>
             <div className="mb-4">
               <p className="text-gray-300 font-semibold mb-2">
@@ -41,7 +38,7 @@ const Footer = () => {
                   to="/services"
                   className="text-gray-300 hover:text-white transition-colors"
                 >
-                  Endoscope
+                  Endoscope Repair
                 </Link>
               </li>
               <li>
@@ -133,7 +130,7 @@ const Footer = () => {
 
         <div className="border-t border-gray-800 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
           <p className="text-gray-400 text-sm">
-            © 2025 EndoZen. All rights reserved.
+            © 2025 EndoZen India Pvt Ltd. All rights reserved.
           </p>
           <div className="flex space-x-6 mt-4 md:mt-0">
             <Link

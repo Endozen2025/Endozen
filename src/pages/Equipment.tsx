@@ -233,7 +233,7 @@ const Equipment = () => {
             <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
               <div className="relative h-48 bg-gradient-to-br from-purple-500 to-purple-600">
                 <img 
-                  src="/duodenoscope.webp" 
+                  src="/freepik__retouch__24208.png" 
                   alt={content.we_buy.duodenoscopes_title} 
                   className="w-full h-full object-cover opacity-30"
                 />
@@ -254,7 +254,7 @@ const Equipment = () => {
             <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
               <div className="relative h-48 bg-gradient-to-br from-teal-500 to-teal-600">
                 <img 
-                  src="/bronchoscope.PNG" 
+                  src="/bronchoscope.png" 
                   alt={content.we_buy.bronchoscopes_title} 
                   className="w-full h-full object-cover opacity-30"
                 />

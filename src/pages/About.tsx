@@ -70,7 +70,7 @@ const About = () => {
               <div className="absolute bottom-6 left-6 right-6 bg-white/90 backdrop-blur-sm p-6 rounded-lg">
                 <div className="grid grid-cols-2 gap-6 text-center">
                   <div>
-                    <div className="text-3xl font-bold text-blue-600 mb-2">14+</div>
+                    <div className="text-3xl font-bold text-blue-600 mb-2">15+</div>
                     <div className="text-gray-600">Years of Global Experience</div>
                   </div>
                   <div>

@@ -247,12 +247,13 @@ const Contact = () => {
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
                   >
                     <option value="">Select service type</option>
-                    <option value="repair">Repair</option>
+                    <option value="endoscope-repair">Endoscope Repair</option>
                     <option value="sell">Sell Equipment</option>
                     <option value="general">General Inquiry</option>
                     <option value="quote">Request Quote</option>
                     <option value="pickup">Schedule Pickup</option>
                     <option value="maintenance">Preventive Maintenance</option>
+                    <option value="priority-support">Priority Support</option>
                   </select>
                 </div>
 

@@ -12,6 +12,7 @@ import {
   Truck,
   AlertTriangle,
   Wrench,
+  BadgeCheck,
 } from "lucide-react";
 import { useContent } from "../hooks/useContent";
 
@@ -156,7 +157,7 @@ const Home = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center items-center">
             <div>
-              <div className="text-3xl font-bold text-blue-600 mb-2">14+</div>
+              <div className="text-3xl font-bold text-blue-600 mb-2">15+</div>
               <div className="text-gray-600 text-xs leading-tight min-h-[3rem] flex flex-col justify-center">
                 <p className="font-medium">Years of Global Experience</p>
                 <p className="text-xs text-gray-500 mt-1">Trusted by Clients Worldwide</p>
@@ -330,7 +331,7 @@ const Home = () => {
               </ul>
             </div>
 
-            <div className="bg-gray-50 p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 md:col-span-2 lg:col-span-1">
+            <div className="bg-gray-50 p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300">
               <div className="relative mb-6">
                 <img
                   src="/nurse-wears-protective-suit-mask-covid19-outbreak.jpg"
@@ -362,6 +363,47 @@ const Home = () => {
                 </li>
               </ul>
             </div>
+
+            <div className="bg-gray-50 p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300">
+              <div className="relative mb-6">
+                <img
+                  src="/standard-quality-control-concept-m.jpg"
+                  alt="Standard quality control concept - trusted quality and value for healthcare facilities"
+                  className="w-full h-32 object-cover rounded-lg"
+                />
+                <div className="absolute -bottom-4 left-4">
+                  <BadgeCheck className="h-12 w-12 text-blue-600 bg-white p-2 rounded-full shadow-lg" />
+                </div>
+              </div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-4">
+                {getContent('home', 'why_choose', 'Trusted_Quality_title') || 'Trusted Quality & Value'}
+              </h3>
+              <p className="text-gray-600 mb-6">
+                {getContent('home', 'why_choose', 'Trusted_Qualitys_description') || 'Save 40-50% compared to OEM repair costs - while maintaining high standards of quality, performance and service.'}
+              </p>
+              <ul className="space-y-2">
+                <li className="flex items-center text-sm text-gray-600">
+                  <CheckCircle className="h-4 w-4 text-green-500 mr-2" />
+                  OEM-Grade Components
+                </li>
+                <li className="flex items-center text-sm text-gray-600">
+                  <CheckCircle className="h-4 w-4 text-green-500 mr-2" />
+                  40–50% cost savings compared to OEM
+                </li>
+                <li className="flex items-center text-sm text-gray-600">
+                  <CheckCircle className="h-4 w-4 text-green-500 mr-2" />
+                  3–7 day turnaround
+                </li>
+                <li className="flex items-center text-sm text-gray-600">
+                  <CheckCircle className="h-4 w-4 text-green-500 mr-2" />
+                  120-day repair warranty
+                </li>
+                <li className="flex items-center text-sm text-gray-600">
+                  <CheckCircle className="h-4 w-4 text-green-500 mr-2" />
+                  Detailed service reports
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
       </section>
@@ -381,13 +423,13 @@ const Home = () => {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {[
               {
-                title: "Endoscope",
+                title: "Endoscope Repair",
                 description:
-                  "Expert repair of flexible endoscopes including gastroscopes, colonoscopes, and bronchoscopes with precision tools and high-grade components.",
+                  "Expert repair of flexible endoscopes including gastroscopes, colonoscopes, duodenoscope and bronchoscopes with precision tools and high-grade components.",
                 features: [
-                  "Endoscope repair",
-                  "Light guide cable service",
-                  "Insertion tube replacement",
+                  "Bending Rubber Replacement",
+                  "Biopsy/Suction Channel Replacement",
+                  "Angulation Adjustment",
                 ],
                 icon: Wrench,
                 image: "/Endoscope.jpg", // Use the same image as Services page
@@ -410,11 +452,11 @@ const Home = () => {
                   "Fast-track support to minimize downtime and keep your facility operational. Get immediate assistance, on-site service, and access to loaner equipment when you need it most.",
                 features: [
                   "Immediate response",
-                  "On-site service",
+                  "Fast pickup & delivery",
                   "Loaner equipment available",
                 ],
                 icon: Clock,
-                image: "/2149478511.jpg",
+                image: "/businessman-holding-light-bulb.jpg",
               }
             ].map((service: any, index: number) => (
               <div

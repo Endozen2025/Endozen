@@ -20,12 +20,12 @@ import {
 // All content is now static/mock data
 const staticContent = {
   hero: {
-    title: "Endoscope Repair Services",
+    title: "Endoscope Repair ",
     subtitle: "Precision Repairs. Trusted Results.",
     description: "At EndoZen, we provide expert repair services for flexible endoscopes used in hospitals, diagnostic centers, and surgical facilities. Our focus is on restoring scopes to full functionality while maintaining the highest standards of quality, safety, and performance."
   },
   service_promise: {
-    description: "We understand the critical role your scopes play in patient care. That's why our repair process is designed to be accurate, transparent, and fast—minimizing downtime and extending the life of your equipment."
+    description: "We understand the critical role your Endoscopes play in patient care. That's why our repair process is designed to be accurate, transparent, and fast—minimizing downtime and extending the life of your equipment."
   },
   pickup_delivery: {
     title: "Pickup and Delivery Support Available Across India",
@@ -33,7 +33,7 @@ const staticContent = {
   },
   we_repair: {
     title: "We Repair",
-    subtitle: "Comprehensive repair services for all types of flexible endoscopes and their components",
+    subtitle: "Comprehensive repair services for all types of flexible endoscopes ",
     gastroscope_title: "Gastroscopes",
     gastroscope_description: "Diagnostic and therapeutic gastroscopes for upper GI procedures.",
     colonoscope_title: "Colonoscopes",
@@ -45,13 +45,31 @@ const staticContent = {
   },
   common_repairs: {
     title: "Common Repairs Include",
-    subtitle: "Our expert technicians handle a wide range of repair services to restore your endoscopes to optimal performance",
-    repair_1: "Insertion tube and bending rubber replacement",
-    repair_2: "Biopsy/suction channel restoration",
-    repair_3: "Light guide bundle repair",
-    repair_4: "Distal tip, angulation wire, and control knob adjustments",
-    repair_5: "Connector and cable repair",
-    repair_6: "Full leak testing and quality checks",
+    subtitle: "Our expert Engineers handle a wide range of repair services to restore your endoscopes to optimal performance",
+    repair_1: {
+      title: "Insertion Tube & Bending Section Overhaul",
+      description: "Complete rebuild using durable insertion tube, bending rubber, and angulation wires."
+    },
+    repair_2: {
+      title: "Distal End Refurbishment", 
+      description: "Restoration or replacement of lenses, prism, and nozzles for clear imaging and fluid delivery."
+    },
+    repair_3: {
+      title: "Channel System Restoration",
+      description: "Servicing or replacing suction and biopsy channels for smooth scope function and effective suction."
+    },
+    repair_4: {
+      title: "Light Transmission System Repair",
+      description: "Fiber bundle or lens repair to restore bright, even illumination without hotspots."
+    },
+    repair_5: {
+      title: "Control Body & Angulation Mechanism Rebuild",
+      description: "Precision repair of control knobs, pulleys, and angulation for accurate tip movement."
+    },
+    repair_6: {
+      title: "Universal Cord & Video Connector Repair",
+      description: "Restores function of electrical, air/water, and video connectors with leak-resistant sealing."
+    },
     qa_note: "All repairs undergo strict quality assurance and testing."
   },
   repair_process: {
@@ -62,14 +80,14 @@ const staticContent = {
     step_2_title: "Quotation & Approval",
     step_2_description: "A detailed estimate is shared for your review and approval before any work begins.",
     step_3_title: "Expert Repair",
-    step_3_description: "Repairs are completed by trained technicians using precision tools and high-grade components.",
+    step_3_description: "Repairs are completed by trained engineers using precision tools and high-grade components.",
     step_4_title: "Final QA & Return",
     step_4_description: "Each unit undergoes rigorous quality assurance checks before return.",
-    turnaround_note: "Typical turnaround: 3-5 business days. Rush service available."
+    turnaround_note: "Typical turnaround: 3-7 business days. Rush service available."
   },
   why_choose: {
     title: "Why Choose EndoZen?",
-    technician_title: "Trained Technicians",
+    technician_title: "Trained Engineers",
     technician_description: "Deep expertise in flexible endoscope repair with continuous training and certification updates.",
     components_title: "High-Quality Components",
     components_description: "Use of high-quality OEM-compatible components ensuring long-lasting repairs and optimal performance.",
@@ -166,7 +184,7 @@ const completeServiceCards = [
       "Loaner equipment available",
     ],
     icon: Clock,
-    image: "/2149478511.jpg",
+    image: "/businessman-holding-light-bulb.jpg",
   },
 ];
 
@@ -303,7 +321,7 @@ const Services = () => {
             <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 hover:scale-105">
               <div className="relative h-32 bg-gradient-to-br from-purple-500 to-purple-600">
                 <img
-                  src="/duodenoscope.webp"
+                  src="/freepik__retouch__24208.png"
                   alt="Duodenoscopes"
                   className="w-full h-full object-cover opacity-30"
                 />
@@ -335,12 +353,13 @@ const Services = () => {
             <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 hover:scale-105">
               <div className="relative h-32 bg-gradient-to-br from-teal-500 to-teal-600">
                 <img
-                  src="/bronchoscope.PNG"
+                  src="/bronchoscope.png"
                   alt="Bronchoscopes"
-                  className="w-full h-full object-cover opacity-20"
+                  className="w-full h-full object-cover opacity-80"
                 />
+                <div className="absolute inset-0 bg-gradient-to-br from-teal-500/20 to-teal-600/20"></div>
                 <div className="absolute inset-0 flex items-center justify-center">
-                  <Monitor className="h-12 w-12 text-white" />
+                  <Monitor className="h-12 w-12 text-white drop-shadow-lg" />
                 </div>
               </div>
               <div className="p-6">
@@ -393,8 +412,11 @@ const Services = () => {
                     <CheckCircle className="h-6 w-6 text-green-500 mr-4 mt-1 flex-shrink-0" />
                     <div>
                       <h4 className="font-semibold text-gray-900 mb-2">
-                        {repair}
+                        {repair.title}
                       </h4>
+                      <p className="text-sm text-gray-600 mb-3">
+                        {repair.description}
+                      </p>
                       <div className="w-12 h-1 bg-blue-600 rounded"></div>
                     </div>
                   </div>

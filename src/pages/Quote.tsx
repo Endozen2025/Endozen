@@ -230,6 +230,7 @@ const Quote = () => {
                     <option value="hysteroscope">Hysteroscope</option>
                     <option value="camera-system">Camera System</option>
                     <option value="light-source">Light Source</option>
+                    <option value="duodenoscope">Duodenoscope</option>
                     <option value="other">Other</option>
                   </select>
                 </div>
@@ -282,10 +283,9 @@ const Quote = () => {
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
                   >
                     <option value="">Select service type</option>
-                    <option value="repair">Repair</option>
+                    <option value="endoscope-repair">Endoscope Repair</option>
                     <option value="maintenance">Preventive Maintenance</option>
-                    <option value="calibration">Calibration</option>
-                    <option value="emergency">Emergency Service</option>
+                    <option value="priority-support">Priority Support</option>
                     <option value="consultation">Consultation</option>
                   </select>
                 </div>
@@ -311,7 +311,7 @@ const Quote = () => {
                     <option value="">Select urgency</option>
                     <option value="emergency">Emergency (Same Day)</option>
                     <option value="urgent">Urgent (24-48 Hours)</option>
-                    <option value="standard">Standard (3-5 Days)</option>
+                    <option value="standard">Standard (3-7 Days)</option>
                     <option value="scheduled">Scheduled Maintenance</option>
                   </select>
                 </div>
@@ -393,7 +393,7 @@ const Quote = () => {
             <div className="bg-white p-6 rounded-xl text-center shadow-lg">
               <Mail className="h-12 w-12 text-green-600 mx-auto mb-4" />
               <h3 className="text-xl font-semibold text-gray-900 mb-2">Email Support</h3>
-              <p className="text-blue-600 font-bold">service@endozen.com</p>
+              <p className="text-blue-600 font-bold">info@endozenindia.com</p>
               <p className="text-gray-600 text-sm mt-2">Response within 2 hours</p>
             </div>
             <div className="bg-white p-6 rounded-xl text-center shadow-lg">
