@@ -6,6 +6,7 @@ import { useContent } from '../hooks/useContent';
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [logoError, setLogoError] = useState(false);
   const location = useLocation();
   const { getContent } = useContent();
 
@@ -30,16 +31,33 @@ const Header = () => {
       isScrolled ? 'bg-white shadow-lg' : 'bg-white/95 backdrop-blur-sm'
     }`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
-          <Link to="/" className="flex items-center space-x-2">
-            <Activity className="h-8 w-8 text-blue-600" />
-            <span className="text-2xl font-bold text-gray-900">
-              {getContent('header', 'brand', 'company_name') || 'EndoZen'}
-            </span>
+        <div className="flex items-center h-16">
+          <Link to="/" className="flex items-center h-full overflow-visible">
+            {/* EndoZen Header Logo - Full width for complete visibility */}
+            {!logoError ? (
+              <img 
+                src="/Endozen Logo for header.png" 
+                alt="EndoZen Logo" 
+                className="h-full w-auto object-contain"
+                style={{ 
+                  maxWidth: '600px',
+                  minWidth: '300px',
+                  objectFit: 'contain',
+                  objectPosition: 'left center',
+                  transform: 'scale(1.3)',
+                  transformOrigin: 'left center',
+                  filter: 'contrast(1.1) brightness(1.05)',
+                  imageRendering: 'crisp-edges'
+                }}
+                onError={() => setLogoError(true)}
+              />
+            ) : (
+              <Activity className="h-12 w-12 text-blue-600" />
+            )}
           </Link>
 
-          {/* Desktop Navigation */}
-          <nav className="hidden md:flex space-x-8">
+          {/* Desktop Navigation - Closer to logo */}
+          <nav className="hidden md:flex space-x-8 ml-8 flex-1">
             {navItems.map((item) => (
               <Link
                 key={item.name}
@@ -57,7 +75,7 @@ const Header = () => {
 
           <Link
             to="/quote"
-            className="hidden md:inline-flex bg-blue-600 text-white px-6 py-2 rounded-lg font-medium hover:bg-blue-700 transition-colors duration-200"
+            className="hidden md:inline-flex bg-blue-600 text-white px-6 py-2 rounded-lg font-medium hover:bg-blue-700 transition-colors duration-200 ml-auto"
           >
             {getContent('header', 'cta', 'quote_button_text') || 'Get Quote'}
           </Link>
