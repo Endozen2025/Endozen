@@ -1,32 +1,69 @@
 import { Link } from "react-router-dom";
 import { Activity, Phone, Mail, MapPin, Clock } from "lucide-react";
 import { useContent } from "../hooks/useContent";
+import { useState } from "react";
 
 const Footer = () => {
   const { getContent } = useContent();
+  const [logoError, setLogoError] = useState(false);
 
   return (
     <footer className="bg-gray-900 text-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 items-start">
           {/* Company Info */}
-          <div>
-            <div className="flex items-center space-x-2 mb-4">
-              <Activity className="h-8 w-8 text-blue-400" />
-              <div>
-                <div className="text-1.5xl font-bold">
-                  {getContent('footer', 'brand', 'company_name') || 'EndoZen India Pvt Ltd'}
+          <div className="flex flex-col items-start justify-start h-full gap-0">
+            {/* EndoZen Footer Logo with placeholder */}
+            {!logoError ? (
+              <div className="flex flex-col items-start gap-0" style={{width: '230px'}}>
+                <img 
+                  src="/Endozen Logo for footer.png" 
+                  alt="EndoZen Logo" 
+                  className="filter brightness-0 invert rounded"
+                  style={{
+                    height: '86px',
+                    width: '230px',
+                    objectFit: 'cover',
+                    backgroundColor: 'transparent',
+                    margin: 0,
+                    padding: 0,
+                    display: 'block',
+                    lineHeight: 0,
+                    textAlign: 'left'
+                  }}
+                  onError={() => setLogoError(true)}
+                />
+                <div className="text-gray-300 text-sm font-semibold" style={{margin: 0, padding: 0, lineHeight: 1, textAlign: 'left', width: '230px'}}>
+                    Certified Endoscope Repair Services Across India
                 </div>
+              </div>
+            ) : (
+              <div className="flex flex-col items-start gap-0">
+                <div 
+                  className="bg-gradient-to-r from-blue-600 to-green-500 rounded-lg shadow-lg flex items-center justify-center self-start"
+                  style={{ 
+                    height: '150px', 
+                    width: '350px',
+                    maxWidth: '350px',
+                    margin: 0,
+                    padding: '16px',
+                    display: 'block',
+                    lineHeight: 0
+                  }}
+                >
+                  <div className="flex items-center space-x-5">
+                    <Activity className="h-14 w-14 text-white" />
+                    <div className="text-center">
+                      <div className="text-xl font-bold text-white tracking-wide">EndoZen</div>
+                      <div className="text-sm text-gray-100 font-medium">India Pvt. Ltd.</div>
+                    </div>
+                  </div>
                 </div>
-            </div>
-            <div className="mb-4">
-              <p className="text-gray-300 font-semibold mb-2">
-                {getContent('footer', 'brand', 'tagline') || 'Precision Care. Peace of Mind.'}
-              </p>
-              <p className="text-sm text-gray-400">
-                {getContent('footer', 'brand', 'description') || 'Certified Endoscope Repair Services Across India'}
-              </p>
-            </div>
+                <div className="text-gray-300 text-sm font-semibold self-start" style={{margin: 0, padding: 0, lineHeight: 1}}>
+                  Certified Endoscope Repair Services Across India
+                </div>
+              </div>
+            )}
           </div>
 
           {/* Services */}
