@@ -129,15 +129,15 @@ const Equipment = () => {
   return (
     <div className="pt-16">
       {/* Hero Banner */}
-      <section className="relative bg-gradient-to-br from-blue-600 via-blue-700 to-green-600 text-white overflow-hidden">
-        <div className="absolute inset-0 bg-black opacity-30"></div>
+      <section className="relative bg-gradient-to-br from-blue-600 via-blue-700 to-green-600 text-white overflow-hidden min-h-[400px]">
         <div className="absolute inset-0">
           <img 
             src="/endoscopy-hospital-doctor-holding-endoscope-before-gastroscopy.jpg" 
             alt={content.hero.title} 
-            className="w-full h-full object-cover opacity-40"
+            className="w-full h-full object-cover"
           />
         </div>
+        <div className="absolute inset-0 bg-gradient-to-br from-blue-600/60 via-blue-700/60 to-green-600/60"></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
           <div className="text-center">
             <h1 className="text-4xl md:text-5xl font-bold mb-6">

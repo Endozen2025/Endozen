@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Phone, Mail, MapPin, Clock, Send, CheckCircle, MessageSquare, Calendar, Building } from 'lucide-react';
+import { emailService } from '../services/emailService';
 
 const Contact = () => {
   const staticContent = {
@@ -18,6 +19,8 @@ const Contact = () => {
   });
 
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitError, setSubmitError] = useState('');
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
@@ -25,18 +28,37 @@ const Contact = () => {
       ...prev,
       [name]: value
     }));
+    // Clear error when user starts typing
+    if (submitError) setSubmitError('');
   };
 
-  // Mock submit function
+  // Updated submit function with EmailJS integration
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    setIsSubmitting(true);
+    setSubmitError('');
+
     try {
-      // Simulate async API call
-      await new Promise(resolve => setTimeout(resolve, 1000));
-      setIsSubmitted(true);
-      setTimeout(() => setIsSubmitted(false), 3000);
+      const result = await emailService.sendContactEmail(formData);
+      
+      if (result.success) {
+        setIsSubmitted(true);
+        // Reset form
+        setFormData({
+          name: '',
+          email: '',
+          phone: '',
+          serviceNeeded: '',
+          message: ''
+        });
+        setTimeout(() => setIsSubmitted(false), 5000);
+      } else {
+        setSubmitError(result.error || 'Failed to send message. Please try again or contact us directly.');
+      }
     } catch (error) {
-      alert('An error occurred. Please try again.');
+      setSubmitError('Network error. Please check your connection and try again.');
+    } finally {
+      setIsSubmitting(false);
     }
   };
 
@@ -63,15 +85,15 @@ const Contact = () => {
   return (
     <div className="pt-16">
       {/* Hero Banner */}
-      <section className="relative bg-gradient-to-br from-blue-600 via-blue-700 to-green-600 text-white overflow-hidden">
-        <div className="absolute inset-0 bg-black opacity-30"></div>
+      <section className="relative bg-gradient-to-br from-blue-600 via-blue-700 to-green-600 text-white overflow-hidden min-h-[400px]">
         <div className="absolute inset-0">
           <img 
             src="/endoscopy-hospital-doctor-holding-endoscope-before-gastroscopy.jpg" 
             alt="Contact EndoZen team for endoscope repair and medical equipment service" 
-            className="w-full h-full object-cover opacity-40"
+            className="w-full h-full object-cover"
           />
         </div>
+        <div className="absolute inset-0 bg-gradient-to-br from-blue-600/60 via-blue-700/60 to-green-600/60"></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
           <div className="text-center">
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
@@ -273,12 +295,33 @@ const Contact = () => {
                   />
                 </div>
 
+                {/* Error Message */}
+                {submitError && (
+                  <div className="p-4 bg-red-50 border border-red-200 rounded-lg">
+                    <p className="text-red-800 text-sm">{submitError}</p>
+                  </div>
+                )}
+
                 <button
                   type="submit"
-                  className="w-full bg-blue-600 text-white py-4 rounded-lg font-semibold text-lg hover:bg-blue-700 transition-colors duration-200 flex items-center justify-center"
+                  disabled={isSubmitting}
+                  className={`w-full py-4 rounded-lg font-semibold text-lg transition-colors duration-200 flex items-center justify-center ${
+                    isSubmitting 
+                      ? 'bg-gray-400 cursor-not-allowed' 
+                      : 'bg-blue-600 hover:bg-blue-700'
+                  } text-white`}
                 >
-                  <Send className="mr-3 h-5 w-5" />
-                  Submit
+                  {isSubmitting ? (
+                    <>
+                      <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-3"></div>
+                      Sending...
+                    </>
+                  ) : (
+                    <>
+                      <Send className="mr-3 h-5 w-5" />
+                      Send Message
+                    </>
+                  )}
                 </button>
               </form>
 
