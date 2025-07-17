@@ -118,12 +118,13 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
-                <Link
-                  to="/quote"
-                  className="text-gray-300 hover:text-white transition-colors"
+                <button
+                  className="text-gray-400 bg-gray-800 px-4 py-2 rounded-lg font-medium cursor-not-allowed opacity-60"
+                  disabled
+                  title="Get Quote is temporarily disabled until Gurgaon office opens."
                 >
                   Get Quote
-                </Link>
+                </button>
               </li>
             </ul>
           </div>
@@ -154,7 +155,7 @@ const Footer = () => {
                 <MapPin className="h-5 w-5 text-blue-400 mr-3 mt-0.5" />
                 <div>
                   <p className="text-gray-300">
-                    {getContent('footer', 'contact', 'address') || '[Your Address Here]'}
+                    {getContent('footer', 'contact', 'address') || 'Coming Soon'}
                   </p>
                   <p className="text-gray-300">
                     {getContent('footer', 'contact', 'business_hours') || 'Mon-Fri: 9AM-5PM'}

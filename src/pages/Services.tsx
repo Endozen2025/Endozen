@@ -658,13 +658,14 @@ const Services = () => {
             {staticContent.cta.subtitle}
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              to="/quote"
-              className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-colors duration-200 inline-flex items-center justify-center"
+            <button
+              className="bg-gray-400 text-white px-8 py-4 rounded-lg font-semibold text-lg inline-flex items-center justify-center cursor-not-allowed opacity-60"
+              disabled
+              title="Get Quote is temporarily disabled until Gurgaon office opens."
             >
               {staticContent.cta.quote_button}
               <ArrowRight className="ml-2 h-5 w-5" />
-            </Link>
+            </button>
             <Link
               to="/contact"
               className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-blue-600 transition-colors duration-200"

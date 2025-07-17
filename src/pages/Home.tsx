@@ -21,6 +21,13 @@ const Home = () => {
 
   return (
     <div className="pt-16">
+      {/* Announcement Bar */}
+      <div className="w-full bg-gradient-to-r from-blue-700 via-green-600 to-blue-700 text-white text-center py-3 px-4 font-semibold text-lg shadow-md">
+        <span className="block">
+          Opening January 2026 in Gurgaon!<br />
+          <span className="font-normal text-base">EndoZen India is proud to bring expert endoscope repair services to healthcare facilities across India. Our Gurgaon office will be fully operational from Jan 2026. Stay tuned!</span>
+        </span>
+      </div>
       {/* Hero Banner */}
       <section className="relative bg-gradient-to-br from-blue-600 via-blue-700 to-green-600 text-white overflow-hidden">
         <div className="absolute inset-0 bg-blue-800 opacity-75"></div>
@@ -51,12 +58,13 @@ const Home = () => {
               >
                 Contact Us <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
-              <Link
-                to="/quote"
-                className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-blue-600 transition-colors duration-200 flex items-center justify-center"
+              <button
+                className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg bg-gray-400 cursor-not-allowed flex items-center justify-center opacity-60"
+                disabled
+                title="Get Quote is temporarily disabled until Gurgaon office opens."
               >
                 Request a Repair
-              </Link>
+              </button>
             </div>
           </div>
         </div>
@@ -514,12 +522,13 @@ const Home = () => {
             {getContent('home', 'cta', 'description') || 'Get a free quote today and experience the EndoZen difference. Fast, reliable, and professional service guaranteed.'}
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              to="/quote"
-              className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-colors duration-200"
+            <button
+              className="bg-gray-400 text-white px-8 py-4 rounded-lg font-semibold text-lg cursor-not-allowed opacity-60"
+              disabled
+              title="Get Quote is temporarily disabled until Gurgaon office opens."
             >
               {getContent('home', 'cta', 'button_1_text') || 'Get Free Quote'}
-            </Link>
+            </button>
             <Link
               to="/contact"
               className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-blue-600 transition-colors duration-200"

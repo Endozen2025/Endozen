@@ -169,8 +169,8 @@ const Contact = () => {
                     <h3 className="text-xl font-semibold text-gray-900 mb-2">Workshop Location</h3>
                     <div className="space-y-1">
                       <p className="font-medium text-gray-900">EndoZen India Pvt Ltd</p>
-                      <p className="text-gray-600">[Your Address Here]</p>
-                      <p className="text-gray-600">(City, State, Pincode)</p>
+                      <p className="text-gray-600">Coming Soon</p>
+                     {/* <p className="text-gray-600">(City, State, Pincode)</p> */}
                     </div>
                   </div>
                 </div>

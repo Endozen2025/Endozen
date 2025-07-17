@@ -73,12 +73,13 @@ const Header = () => {
             ))}
           </nav>
 
-          <Link
-            to="/quote"
-            className="hidden md:inline-flex bg-blue-600 text-white px-6 py-2 rounded-lg font-medium hover:bg-blue-700 transition-colors duration-200 ml-auto"
+          <button
+            className="hidden md:inline-flex bg-gray-400 text-white px-6 py-2 rounded-lg font-medium ml-auto cursor-not-allowed opacity-60"
+            disabled
+            title="Get Quote is temporarily disabled until Gurgaon office opens."
           >
             {getContent('header', 'cta', 'quote_button_text') || 'Get Quote'}
-          </Link>
+          </button>
 
           {/* Mobile menu button */}
           <button
@@ -107,13 +108,13 @@ const Header = () => {
                   {item.name}
                 </Link>
               ))}
-              <Link
-                to="/quote"
-                className="block px-3 py-2 mt-4 bg-blue-600 text-white text-center rounded-lg font-medium hover:bg-blue-700 transition-colors duration-200"
-                onClick={() => setIsMenuOpen(false)}
+              <button
+                className="block px-3 py-2 mt-4 bg-gray-400 text-white text-center rounded-lg font-medium cursor-not-allowed opacity-60"
+                disabled
+                title="Get Quote is temporarily disabled until Gurgaon office opens."
               >
                 {getContent('header', 'cta', 'quote_button_text') || 'Get Quote'}
-              </Link>
+              </button>
             </div>
           </div>
         )}
