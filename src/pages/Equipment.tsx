@@ -128,6 +128,13 @@ const Equipment = () => {
 
   return (
     <div className="pt-16">
+      {/* Announcement Bar */}
+      <div className="w-full bg-gradient-to-r from-blue-700 via-green-600 to-blue-700 text-white text-center py-3 px-4 font-semibold text-lg shadow-md">
+        <span className="block">
+          Opening January 2026 in Gurgaon!<br />
+          <span className="font-normal text-base">EndoZen India is proud to bring expert endoscope repair services to healthcare facilities across India. Our Gurgaon office will be fully operational from Jan 2026. Stay tuned!</span>
+        </span>
+      </div>
       {/* Hero Banner */}
       <section className="relative bg-gradient-to-br from-blue-600 via-blue-700 to-green-600 text-white overflow-hidden min-h-[400px]">
         <div className="absolute inset-0">
