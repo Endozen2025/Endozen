@@ -193,7 +193,7 @@ const Equipment = () => {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 items-stretch max-w-6xl mx-auto">
             {/* Gastroscopes */}
             <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
               <div className="relative h-48 bg-gradient-to-br from-blue-500 to-blue-600">
