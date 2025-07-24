@@ -64,7 +64,7 @@ const staticContent = {
     email_cta: 'info@endozenindia.com',
     phone_block_title: 'Call Us',
     phone_block_description: 'Speak with our specialists',
-    phone_cta: '+91-XXXXXXXXXX'
+    phone_cta: '+91-9871641857'
   }
 };
 
