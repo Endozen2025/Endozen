@@ -134,7 +134,7 @@ const Contact = () => {
                   <div className="ml-4">
                     <h3 className="text-xl font-semibold text-gray-900 mb-2">Phone</h3>
                     <div>
-                      <p className="text-lg font-medium text-blue-600">+91-XXXXXXXXXX</p>
+                      <p className="text-lg font-medium text-blue-600">+91-9871641857</p>
                       <p className="text-gray-600">Call us for immediate assistance</p>
                     </div>
                   </div>
@@ -437,7 +437,7 @@ const Contact = () => {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
-              href="tel:+91-XXXXXXXXXX"
+              href="tel:+91-9871641857"
               className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-colors duration-200 inline-flex items-center justify-center"
             >
               <Phone className="mr-2 h-5 w-5" />
