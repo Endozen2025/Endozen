@@ -139,7 +139,7 @@ const Footer = () => {
                   <p className="text-gray-300">
                     {getContent('footer', 'contact', 'phone') || '+91-9871641857'}
                   </p>
-                  <p className="text-gray-400 text-sm">24/7 Emergency Line</p>
+                  <p className="text-gray-400 text-sm">Call us for assistance</p>
                 </div>
               </div>
               <div className="flex items-start">

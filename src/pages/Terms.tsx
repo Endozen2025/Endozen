@@ -231,9 +231,9 @@ const Terms = () => {
                   </p>
                   <div className="space-y-2 text-gray-700">
                     <p><strong>Company:</strong> EndoZen India Pvt Ltd</p>
-                    <p><strong>Address:</strong> [Your Complete Address Here]</p>
+                    <p><strong>Address:</strong> Coming Soon</p>
                     <p><strong>Email:</strong> info@endozenindia.com</p>
-                    <p><strong>Phone:</strong> +91-XXXXXXXXXX</p>
+                    <p><strong>Phone:</strong> +91-9871641857</p>
                     <p><strong>Business Hours:</strong> Mon-Fri: 9 AM – 5 PM IST</p>
                   </div>
                 </div>

@@ -235,8 +235,8 @@ const Privacy = () => {
                   </p>
                   <div className="space-y-2 text-gray-700">
                     <p><strong>Email:</strong> info@endozenindia.com</p>
-                    <p><strong>Phone:</strong> +91-XXXXXXXXXX</p>
-                    <p><strong>Mailing Address:</strong> [Address only]</p>
+                    <p><strong>Phone:</strong> +91-9871641857</p>
+                    <p><strong>Mailing Address:</strong> Coming Soon</p>
                   </div>
                 </div>
               </div>

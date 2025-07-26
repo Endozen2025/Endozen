@@ -153,11 +153,11 @@ const completeServiceCards = [
   {
     title: "Endoscope",
     description:
-      "Expert repair of flexible endoscopes including gastroscopes, colonoscopes, and bronchoscopes with precision tools and high-grade components.",
+      "Expert repair of flexible endoscopes including gastroscopes, colonoscopes,duodenoscope and bronchoscopes with precision tools and high-grade components.",
     features: [
-      "Endoscope repair",
-      "Light guide cable service",
-      "Insertion tube replacement",
+      "Bending Rubber Replacement",
+      "Biopsy/Suction Channel Replacement",
+      "Angulation Adjustment",
     ],
     icon: Wrench,
     image: "/Endoscope.jpg", // This matches the actual file in public folder
