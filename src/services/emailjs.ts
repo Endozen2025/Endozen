@@ -1,14 +1,16 @@
 import emailjs from '@emailjs/browser';
 
-// EmailJS configuration
-// You'll need to replace these with your actual EmailJS credentials
-const EMAILJS_SERVICE_ID = 'YOUR_SERVICE_ID'; // Replace with your EmailJS service ID
-const EMAILJS_TEMPLATE_ID_CONTACT = 'YOUR_CONTACT_TEMPLATE_ID'; // Replace with your contact template ID
-const EMAILJS_TEMPLATE_ID_QUOTE = 'YOUR_QUOTE_TEMPLATE_ID'; // Replace with your quote template ID
-const EMAILJS_PUBLIC_KEY = 'YOUR_PUBLIC_KEY'; // Replace with your EmailJS public key
+// EmailJS configuration using environment variables
+const EMAILJS_SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+const EMAILJS_TEMPLATE_ID_CONTACT = import.meta.env.VITE_EMAILJS_CONTACT_TEMPLATE_ID;
+const EMAILJS_TEMPLATE_ID_QUOTE = import.meta.env.VITE_EMAILJS_QUOTE_TEMPLATE_ID;
+const EMAILJS_PUBLIC_KEY = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
 
-// Initialize EmailJS
-emailjs.init(EMAILJS_PUBLIC_KEY);
+// Initialize EmailJS (only if not already initialized)
+if (!emailjs.__initialized) {
+  emailjs.init(EMAILJS_PUBLIC_KEY);
+  emailjs.__initialized = true;
+}
 
 export interface ContactFormData {
   name: string;
@@ -41,14 +43,15 @@ export interface QuoteFormData {
 
 export const sendContactEmail = async (formData: ContactFormData): Promise<void> => {
   try {
+    const now = new Date();
     const templateParams = {
-      to_name: 'EndoZen Team',
       from_name: formData.name,
       from_email: formData.email,
       phone: formData.phone,
       service_needed: formData.serviceNeeded,
       message: formData.message,
-      reply_to: formData.email,
+      date: now.toLocaleDateString(),
+      time: now.toLocaleTimeString(),
     };
 
     const result = await emailjs.send(
@@ -66,27 +69,23 @@ export const sendContactEmail = async (formData: ContactFormData): Promise<void>
 
 export const sendQuoteEmail = async (formData: QuoteFormData): Promise<void> => {
   try {
+    const now = new Date();
     const templateParams = {
-      to_name: 'EndoZen Team',
       facility_name: formData.facilityName,
       facility_type: formData.facilityType,
       contact_name: formData.contactName,
-      from_email: formData.email,
-      phone: formData.phone,
-      position: formData.position,
-      address: formData.address,
-      city: formData.city,
-      state: formData.state,
-      pincode: formData.pincode,
+      contact_email: formData.email,
+      contact_phone: formData.phone,
       equipment_type: formData.equipmentType,
       equipment_brand: formData.equipmentBrand,
       equipment_model: formData.equipmentModel,
-      serial_number: formData.serialNumber,
-      issue_description: formData.issueDescription,
+      service_type: formData.serviceType,
       urgency: formData.urgency,
-      preferred_service_date: formData.preferredServiceDate,
+      preferred_date: formData.preferredServiceDate,
+      symptoms: formData.issueDescription,
       additional_info: formData.additionalInfo,
-      reply_to: formData.email,
+      date: now.toLocaleDateString(),
+      time: now.toLocaleTimeString(),
     };
 
     const result = await emailjs.send(
