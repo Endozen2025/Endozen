@@ -17,7 +17,22 @@ import ScrollToTop from './components/ScrollToTop';
 function App() {
   return (
     <Router>
+      {/* Google Tag Manager */}
+      <script dangerouslySetInnerHTML={{ __html: `
+        (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-TBR754V9');
+      ` }} />
+      {/* End Google Tag Manager */}
       <ScrollToTop />
+      {/* Google Tag Manager (noscript) */}
+      <noscript>
+        <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TBR754V9"
+          height="0" width="0" style={{display:'none',visibility:'hidden'}}></iframe>
+      </noscript>
+      {/* End Google Tag Manager (noscript) */}
       <div className="min-h-screen bg-white">
         <Routes>
           {/* CMS Route - No Header/Footer for clean admin interface */}
