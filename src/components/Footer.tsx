@@ -17,7 +17,7 @@ const Footer = () => {
             {!logoError ? (
               <div className="flex flex-col items-start gap-0" style={{width: '230px'}}>
                 <img 
-                  src="/Endozen Logo for footer.png" 
+                  src="/Logo-footer.png" 
                   alt="EndoZen Logo" 
                   className="filter brightness-0 invert rounded"
                   style={{

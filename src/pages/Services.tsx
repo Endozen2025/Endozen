@@ -180,7 +180,7 @@ const completeServiceCards = [
       "Fast-track support to minimize downtime and keep your facility operational. Get immediate assistance, on-site service, and access to loaner equipment when you need it most.",
     features: [
       "Immediate response",
-      "On-site service",
+      "Fast pickup & delivery",
       "Loaner equipment available",
     ],
     icon: Clock,
