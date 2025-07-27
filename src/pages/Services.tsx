@@ -151,7 +151,7 @@ const services = [
 // Add static service cards for the Complete Service Solutions section
 const completeServiceCards = [
   {
-    title: "Endoscope",
+    title: "Endoscope Repair",
     description:
       "Expert repair of flexible endoscopes including gastroscopes, colonoscopes,duodenoscope and bronchoscopes with precision tools and high-grade components.",
     features: [
@@ -622,7 +622,7 @@ const Services = () => {
             {completeServiceCards.map((service, index) => (
               <div
                 key={index}
-                className="bg-white rounded-xl overflow-hidden hover:shadow-lg transition-shadow duration-300"
+                className="bg-white rou nded-xl overflow-hidden hover:shadow-lg transition-shadow duration-300"
               >
                 <img
                   src={service.image}

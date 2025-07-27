@@ -110,7 +110,7 @@ const Equipment = () => {
       step: '2',
       title: content.how_it_works.step2_title,
       description: content.how_it_works.step2_description,
-      icon: DollarSign,
+      icon: () => <span className="text-blue-600 text-3xl font-bold">₹</span>,
     },
     {
       step: '3',

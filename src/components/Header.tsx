@@ -36,7 +36,7 @@ const Header = () => {
             {/* EndoZen Header Logo - Full width for complete visibility */}
             {!logoError ? (
               <img 
-                src="/Logo 600x224.png" 
+                src="/Header Logo.png" 
                 alt="EndoZen Logo" 
                 className="h-full w-auto object-contain"
                 style={{ 
@@ -44,7 +44,7 @@ const Header = () => {
                   minWidth: '300px',
                   objectFit: 'contain',
                   objectPosition: 'left center',
-                  transform: 'scale(0.8)',
+                  transform: 'scale(0.88)',
                   transformOrigin: 'left center',
                   filter: 'contrast(1.1) brightness(1.05)',
                   imageRendering: 'auto'
