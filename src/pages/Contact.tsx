@@ -134,7 +134,12 @@ const Contact = () => {
                   <div className="ml-4">
                     <h3 className="text-xl font-semibold text-gray-900 mb-2">Phone</h3>
                     <div>
-                      <p className="text-lg font-medium text-blue-600">+91-9871641857</p>
+                      <a 
+                        href="tel:+91-9871641857" 
+                        className="text-lg font-medium text-blue-600 hover:text-blue-800 hover:underline transition-colors duration-200"
+                      >
+                        +91-9871641857
+                      </a>
                       <p className="text-gray-600">Call us for immediate assistance</p>
                     </div>
                   </div>
@@ -148,7 +153,12 @@ const Contact = () => {
                   <div className="ml-4">
                     <h3 className="text-xl font-semibold text-gray-900 mb-2">Email</h3>
                     <div>
-                      <p className="text-lg font-medium text-blue-600">info@endozenindia.com</p>
+                      <a 
+                        href="mailto:info@endozenindia.com" 
+                        className="text-lg font-medium text-blue-600 hover:text-blue-800 hover:underline transition-colors duration-200"
+                      >
+                        info@endozenindia.com
+                      </a>
                       <p className="text-gray-600">Send us your equipment details</p>
                     </div>
                   </div>
@@ -162,7 +172,14 @@ const Contact = () => {
                   <div className="ml-4">
                     <h3 className="text-xl font-semibold text-gray-900 mb-2">Website</h3>
                     <div>
-                      <p className="text-lg font-medium text-blue-600">www.endozenindia.com</p>
+                      <a 
+                        href="https://endozenindia.com/" 
+                        target="_blank" 
+                        rel="noopener noreferrer" 
+                        className="text-lg font-medium text-blue-600 hover:text-blue-800 hover:underline transition-colors duration-200"
+                      >
+                        www.endozenindia.com
+                      </a>
                       <p className="text-gray-600">Visit our website for more information</p>
                     </div>
                   </div>
@@ -406,13 +423,23 @@ const Contact = () => {
             <div className="bg-blue-50 p-6 rounded-xl text-center shadow-lg">
               <Phone className="h-12 w-12 text-blue-600 mx-auto mb-4" />
               <h3 className="text-xl font-semibold text-gray-900 mb-2">Call Us</h3>
-              <p className="text-blue-600 font-bold text-lg">+91-9871641857</p>
+              <a 
+                href="tel:+91-9871641857" 
+                className="text-blue-600 font-bold text-lg hover:text-blue-800 hover:underline transition-colors duration-200"
+              >
+                +91-9871641857
+              </a>
               <p className="text-gray-600 text-sm mt-2">For immediate assistance</p>
             </div>
             <div className="bg-green-50 p-6 rounded-xl text-center shadow-lg">
               <Mail className="h-12 w-12 text-green-600 mx-auto mb-4" />
               <h3 className="text-xl font-semibold text-gray-900 mb-2">Email Us</h3>
-              <p className="text-blue-600 font-bold">info@endozenindia.com</p>
+              <a 
+                href="mailto:info@endozenindia.com" 
+                className="text-blue-600 font-bold hover:text-blue-800 hover:underline transition-colors duration-200"
+              >
+                info@endozenindia.com
+              </a>
               <p className="text-gray-600 text-sm mt-2">Send equipment details</p>
             </div>
             <div className="bg-blue-50 p-6 rounded-xl text-center shadow-lg">

@@ -136,18 +136,24 @@ const Footer = () => {
               <div className="flex items-start">
                 <Phone className="h-5 w-5 text-blue-400 mr-3 mt-0.5" />
                 <div>
-                  <p className="text-gray-300">
+                  <a 
+                    href={`tel:${getContent('footer', 'contact', 'phone') || '+919871641857'}`}
+                    className="text-gray-300 hover:text-blue-400 transition-colors cursor-pointer"
+                  >
                     {getContent('footer', 'contact', 'phone') || '+91-9871641857'}
-                  </p>
+                  </a>
                   <p className="text-gray-400 text-sm">Call us for assistance</p>
                 </div>
               </div>
               <div className="flex items-start">
                 <Mail className="h-5 w-5 text-blue-400 mr-3 mt-0.5" />
                 <div>
-                  <p className="text-gray-300">
+                  <a 
+                    href={`mailto:${getContent('footer', 'contact', 'email') || 'info@endozenindia.com'}`}
+                    className="text-gray-300 hover:text-blue-400 transition-colors cursor-pointer"
+                  >
                     {getContent('footer', 'contact', 'email') || 'info@endozenindia.com'}
-                  </p>
+                  </a>
                   <p className="text-gray-400 text-sm">General Inquiries</p>
                 </div>
               </div>
