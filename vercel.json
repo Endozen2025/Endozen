@@ -1,8 +1,16 @@
 {
   "rewrites": [
-    { 
-      "source": "/((?!sitemap\\.xml|robots\\.txt|favicon\\.ico|.*\\.(png|jpg|jpeg|gif|svg|webp|ico|css|js|json)).*)", 
-      "destination": "/" 
+    {
+      "source": "/sitemap.xml",
+      "destination": "/sitemap.xml"
+    },
+    {
+      "source": "/robots.txt", 
+      "destination": "/robots.txt"
+    },
+    {
+      "source": "/((?!sitemap\\.xml|robots\\.txt|.*\\.(png|jpg|jpeg|gif|svg|webp|ico|js|css|json|woff|woff2|ttf|eot)).*)",
+      "destination": "/index.html"
     }
   ],
   "headers": [
@@ -11,7 +19,7 @@
       "headers": [
         {
           "key": "Content-Type",
-          "value": "application/xml"
+          "value": "application/xml; charset=utf-8"
         }
       ]
     },
@@ -19,8 +27,8 @@
       "source": "/robots.txt",
       "headers": [
         {
-          "key": "Content-Type",
-          "value": "text/plain"
+          "key": "Content-Type", 
+          "value": "text/plain; charset=utf-8"
         }
       ]
     }
