@@ -1,9 +1,19 @@
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
 import { Shield, Eye, Lock, FileText, Globe, UserCheck, Settings, Database } from 'lucide-react';
 
 const Privacy = () => {
   return (
-    <div className="pt-16">
+    <>
+      <Helmet>
+        <title>Privacy Policy | EndoZen India</title>
+        <meta
+          name="description"
+          content="Read EndoZen India's privacy policy detailing how we collect, use, and protect personal information for endoscope repair and medical equipment services."
+        />
+        <link rel="canonical" href="https://endozenindia.com/privacy" />
+      </Helmet>
+      <div className="pt-16">
       {/* Hero Banner */}
       <section className="relative bg-gradient-to-br from-blue-600 via-blue-700 to-green-600 text-white overflow-hidden min-h-[400px]">
         <div className="absolute inset-0">
@@ -235,8 +245,13 @@ const Privacy = () => {
                   </p>
                   <div className="space-y-2 text-gray-700">
                     <p><strong>Email:</strong> info@endozenindia.com</p>
-                    <p><strong>Phone:</strong> +91-9871641857</p>
-                    <p><strong>Mailing Address:</strong> Coming Soon</p>
+                    <p><strong>Phone:</strong> +91 8569804777</p>
+                    <div>
+                      <p className="font-semibold text-gray-900">Mailing Address:</p>
+                      <p>M3M Urbana, C-620, Sec 67</p>
+                      <p>Golf Course Ext Rd</p>
+                      <p>Gurugram, Haryana 122101</p>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -254,7 +269,8 @@ const Privacy = () => {
           </div>
         </div>
       </section>
-    </div>
+      </div>
+    </>
   );
 };
 

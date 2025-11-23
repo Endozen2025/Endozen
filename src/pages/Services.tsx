@@ -1,4 +1,5 @@
 import React from "react";
+import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import {
   Wrench,
@@ -190,14 +191,16 @@ const completeServiceCards = [
 
 const Services = () => {
   return (
-    <div className="pt-16">
-      {/* Announcement Bar */}
-      <div className="w-full bg-gradient-to-r from-blue-700 via-green-600 to-blue-700 text-white text-center py-3 px-4 font-semibold text-lg shadow-md">
-        <span className="block">
-          Opening January 2026 in Gurgaon!<br />
-          <span className="font-normal text-base">EndoZen India is proud to bring expert endoscope repair services to healthcare facilities across India. Our Gurgaon office will be fully operational from Jan 2026. Stay tuned!</span>
-        </span>
-      </div>
+    <>
+      <Helmet>
+        <title>Endoscope Repair &amp; Maintenance Services | EndoZen India</title>
+        <meta
+          name="description"
+          content="Explore EndoZen's endoscope repair, preventive maintenance, and priority support services delivering OEM-grade quality with nationwide pickup and delivery."
+        />
+        <link rel="canonical" href="https://endozenindia.com/services" />
+      </Helmet>
+      <div className="pt-16">
       {/* Hero Banner */}
       <section className="relative bg-gradient-to-br from-blue-600 via-blue-700 to-green-600 text-white overflow-hidden min-h-[400px]">
         <div className="absolute inset-0">
@@ -665,14 +668,13 @@ const Services = () => {
             {staticContent.cta.subtitle}
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button
-              className="bg-gray-400 text-white px-8 py-4 rounded-lg font-semibold text-lg inline-flex items-center justify-center cursor-not-allowed opacity-60"
-              disabled
-              title="Get Quote is temporarily disabled until Gurgaon office opens."
+            <Link
+              to="/quote"
+              className="bg-white text-blue-700 px-8 py-4 rounded-lg font-semibold text-lg inline-flex items-center justify-center hover:bg-blue-50 transition-colors duration-200"
             >
               {staticContent.cta.quote_button}
               <ArrowRight className="ml-2 h-5 w-5" />
-            </button>
+            </Link>
             <Link
               to="/contact"
               className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-blue-600 transition-colors duration-200"
@@ -682,7 +684,8 @@ const Services = () => {
           </div>
         </div>
       </section>
-    </div>
+      </div>
+    </>
   );
 };
 

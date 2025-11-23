@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Helmet } from 'react-helmet-async';
 import { Phone, Mail, MapPin, Clock, Send, CheckCircle, MessageSquare, Calendar, Building } from 'lucide-react';
 import { emailService } from '../services/emailService';
 
@@ -83,15 +84,16 @@ const Contact = () => {
   }
 
   return (
-    <div className="pt-16">
-      {/* Announcement Bar */}
-      <div className="w-full bg-gradient-to-r from-blue-700 via-green-600 to-blue-700 text-white text-center py-3 px-4 font-semibold text-lg shadow-md">
-        <span className="block">
-          Opening January 2026 in Gurgaon!<br />
-          <span className="font-normal text-base">EndoZen India is proud to bring expert endoscope repair services to healthcare facilities across India. Our Gurgaon office will be fully operational from Jan 2026. Stay tuned!</span>
-        </span>
-      </div>
-
+    <>
+      <Helmet>
+        <title>Contact EndoZen | Endoscope Repair Support India</title>
+        <meta
+          name="description"
+          content="Connect with EndoZen India for endoscope repair support, quotes, or equipment sales. Call +91 8569804777 or reach our Gurugram service center via the contact form."
+        />
+        <link rel="canonical" href="https://endozenindia.com/contact" />
+      </Helmet>
+      <div className="pt-16">
       {/* Hero Banner */}
       <section className="relative bg-gradient-to-br from-blue-600 via-blue-700 to-green-600 text-white overflow-hidden min-h-[400px]">
         <div className="absolute inset-0">
@@ -135,10 +137,10 @@ const Contact = () => {
                     <h3 className="text-xl font-semibold text-gray-900 mb-2">Phone</h3>
                     <div>
                       <a 
-                        href="tel:+91-9871641857" 
+                        href="tel:+918569804777" 
                         className="text-lg font-medium text-blue-600 hover:text-blue-800 hover:underline transition-colors duration-200"
                       >
-                        +91-9871641857
+                        +91 8569804777
                       </a>
                       <p className="text-gray-600">Call us for immediate assistance</p>
                     </div>
@@ -194,8 +196,17 @@ const Contact = () => {
                     <h3 className="text-xl font-semibold text-gray-900 mb-2">Service Center</h3>
                     <div className="space-y-1">
                       <p className="font-medium text-gray-900">EndoZen India Pvt Ltd</p>
-                      <p className="text-gray-600">Coming Soon</p>
-                     {/* <p className="text-gray-600">(City, State, Pincode)</p> */}
+                      <p className="text-gray-600">M3M Urbana, C-620, Sec 67</p>
+                      <p className="text-gray-600">Golf Course Ext Rd</p>
+                      <p className="text-gray-600">Gurugram, Haryana 122101</p>
+                      <p className="text-gray-600">
+                        <a
+                          href="tel:+918569804777"
+                          className="text-blue-600 font-semibold hover:text-blue-800 hover:underline"
+                        >
+                          +91 8569804777
+                        </a>
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -424,10 +435,10 @@ const Contact = () => {
               <Phone className="h-12 w-12 text-blue-600 mx-auto mb-4" />
               <h3 className="text-xl font-semibold text-gray-900 mb-2">Call Us</h3>
               <a 
-                href="tel:+91-9871641857" 
+                href="tel:+918569804777" 
                 className="text-blue-600 font-bold text-lg hover:text-blue-800 hover:underline transition-colors duration-200"
               >
-                +91-9871641857
+                +91 8569804777
               </a>
               <p className="text-gray-600 text-sm mt-2">For immediate assistance</p>
             </div>
@@ -464,7 +475,7 @@ const Contact = () => {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
-              href="tel:+91-9871641857"
+              href="tel:+918569804777"
               className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-colors duration-200 inline-flex items-center justify-center"
             >
               <Phone className="mr-2 h-5 w-5" />
@@ -480,7 +491,8 @@ const Contact = () => {
           </div>
         </div>
       </section>
-    </div>
+      </div>
+    </>
   );
 };
 

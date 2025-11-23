@@ -36,12 +36,12 @@ const Header = () => {
             {/* EndoZen Header Logo - Full width for complete visibility */}
             {!logoError ? (
               <img 
-                src="/Header Logo.png" 
+                src="/Endozen Logo.jpg" 
                 alt="EndoZen Logo" 
                 className="h-full w-auto object-contain"
                 style={{ 
                   maxWidth: '600px',
-                  minWidth: '300px',
+                  minWidth: '330px',
                   objectFit: 'contain',
                   objectPosition: 'left center',
                   transform: 'scale(0.88)',
@@ -73,13 +73,12 @@ const Header = () => {
             ))}
           </nav>
 
-          <button
-            className="hidden md:inline-flex bg-gray-400 text-white px-6 py-2 rounded-lg font-medium ml-auto cursor-not-allowed opacity-60"
-            disabled
-            title="Get Quote is temporarily disabled until Gurgaon office opens."
+          <Link
+            to="/quote"
+            className="hidden md:inline-flex bg-green-600 hover:bg-green-700 text-white px-6 py-2 rounded-lg font-medium ml-auto transition-colors duration-200"
           >
             {getContent('header', 'cta', 'quote_button_text') || 'Get Quote'}
-          </button>
+          </Link>
 
           {/* Mobile menu button */}
           <button
@@ -108,13 +107,13 @@ const Header = () => {
                   {item.name}
                 </Link>
               ))}
-              <button
-                className="block px-3 py-2 mt-4 bg-gray-400 text-white text-center rounded-lg font-medium cursor-not-allowed opacity-60"
-                disabled
-                title="Get Quote is temporarily disabled until Gurgaon office opens."
+              <Link
+                to="/quote"
+                className="block px-3 py-2 mt-4 bg-green-600 text-white text-center rounded-lg font-medium hover:bg-green-700 transition-colors duration-200"
+                onClick={() => setIsMenuOpen(false)}
               >
                 {getContent('header', 'cta', 'quote_button_text') || 'Get Quote'}
-              </button>
+              </Link>
             </div>
           </div>
         )}

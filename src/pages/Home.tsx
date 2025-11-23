@@ -1,4 +1,5 @@
 import React from "react";
+import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import {
   ArrowRight,
@@ -20,14 +21,16 @@ const Home = () => {
   const { getContent } = useContent();
 
   return (
-    <div className="pt-16">
-      {/* Announcement Bar */}
-      <div className="w-full bg-gradient-to-r from-blue-700 via-green-600 to-blue-700 text-white text-center py-3 px-4 font-semibold text-lg shadow-md">
-        <span className="block">
-          Opening January 2026 in Gurgaon!<br />
-          <span className="font-normal text-base">EndoZen India is proud to bring expert endoscope repair services to healthcare facilities across India. Our Gurgaon office will be fully operational from Jan 2026. Stay tuned!</span>
-        </span>
-      </div>
+    <>
+      <Helmet>
+        <title>Endoscope Repair in India | Scope Repair Services – EndoZen</title>
+        <meta
+          name="description"
+          content="OEM-grade endoscope and scope repair in India. EndoZen delivers precision service, fast turnaround, and 40–50% cost savings from Gurgaon to nationwide facilities."
+        />
+        <link rel="canonical" href="https://endozenindia.com/" />
+      </Helmet>
+      <div className="pt-16">
       {/* Hero Banner */}
       <section className="relative bg-gradient-to-br from-blue-600 via-blue-700 to-green-600 text-white overflow-hidden">
         <div className="absolute inset-0 bg-blue-800 opacity-75"></div>
@@ -40,12 +43,9 @@ const Home = () => {
         </div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-28">
           <div className="text-center">
-            <h1 className="text-3xl md:text-5xl font-bold mb-2">
-              Expert Endoscope Care for
+            <h1 className="text-3xl md:text-5xl font-bold mb-6">
+              Expert Endoscope Repair for <span style={{ color: '#4ADE80' }}>Peace of Mind</span>
             </h1>
-            <h2 className="text-3xl md:text-5xl font-bold mb-6" style={{ color: '#4ADE80' }}>
-              Peace of Mind
-            </h2>
             <div className="mb-8">
               <div className="text-lg md:text-xl font-semibold mb-6 tracking-wider">
                 REPAIRS | UPGRADES | PURCHASES | PREVENTIVE MAINTENANCE
@@ -58,13 +58,12 @@ const Home = () => {
               >
                 Contact Us <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
-              <button
-                className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg bg-gray-400 cursor-not-allowed flex items-center justify-center opacity-60"
-                disabled
-                title="Get Quote is temporarily disabled until Gurgaon office opens."
+              <Link
+                to="/quote"
+                className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-blue-700 transition-colors duration-200 flex items-center justify-center shadow-lg"
               >
-                Request a Repair
-              </button>
+                Get Quote <ArrowRight className="ml-2 h-5 w-5" />
+              </Link>
             </div>
           </div>
         </div>
@@ -522,13 +521,13 @@ const Home = () => {
             {getContent('home', 'cta', 'description') || 'Get a free quote today and experience the EndoZen difference. Fast, reliable, and professional service guaranteed.'}
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button
-              className="bg-gray-400 text-white px-8 py-4 rounded-lg font-semibold text-lg cursor-not-allowed opacity-60"
-              disabled
-              title="Get Quote is temporarily disabled until Gurgaon office opens."
+            <Link
+              to="/quote"
+              className="bg-white text-blue-700 px-8 py-4 rounded-lg font-semibold text-lg inline-flex items-center justify-center hover:bg-blue-50 transition-colors duration-200"
             >
               {getContent('home', 'cta', 'button_1_text') || 'Get Free Quote'}
-            </button>
+              <ArrowRight className="ml-2 h-5 w-5" />
+            </Link>
             <Link
               to="/contact"
               className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-blue-600 transition-colors duration-200"
@@ -538,7 +537,8 @@ const Home = () => {
           </div>
         </div>
       </section>
-    </div>
+      </div>
+    </>
   );
 };
 

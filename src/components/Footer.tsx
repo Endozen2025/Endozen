@@ -17,9 +17,9 @@ const Footer = () => {
             {!logoError ? (
               <div className="flex flex-col items-start gap-0" style={{width: '230px'}}>
                 <img 
-                  src="/Logo-footer.png" 
+                  src="/colored-logo.png" 
                   alt="EndoZen Logo" 
-                  className="filter brightness-0 invert rounded"
+                  className="rounded"
                   style={{
                     height: '86px',
                     width: '230px',
@@ -118,13 +118,12 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
-                <button
-                  className="text-gray-400 bg-gray-800 px-4 py-2 rounded-lg font-medium cursor-not-allowed opacity-60"
-                  disabled
-                  title="Get Quote is temporarily disabled until Gurgaon office opens."
+                <Link
+                  to="/quote"
+                  className="inline-flex items-center justify-center bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-lg font-medium transition-colors"
                 >
                   Get Quote
-                </button>
+                </Link>
               </li>
             </ul>
           </div>
@@ -137,10 +136,10 @@ const Footer = () => {
                 <Phone className="h-5 w-5 text-blue-400 mr-3 mt-0.5" />
                 <div>
                   <a 
-                    href={`tel:${getContent('footer', 'contact', 'phone') || '+919871641857'}`}
+                    href={`tel:${getContent('footer', 'contact', 'phone') || '+918569804777'}`}
                     className="text-gray-300 hover:text-blue-400 transition-colors cursor-pointer"
                   >
-                    {getContent('footer', 'contact', 'phone') || '+91-9871641857'}
+                    {getContent('footer', 'contact', 'phone') || '+91 8569804777'}
                   </a>
                   <p className="text-gray-400 text-sm">Call us for assistance</p>
                 </div>
@@ -159,13 +158,11 @@ const Footer = () => {
               </div>
               <div className="flex items-start">
                 <MapPin className="h-5 w-5 text-blue-400 mr-3 mt-0.5" />
-                <div>
-                  <p className="text-gray-300">
-                    {getContent('footer', 'contact', 'address') || 'Coming Soon'}
-                  </p>
-                  <p className="text-gray-300">
-                    {getContent('footer', 'contact', 'business_hours') || 'Mon-Fri: 9AM-5PM'}
-                  </p>
+                <div className="text-gray-300 text-sm space-y-1">
+                  <p>{getContent('footer', 'contact', 'address_line1') || 'M3M Urbana, C-620, Sec 67'}</p>
+                  <p>{getContent('footer', 'contact', 'address_line2') || 'Golf Course Ext Rd'}</p>
+                  <p>{getContent('footer', 'contact', 'address_line3') || 'Gurugram, Haryana 122101'}</p>
+                  <p>{getContent('footer', 'contact', 'business_hours') || 'Mon-Fri: 9AM-5PM'}</p>
                 </div>
               </div>
             </div>

@@ -1,4 +1,5 @@
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
 import { Award, Users, Clock, Shield, Target, Heart } from 'lucide-react';
 import { useContent } from '../hooks/useContent';
 
@@ -6,14 +7,16 @@ const About = () => {
   const { getContent } = useContent();
 
   return (
-    <div className="pt-16">
-      {/* Announcement Bar */}
-      <div className="w-full bg-gradient-to-r from-blue-700 via-green-600 to-blue-700 text-white text-center py-3 px-4 font-semibold text-lg shadow-md">
-        <span className="block">
-          Opening January 2026 in Gurgaon!<br />
-          <span className="font-normal text-base">EndoZen India is proud to bring expert endoscope repair services to healthcare facilities across India. Our Gurgaon office will be fully operational from Jan 2026. Stay tuned!</span>
-        </span>
-      </div>
+    <>
+      <Helmet>
+        <title>About EndoZen | Precision Endoscope Repair Experts</title>
+        <meta
+          name="description"
+          content="Discover EndoZen India Pvt Ltd, Gurgaon-based specialists delivering OEM-grade endoscope repair, preventive maintenance, and nationwide support."
+        />
+        <link rel="canonical" href="https://endozenindia.com/about" />
+      </Helmet>
+      <div className="pt-16">
       {/* Hero Banner */}
       <section className="relative bg-gradient-to-br from-blue-600 via-blue-700 to-green-600 text-white overflow-hidden min-h-[400px]">
         <div className="absolute inset-0">
@@ -285,7 +288,8 @@ const About = () => {
           </div>
         </div>
       </section>
-    </div>
+      </div>
+    </>
   );
 };
 

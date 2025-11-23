@@ -1,9 +1,19 @@
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
 import { FileText, Shield, AlertCircle, Scale, Users, Gavel, CreditCard, RefreshCw, Eye, MapPin } from 'lucide-react';
 
 const Terms = () => {
   return (
-    <div className="pt-16">
+    <>
+      <Helmet>
+        <title>Terms &amp; Conditions | EndoZen India</title>
+        <meta
+          name="description"
+          content="Review the terms and conditions for EndoZen India's endoscope repair, maintenance, and equipment services including payment, liability, and governance."
+        />
+        <link rel="canonical" href="https://endozenindia.com/terms" />
+      </Helmet>
+      <div className="pt-16">
       {/* Hero Banner */}
       <section className="relative bg-gradient-to-br from-blue-600 via-blue-700 to-green-600 text-white overflow-hidden min-h-[400px]">
         <div className="absolute inset-0">
@@ -231,9 +241,14 @@ const Terms = () => {
                   </p>
                   <div className="space-y-2 text-gray-700">
                     <p><strong>Company:</strong> EndoZen India Pvt Ltd</p>
-                    <p><strong>Address:</strong> Coming Soon</p>
+                    <div>
+                      <p className="font-semibold text-gray-900">Address:</p>
+                      <p>M3M Urbana, C-620, Sec 67</p>
+                      <p>Golf Course Ext Rd</p>
+                      <p>Gurugram, Haryana 122101</p>
+                    </div>
                     <p><strong>Email:</strong> info@endozenindia.com</p>
-                    <p><strong>Phone:</strong> +91-9871641857</p>
+                    <p><strong>Phone:</strong> +91 8569804777</p>
                     <p><strong>Business Hours:</strong> Mon-Fri: 9 AM – 5 PM IST</p>
                   </div>
                 </div>
@@ -249,7 +264,8 @@ const Terms = () => {
           </div>
         </div>
       </section>
-    </div>
+      </div>
+    </>
   );
 };
 

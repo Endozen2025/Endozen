@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Helmet } from 'react-helmet-async';
 import { Calendar, FileText, Send, CheckCircle, Phone, Mail } from 'lucide-react';
 import { emailService } from '../services/emailService';
 
@@ -78,7 +79,7 @@ const Quote = () => {
           <CheckCircle className="h-20 w-20 text-green-500 mx-auto mb-6" />
           <h2 className="text-2xl font-bold text-gray-900 mb-4">Quote Request Submitted!</h2>
           <p className="text-gray-600 mb-6">
-            Thank you for your service request. Our team will review your information and contact you within 2 hours.
+            Thank you for your service request. Our team will review your information and contact you within 24 hours.
           </p>
           <button
             onClick={() => setIsSubmitted(false)}
@@ -92,7 +93,16 @@ const Quote = () => {
   }
 
   return (
-    <div className="pt-16">
+    <>
+      <Helmet>
+        <title>Request Endoscope Repair Quote | EndoZen India</title>
+        <meta
+          name="description"
+          content="Request a fast, detailed quote for endoscope repair or preventive maintenance from EndoZen India. Share facility, equipment, and urgency details to get started."
+        />
+        <link rel="canonical" href="https://endozenindia.com/quote" />
+      </Helmet>
+      <div className="pt-16">
       {/* Hero Banner */}
       <section className="relative bg-gradient-to-br from-blue-600 via-blue-700 to-green-600 text-white overflow-hidden min-h-[400px]">
         <div className="absolute inset-0">
@@ -110,7 +120,7 @@ const Quote = () => {
             </h1>
             <p className="text-xl max-w-3xl mx-auto opacity-90">
               Get a fast, accurate quote for your medical equipment servicing needs. 
-              Our experts will review your request and provide a detailed estimate within 2 hours.
+              Our experts will review your request and provide a detailed estimate within 24 hours.
             </p>
           </div>
         </div>
@@ -122,7 +132,7 @@ const Quote = () => {
           <div className="flex flex-col md:flex-row items-center justify-center text-center md:text-left">
             <Phone className="h-6 w-6 mr-3 mb-2 md:mb-0" />
             <span className="font-semibold mr-4">Emergency Service Needed?</span>
-            <span>Call us directly: <a href="tel:+91-9871641857" className="underline font-bold">+91-XXXXXXXXXX</a></span>
+            <span>Call us directly: <a href="tel:+918569804777" className="underline font-bold">+91 8569804777</a></span>
           </div>
         </div>
       </section>
@@ -419,7 +429,7 @@ const Quote = () => {
                 )}
               </button>
               <p className="mt-4 text-sm text-gray-600">
-                We'll review your request and contact you within 2 hours during business hours.
+                We'll review your request and contact you within 24 hours during business hours.
               </p>
             </div>
           </form>
@@ -437,14 +447,19 @@ const Quote = () => {
             <div className="bg-white p-6 rounded-xl text-center shadow-lg">
               <Phone className="h-12 w-12 text-blue-600 mx-auto mb-4" />
               <h3 className="text-xl font-semibold text-gray-900 mb-2">Emergency Hotline</h3>
-              <p className="text-blue-600 font-bold text-lg">+91-XXXXXXXXXX</p>
+              <a
+                href="tel:+918569804777"
+                className="text-blue-600 font-bold text-lg hover:text-blue-800"
+              >
+                +91 8569804777
+              </a>
               <p className="text-gray-600 text-sm mt-2">Available 24/7</p>
             </div>
             <div className="bg-white p-6 rounded-xl text-center shadow-lg">
               <Mail className="h-12 w-12 text-green-600 mx-auto mb-4" />
               <h3 className="text-xl font-semibold text-gray-900 mb-2">Email Support</h3>
               <p className="text-blue-600 font-bold">info@endozenindia.com</p>
-              <p className="text-gray-600 text-sm mt-2">Response within 2 hours</p>
+              <p className="text-gray-600 text-sm mt-2">Response within 24 hours</p>
             </div>
             <div className="bg-white p-6 rounded-xl text-center shadow-lg">
               <Calendar className="h-12 w-12 text-blue-600 mx-auto mb-4" />
@@ -455,7 +470,8 @@ const Quote = () => {
           </div>
         </div>
       </section>
-    </div>
+      </div>
+    </>
   );
 };
 

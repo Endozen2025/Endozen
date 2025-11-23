@@ -1,4 +1,5 @@
 import { CheckCircle, DollarSign, Truck, FileText, Phone, Mail, Clock, Shield } from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
 
 // All content is now static/mock data
 const staticContent = {
@@ -64,7 +65,7 @@ const staticContent = {
     email_cta: 'info@endozenindia.com',
     phone_block_title: 'Call Us',
     phone_block_description: 'Speak with our specialists',
-    phone_cta: '+91-9871641857'
+    phone_cta: '+91 8569804777'
   }
 };
 
@@ -127,14 +128,16 @@ const Equipment = () => {
   ];
 
   return (
-    <div className="pt-16">
-      {/* Announcement Bar */}
-      <div className="w-full bg-gradient-to-r from-blue-700 via-green-600 to-blue-700 text-white text-center py-3 px-4 font-semibold text-lg shadow-md">
-        <span className="block">
-          Opening January 2026 in Gurgaon!<br />
-          <span className="font-normal text-base">EndoZen India is proud to bring expert endoscope repair services to healthcare facilities across India. Our Gurgaon office will be fully operational from Jan 2026. Stay tuned!</span>
-        </span>
-      </div>
+    <>
+      <Helmet>
+        <title>Sell Endoscopy Equipment in India | EndoZen Buying Program</title>
+        <meta
+          name="description"
+          content="Sell surplus or legacy endoscopy equipment through EndoZen's transparent buying program with quick quotes, logistics support, and payments from Gurgaon."
+        />
+        <link rel="canonical" href="https://endozenindia.com/equipment" />
+      </Helmet>
+      <div className="pt-16">
       {/* Hero Banner */}
       <section className="relative bg-gradient-to-br from-blue-600 via-blue-700 to-green-600 text-white overflow-hidden min-h-[400px]">
         <div className="absolute inset-0">
@@ -435,7 +438,8 @@ const Equipment = () => {
         </div>
       </section>
 
-    </div>
+      </div>
+    </>
   );
 };
 
