@@ -75,7 +75,7 @@ const Header = () => {
 
           <Link
             to="/quote"
-            className="hidden md:inline-flex bg-green-600 hover:bg-green-700 text-white px-6 py-2 rounded-lg font-medium ml-auto transition-colors duration-200"
+            className="hidden md:inline-flex bg-emerald-700 hover:bg-emerald-800 text-white px-6 py-2 rounded-lg font-medium ml-auto transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-emerald-600"
           >
             {getContent('header', 'cta', 'quote_button_text') || 'Get Quote'}
           </Link>
@@ -83,7 +83,10 @@ const Header = () => {
           {/* Mobile menu button */}
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="md:hidden p-2 rounded-md text-gray-700 hover:text-blue-600 hover:bg-gray-100"
+            className="md:hidden p-2 rounded-md text-gray-700 hover:text-blue-600 hover:bg-gray-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-blue-600"
+            aria-label={isMenuOpen ? 'Close navigation menu' : 'Open navigation menu'}
+            aria-expanded={isMenuOpen}
+            type="button"
           >
             {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
           </button>
@@ -109,7 +112,7 @@ const Header = () => {
               ))}
               <Link
                 to="/quote"
-                className="block px-3 py-2 mt-4 bg-green-600 text-white text-center rounded-lg font-medium hover:bg-green-700 transition-colors duration-200"
+                className="block px-3 py-2 mt-4 bg-emerald-700 text-white text-center rounded-lg font-medium hover:bg-emerald-800 transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-emerald-600"
                 onClick={() => setIsMenuOpen(false)}
               >
                 {getContent('header', 'cta', 'quote_button_text') || 'Get Quote'}

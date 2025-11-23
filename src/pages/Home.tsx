@@ -35,14 +35,20 @@ const Home = () => {
       <section className="relative bg-gradient-to-br from-blue-600 via-blue-700 to-green-600 text-white overflow-hidden">
         <div className="absolute inset-0 bg-blue-800 opacity-75"></div>
         <div className="absolute inset-0">
-          <img
-            src="/colonoscopy-endoscopic-examination (1).jpg"
-            alt="Professional colonoscopy endoscopic examination and medical equipment"
-            className="w-full h-full object-cover opacity-40"
-            fetchPriority="high"
-            loading="eager"
-            decoding="async"
-          />
+          <picture>
+            <source
+              srcSet="/colonoscopy-endoscopic-examination (1).webp"
+              type="image/webp"
+            />
+            <img
+              src="/colonoscopy-endoscopic-examination (1).jpg"
+              alt="Professional colonoscopy endoscopic examination and medical equipment"
+              className="w-full h-full object-cover opacity-40"
+              fetchPriority="high"
+              loading="eager"
+              decoding="async"
+            />
+          </picture>
         </div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-28">
           <div className="text-center">
@@ -57,13 +63,13 @@ const Home = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/contact"
-                className="bg-green-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-green-600 transition-colors duration-200 flex items-center justify-center shadow-lg"
+                className="bg-emerald-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-emerald-700 transition-colors duration-200 flex items-center justify-center shadow-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-emerald-500"
               >
                 Contact Us <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
               <Link
                 to="/quote"
-                className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-blue-700 transition-colors duration-200 flex items-center justify-center shadow-lg"
+                className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg transition-colors duration-200 flex items-center justify-center shadow-lg hover:bg-white hover:text-blue-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-white"
               >
                 Get Quote <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
@@ -128,11 +134,19 @@ const Home = () => {
             </div>
 
             <div className="relative">
-              <img
-                src="/flexible-endoscope-medical-investigative-surgical-tool-monitoring-gastrointestinal-endoscope-clinic-closeup.jpg"
-                alt="Flexible endoscope medical investigative surgical tool - precision repair and quality control process"
-                className="w-full h-[600px] object-cover rounded-xl shadow-lg"
-              />
+              <picture>
+                <source
+                  srcSet="/flexible-endoscope-medical-investigative-surgical-tool-monitoring-gastrointestinal-endoscope-clinic-closeup.webp"
+                  type="image/webp"
+                />
+                <img
+                  src="/flexible-endoscope-medical-investigative-surgical-tool-monitoring-gastrointestinal-endoscope-clinic-closeup.jpg"
+                  srcSet="/flexible-endoscope-medical-investigative-surgical-tool-monitoring-gastrointestinal-endoscope-clinic-closeup.jpg 1200w, /flexible-endoscope-medical-investigative-surgical-tool-monitoring-gastrointestinal-endoscope-clinic-closeup.webp 1600w"
+                  sizes="(min-width: 1024px) 600px, 100vw"
+                  alt="Flexible endoscope medical investigative surgical tool - precision repair and quality control process"
+                  className="w-full h-[600px] object-cover rounded-xl shadow-lg"
+                />
+              </picture>
               <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent rounded-xl"></div>
               <div className="absolute bottom-6 left-6 right-6 bg-white/90 backdrop-blur-sm p-6 rounded-lg">
                 <h3 className="text-xl font-bold text-gray-900 mb-3">
@@ -215,11 +229,16 @@ const Home = () => {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="bg-gray-50 p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300">
               <div className="relative mb-6">
-                <img
-                  src="/endoscopy-hospital-doctor-holding-endoscope-before-gastroscopy-medical-examination (1).jpg"
-                  alt="Endoscopy hospital doctor holding endoscope - extend equipment lifespan through professional maintenance"
-                  className="w-full h-32 object-cover rounded-lg"
-                />
+                <picture>
+                  <source srcSet="/endoscopy-hospital-doctor-holding-endoscope-before-gastroscopy-medical-examination (1).webp" type="image/webp" />
+                    <img
+                      src="/endoscopy-hospital-doctor-holding-endoscope-before-gastroscopy-medical-examination (1).jpg"
+                      srcSet="/endoscopy-hospital-doctor-holding-endoscope-before-gastroscopy-medical-examination (1).jpg 900w, /endoscopy-hospital-doctor-holding-endoscope-before-gastroscopy-medical-examination (1).webp 1200w"
+                      sizes="(min-width: 1024px) 320px, 100vw"
+                      alt="Endoscopy hospital doctor holding endoscope - extend equipment lifespan through professional maintenance"
+                      className="w-full h-32 object-cover rounded-lg"
+                    />
+                </picture>
                 <div className="absolute -bottom-4 left-4">
                   <Shield className="h-12 w-12 text-blue-600 bg-white p-2 rounded-full shadow-lg" />
                 </div>
@@ -248,11 +267,16 @@ const Home = () => {
 
             <div className="bg-gray-50 p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300">
               <div className="relative mb-6">
-                <img
-                  src="/close-up-endoscope-hands-medical-worker-stock-photo.jpg"
-                  alt="Close-up endoscope hands medical worker - minimize downtime with fast maintenance"
-                  className="w-full h-32 object-cover rounded-lg"
-                />
+                <picture>
+                  <source srcSet="/close-up-endoscope-hands-medical-worker-stock-photo.webp" type="image/webp" />
+                  <img
+                    src="/close-up-endoscope-hands-medical-worker-stock-photo.jpg"
+                    srcSet="/close-up-endoscope-hands-medical-worker-stock-photo.jpg 900w, /close-up-endoscope-hands-medical-worker-stock-photo.webp 1200w"
+                    sizes="(min-width: 1024px) 320px, 100vw"
+                    alt="Close-up endoscope hands medical worker - minimize downtime with fast maintenance"
+                    className="w-full h-32 object-cover rounded-lg"
+                  />
+                </picture>
                 <div className="absolute -bottom-4 left-4">
                   <Clock className="h-12 w-12 text-green-600 bg-white p-2 rounded-full shadow-lg" />
                 </div>
@@ -277,11 +301,16 @@ const Home = () => {
 
             <div className="bg-gray-50 p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300">
               <div className="relative mb-6">
-                <img
-                  src="/doctor-monitoring-patient-s-pulse.jpg"
-                  alt="Doctor monitoring patient's pulse - expert medical support and technical guidance"
-                  className="w-full h-32 object-cover rounded-lg"
-                />
+                <picture>
+                  <source srcSet="/doctor-monitoring-patient-s-pulse.webp" type="image/webp" />
+                  <img
+                    src="/doctor-monitoring-patient-s-pulse.jpg"
+                    srcSet="/doctor-monitoring-patient-s-pulse.jpg 900w, /doctor-monitoring-patient-s-pulse.webp 1200w"
+                    sizes="(min-width: 1024px) 320px, 100vw"
+                    alt="Doctor monitoring patient's pulse - expert medical support and technical guidance"
+                    className="w-full h-32 object-cover rounded-lg"
+                  />
+                </picture>
                 <div className="absolute -bottom-4 left-4">
                   <Users className="h-12 w-12 text-blue-600 bg-white p-2 rounded-full shadow-lg" />
                 </div>
@@ -310,11 +339,16 @@ const Home = () => {
 
             <div className="bg-gray-50 p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300">
               <div className="relative mb-6">
-                <img
-                  src="/Gastro.jpg"
-                  alt="Gastroscopy equipment - reduce operational disruptions with comprehensive maintenance"
-                  className="w-full h-32 object-cover rounded-lg"
-                />
+                <picture>
+                  <source srcSet="/Gastro.webp" type="image/webp" />
+                  <img
+                    src="/Gastro.jpg"
+                    srcSet="/Gastro.jpg 900w, /Gastro.webp 1200w"
+                    sizes="(min-width: 1024px) 320px, 100vw"
+                    alt="Gastroscopy equipment - reduce operational disruptions with comprehensive maintenance"
+                    className="w-full h-32 object-cover rounded-lg"
+                  />
+                </picture>
                 <div className="absolute -bottom-4 left-4">
                   <Settings className="h-12 w-12 text-green-600 bg-white p-2 rounded-full shadow-lg" />
                 </div>
@@ -343,11 +377,16 @@ const Home = () => {
 
             <div className="bg-gray-50 p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300">
               <div className="relative mb-6">
-                <img
-                  src="/nurse-wears-protective-suit-mask-covid19-outbreak.jpg"
-                  alt="Nurse wearing protective suit and mask - affordable and dependable repair solutions for healthcare facilities"
-                  className="w-full h-32 object-cover rounded-lg"
-                />
+                <picture>
+                  <source srcSet="/nurse-wears-protective-suit-mask-covid19-outbreak.webp" type="image/webp" />
+                  <img
+                    src="/nurse-wears-protective-suit-mask-covid19-outbreak.jpg"
+                    srcSet="/nurse-wears-protective-suit-mask-covid19-outbreak.jpg 900w, /nurse-wears-protective-suit-mask-covid19-outbreak.webp 1200w"
+                    sizes="(min-width: 1024px) 320px, 100vw"
+                    alt="Nurse wearing protective suit and mask - affordable and dependable repair solutions for healthcare facilities"
+                    className="w-full h-32 object-cover rounded-lg"
+                  />
+                </picture>
                 <div className="absolute -bottom-4 left-4">
                   <Award className="h-12 w-12 text-blue-600 bg-white p-2 rounded-full shadow-lg" />
                 </div>
@@ -376,11 +415,16 @@ const Home = () => {
 
             <div className="bg-gray-50 p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300">
               <div className="relative mb-6">
-                <img
-                  src="/standard-quality-control-concept-m.jpg"
-                  alt="Standard quality control concept - trusted quality and value for healthcare facilities"
-                  className="w-full h-32 object-cover rounded-lg"
-                />
+                <picture>
+                  <source srcSet="/standard-quality-control-concept-m.webp" type="image/webp" />
+                  <img
+                    src="/standard-quality-control-concept-m.jpg"
+                    srcSet="/standard-quality-control-concept-m.jpg 900w, /standard-quality-control-concept-m.webp 1200w"
+                    sizes="(min-width: 1024px) 320px, 100vw"
+                    alt="Standard quality control concept - trusted quality and value for healthcare facilities"
+                    className="w-full h-32 object-cover rounded-lg"
+                  />
+                </picture>
                 <div className="absolute -bottom-4 left-4">
                   <BadgeCheck className="h-12 w-12 text-blue-600 bg-white p-2 rounded-full shadow-lg" />
                 </div>
@@ -473,11 +517,22 @@ const Home = () => {
                 key={index}
                 className="bg-white rounded-xl overflow-hidden hover:shadow-lg transition-shadow duration-300"
               >
-                <img
-                  src={service.image}
-                  alt={service.title}
-                  className="w-full h-40 object-cover"
-                />
+                {service.image.endsWith('.jpg') ? (
+                  <picture>
+                    <source srcSet={service.image.replace(/\.jpg$/, '.webp')} type="image/webp" />
+                    <img
+                      src={service.image}
+                      alt={service.title}
+                      className="w-full h-40 object-cover"
+                    />
+                  </picture>
+                ) : (
+                  <img
+                    src={service.image}
+                    alt={service.title}
+                    className="w-full h-40 object-cover"
+                  />
+                )}
                 <div className="p-6">
                   <div className="flex items-center mb-4">
                     <service.icon className="h-8 w-8 text-blue-600 mr-3" />

@@ -120,7 +120,7 @@ const Footer = () => {
               <li>
                 <Link
                   to="/quote"
-                  className="inline-flex items-center justify-center bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-lg font-medium transition-colors"
+                  className="inline-flex items-center justify-center bg-emerald-700 hover:bg-emerald-800 text-white px-4 py-2 rounded-lg font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-emerald-600"
                 >
                   Get Quote
                 </Link>
@@ -137,7 +137,7 @@ const Footer = () => {
                 <div>
                   <a 
                     href={`tel:${getContent('footer', 'contact', 'phone') || '+918569804777'}`}
-                    className="text-gray-300 hover:text-blue-400 transition-colors cursor-pointer"
+                    className="text-gray-100 hover:text-blue-300 transition-colors cursor-pointer underline decoration-dotted decoration-1"
                   >
                     {getContent('footer', 'contact', 'phone') || '+91 8569804777'}
                   </a>

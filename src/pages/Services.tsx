@@ -189,6 +189,34 @@ const completeServiceCards = [
   },
 ];
 
+type ImageWithWebpProps = React.ImgHTMLAttributes<HTMLImageElement> & {
+  src: string;
+  webpSrc?: string;
+  webpSrcSet?: string;
+};
+
+const ImageWithWebp: React.FC<ImageWithWebpProps> = ({
+  src,
+  webpSrc,
+  webpSrcSet,
+  ...imgProps
+}) => {
+  const derivedWebp =
+    webpSrc ?? (src.match(/\.jpe?g$/i) ? src.replace(/\.jpe?g$/i, ".webp") : undefined);
+  const webpSource = webpSrcSet ?? derivedWebp;
+
+  if (!webpSource) {
+    return <img src={src} {...imgProps} />;
+  }
+
+  return (
+    <picture>
+      <source srcSet={webpSource} type="image/webp" />
+      <img src={src} {...imgProps} />
+    </picture>
+  );
+};
+
 const Services = () => {
   return (
     <>
@@ -204,10 +232,11 @@ const Services = () => {
       {/* Hero Banner */}
       <section className="relative bg-gradient-to-br from-blue-600 via-blue-700 to-green-600 text-white overflow-hidden min-h-[400px]">
         <div className="absolute inset-0">
-          <img
+          <ImageWithWebp
             src="/endoscopy-hospital-doctor-holding-endoscope-before-gastroscopy.jpg"
             alt="Medical equipment services and endoscope repair facility"
             className="w-full h-full object-cover"
+            loading="lazy"
           />
         </div>
         <div className="absolute inset-0 bg-gradient-to-br from-blue-600/60 via-blue-700/60 to-green-600/60"></div>
@@ -266,10 +295,11 @@ const Services = () => {
             {/* Video Gastroscopes */}
             <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 hover:scale-105">
               <div className="relative h-32 bg-gradient-to-br from-blue-500 to-blue-600">
-                <img
+                <ImageWithWebp
                   src="/Gastro.jpg"
                   alt="Video Gastroscopes"
                   className="w-full h-full object-cover opacity-20"
+                  loading="lazy"
                 />
                 <div className="absolute inset-0 flex items-center justify-center">
                   <Search className="h-12 w-12 text-white" />
@@ -298,10 +328,11 @@ const Services = () => {
             {/* Colonoscopes */}
             <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 hover:scale-105">
               <div className="relative h-32 bg-gradient-to-br from-green-500 to-green-600">
-                <img
+                <ImageWithWebp
                   src="/colonoscopy-endoscopic-examination.jpg"
                   alt="Colonoscopes"
                   className="w-full h-full object-cover opacity-20"
+                  loading="lazy"
                 />
                 <div className="absolute inset-0 flex items-center justify-center">
                   <Heart className="h-12 w-12 text-white" />
@@ -627,10 +658,11 @@ const Services = () => {
                 key={index}
                 className="bg-white rou nded-xl overflow-hidden hover:shadow-lg transition-shadow duration-300"
               >
-                <img
+                <ImageWithWebp
                   src={service.image}
                   alt={service.title}
                   className="w-full h-40 object-cover"
+                  loading="lazy"
                 />
                 <div className="p-6">
                   <div className="flex items-center mb-4">
