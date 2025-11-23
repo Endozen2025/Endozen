@@ -39,6 +39,9 @@ const Home = () => {
             src="/colonoscopy-endoscopic-examination (1).jpg"
             alt="Professional colonoscopy endoscopic examination and medical equipment"
             className="w-full h-full object-cover opacity-40"
+            fetchPriority="high"
+            loading="eager"
+            decoding="async"
           />
         </div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-28">
