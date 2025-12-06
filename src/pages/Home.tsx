@@ -433,7 +433,7 @@ const Home = () => {
                 {getContent('home', 'why_choose', 'Trusted_Quality_title') || 'Trusted Quality & Value'}
               </h3>
               <p className="text-gray-600 mb-6">
-                {getContent('home', 'why_choose', 'Trusted_Qualitys_description') || 'Save 40-50% compared to OEM repair costs - while maintaining high standards of quality, performance and service.'}
+                {getContent('home', 'why_choose', 'Trusted_Qualitys_description') || 'Save 30-40% compared to OEM repair costs - while maintaining high standards of quality, performance and service.'}
               </p>
               <ul className="space-y-2">
                 <li className="flex items-center text-sm text-gray-600">
@@ -442,7 +442,7 @@ const Home = () => {
                 </li>
                 <li className="flex items-center text-sm text-gray-600">
                   <CheckCircle className="h-4 w-4 text-green-500 mr-2" />
-                  40–50% cost savings compared to OEM
+                  30–40% cost savings compared to OEM
                 </li>
                 <li className="flex items-center text-sm text-gray-600">
                   <CheckCircle className="h-4 w-4 text-green-500 mr-2" />
