@@ -26,7 +26,7 @@ const Home = () => {
         <title>Endoscope Repair in India | Scope Repair Services – EndoZen</title>
         <meta
           name="description"
-          content="OEM-grade endoscope and scope repair in India. EndoZen delivers precision service, fast turnaround, and 40–50% cost savings from Gurgaon to nationwide facilities."
+          content="OEM-grade endoscope and scope repair in India. EndoZen delivers precision service, fast turnaround, and 30–40% cost savings from Gurgaon to nationwide facilities."
         />
         <link rel="canonical" href="https://endozenindia.com/" />
       </Helmet>
